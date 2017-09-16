@@ -17,10 +17,17 @@ MainView.prototype = {
       var input = document.querySelector('#search-text').value;
 
       var term = data.find(function(element){
-        return element.name = input;
+        return element.name === input;
       });
 
       console.log(term);
+      console.log(term.name);
+      console.log(term.description);
+
+      var section = document.querySelector('#description-section');
+      var p = document.createElement('p');
+      p.innerText = term.description;
+      section.appendChild(p);
 
     });
   }
