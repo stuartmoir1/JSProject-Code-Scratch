@@ -17,6 +17,10 @@ describe('Term', function(){
     assert.strictEqual(term.description, "");
   })
 
+  it('Should have keywords', function(){
+    assert.strictEqual(term.keywords.length, 2 );
+  })
+
 
   
 })
