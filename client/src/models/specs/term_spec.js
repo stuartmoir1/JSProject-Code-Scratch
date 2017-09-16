@@ -25,7 +25,10 @@ describe('Term', function(){
     assert.strictEqual(term.image, "./client/build/images/object_vs_class.jpg",);
   })
 
-  
+  it('Should have tags', function(){
+    assert.strictEqual(term.tags.length, 2);
+  })
+
 
 
   
