@@ -37,6 +37,9 @@ describe('Term', function(){
     assert.strictEqual(term.webpages.length, 3);
   })
 
+  it('Should have videos', function(){
+    assert.strictEqual(term.videos.length, 3);
+  })
 
 
   
