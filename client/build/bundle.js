@@ -116,7 +116,9 @@ module.exports = AjaxRequest;
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var DescriptionView = __webpack_require__(3);
 
 // Constructor
 var MainView = function(){
@@ -140,19 +142,41 @@ MainView.prototype = {
         return element.name === input;
       });
 
-      var section = document.querySelector('#description-section');
-      var pName = document.createElement('p');
-      pName.innerText = term.name;
-      section.appendChild(pName)
-      var pDescription = document.createElement('p');
-      pDescription.innerText = term.description;
-      section.appendChild(pDescription);
+      var descriptionView = new DescriptionView();
+      descriptionView.render(term);
 
     });
   }
 }
 
 module.exports = MainView;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+// Constructor
+var DescriptionView = function(){
+
+}
+
+// Methods
+
+DescriptionView.prototype = {
+
+  render: function(term){
+
+    var section = document.querySelector('#description-section');
+    var pName = document.createElement('p');
+    pName.innerText = term.name;
+    section.appendChild(pName)
+    var pDescription = document.createElement('p');
+    pDescription.innerText = term.description;
+    section.appendChild(pDescription);
+  }
+}
+
+module.exports = DescriptionView;
 
 /***/ })
 /******/ ]);

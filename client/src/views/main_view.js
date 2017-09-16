@@ -1,3 +1,5 @@
+var DescriptionView = require('./description_view.js');
+
 // Constructor
 var MainView = function(){
 
@@ -20,13 +22,8 @@ MainView.prototype = {
         return element.name === input;
       });
 
-      var section = document.querySelector('#description-section');
-      var pName = document.createElement('p');
-      pName.innerText = term.name;
-      section.appendChild(pName)
-      var pDescription = document.createElement('p');
-      pDescription.innerText = term.description;
-      section.appendChild(pDescription);
+      var descriptionView = new DescriptionView();
+      descriptionView.render(term);
 
     });
   }

@@ -7,8 +7,15 @@ var DescriptionView = function(){
 
 DescriptionView.prototype = {
 
-  render: function(){
+  render: function(term){
 
+    var section = document.querySelector('#description-section');
+    var pName = document.createElement('p');
+    pName.innerText = term.name;
+    section.appendChild(pName)
+    var pDescription = document.createElement('p');
+    pDescription.innerText = term.description;
+    section.appendChild(pDescription);
   }
 }
 
