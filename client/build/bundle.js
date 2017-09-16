@@ -68,43 +68,23 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 // 
-var AjaxRequest = __webpack_require__(2);
-var MainView = __webpack_require__(1);
+var AjaxRequest = __webpack_require__(1);
+var MainView = __webpack_require__(2);
 
 var url = 'http://localhost:3000/api/main';
 
 window.addEventListener('load', function(){
 
+  console.log('Hello, World!');
+
   var ajaxRequest = new AjaxRequest(url);
   var mainView = new MainView();
-  ajaxRequest.getData(mainView.render)
+  ajaxRequest.getData(mainView.render);
   
 });
 
-
-
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
-
-// Constructor
-var MainView = function(){
-
-}
-
-// Methods
-
-MainView.prototype = {
-
-  render: function(data){
-    console.log(data);
-  }
-}
-
-module.exports = MainView;
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports) {
 
 // Constructor
@@ -134,6 +114,26 @@ AjaxRequest.prototype = {
 }
 
 module.exports = AjaxRequest;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// Constructor
+var MainView = function(){
+
+}
+
+// Methods
+
+MainView.prototype = {
+
+  render: function(data){
+    console.log(data);
+  }
+}
+
+module.exports = MainView;
 
 /***/ })
 /******/ ]);
