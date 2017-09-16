@@ -7,6 +7,7 @@ var Term = function(data) {
   this.tags = data.tags;
   this.add_info = data.add_info;
   this.webpages = data.webpages;
+  this.videos = data.videos;
 
 }
 
