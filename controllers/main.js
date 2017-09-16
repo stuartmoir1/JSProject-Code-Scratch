@@ -13,7 +13,7 @@ mainRouter.get('/main', function(req, res){
     if (err){console.log('Unable to connect to MongoDB...'); return;}
     var collection = db.collection('data');
     collection.find({}).toArray(function(err, docs){
-      res.json(docs); // Send response (array) to BodyParser
+      res.json(docs); // Send response (array) to BodyParser.
       db.close();
     });
   });

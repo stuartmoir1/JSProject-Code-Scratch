@@ -65,6 +65,22 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// View
+var MainView = __webpack_require__(1);
+
+window.addEventListener('load', function(){
+
+  // View
+  var mainView = new MainView(document.querySelector('#main'));
+  mainView.render();
+});
+
+
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 
