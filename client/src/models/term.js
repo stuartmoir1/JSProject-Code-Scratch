@@ -6,6 +6,7 @@ var Term = function(data) {
   this.image = data.image;
   this.tags = data.tags;
   this.add_info = data.add_info;
+  this.webpages = data.webpages;
 
 }
 
