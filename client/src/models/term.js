@@ -4,6 +4,7 @@ var Term = function(data) {
   this.description = data.description;
   this.keywords = data.keywords;
   this.image = data.image;
+  this.tags = data.tags;
 
 }
 
