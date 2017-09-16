@@ -20,14 +20,13 @@ MainView.prototype = {
         return element.name === input;
       });
 
-      console.log(term);
-      console.log(term.name);
-      console.log(term.description);
-
       var section = document.querySelector('#description-section');
-      var p = document.createElement('p');
-      p.innerText = term.description;
-      section.appendChild(p);
+      var pName = document.createElement('p');
+      pName.innerText = term.name;
+      section.appendChild(pName)
+      var pDescription = document.createElement('p');
+      pDescription.innerText = term.description;
+      section.appendChild(pDescription);
 
     });
   }
