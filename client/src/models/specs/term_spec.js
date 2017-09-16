@@ -21,6 +21,12 @@ describe('Term', function(){
     assert.strictEqual(term.keywords.length, 2 );
   })
 
+  it('Should have image', function(){
+    assert.strictEqual(term.image, "./client/build/images/object_vs_class.jpg",);
+  })
+
+  
+
 
   
 })
