@@ -13,7 +13,9 @@ describe('Term', function(){
     assert.strictEqual(term.name, "object");
   })
 
-
+  it('Should have description', function(){
+    assert.strictEqual(term.description, "");
+  })
 
 
   
