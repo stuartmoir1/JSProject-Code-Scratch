@@ -34,7 +34,7 @@ describe('Term', function(){
     assert.strictEqual(term.description, "A self-contained component that contains properties and methods needed to make a certain type of data useful.");
   })
 
-  xit('Should have keywords', function(){
+  it('Should have keywords', function(){
     assert.strictEqual(term.keywords.length, 2 );
   })
 
