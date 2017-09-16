@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-// Mongo
+// MongoDB
 var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb://localhost:27017/js_project';
 

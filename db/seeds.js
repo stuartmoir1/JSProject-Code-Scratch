@@ -32,7 +32,7 @@ db.data.insert([
       {"Codecademy (Method)": "https://www.codecademy.com/courses/learn-ruby/lessons/methods-blocks-sorting/exercises/why-methods?action=lesson_resume"}
     ],
     "videos": [
-      {"Youtube video:": "https://www.youtube.com/watch?v=_rsKeFaGx48"}
+      {"YouTube video:": "https://www.youtube.com/watch?v=_rsKeFaGx48"}
     ],
     "audio": ""
   },

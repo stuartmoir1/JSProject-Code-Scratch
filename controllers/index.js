@@ -6,7 +6,7 @@ var router = express.Router();
 var path = require('path');
 
 // RESTful routes location.
-router.use('/api/main', require('./main'));
+router.use('/api', require('./main'));
 
 // Main route.
 router.get('/', function(req, res){

@@ -3,13 +3,14 @@ var express = require('express');
 var mainRouter = express.Router();
 
 // MongoDB
-require('mongodb').MongoClient;
+var MongoClient = require('mongodb').MongoClient;
+var dbUrl = 'mongodb://localhost:27017/main';
 
 // RESTful routes.
 
 // Index
 mainRouter.get('/main', function(req, res){
-  MongoClient.connect(url, function(err, db){
+  MongoClient.connect(dbUrl, function(err, db){
     if (err){console.log('Unable to connect to MongoDB...'); return;}
     var collection = db.collection('data');
     collection.find({}).toArray(function(err, docs){

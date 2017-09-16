@@ -67,14 +67,18 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// View
+// 
+var AjaxRequest = __webpack_require__(2);
 var MainView = __webpack_require__(1);
+
+var url = 'http://localhost:3000/api/main';
 
 window.addEventListener('load', function(){
 
-  // View
-  var mainView = new MainView(document.querySelector('#main'));
-  mainView.render();
+  var ajaxRequest = new AjaxRequest(url);
+  var mainView = new MainView();
+  ajaxRequest.getData(mainView.render)
+  
 });
 
 
@@ -83,7 +87,53 @@ window.addEventListener('load', function(){
 /* 1 */
 /***/ (function(module, exports) {
 
+// Constructor
+var MainView = function(){
 
+}
+
+// Methods
+
+MainView.prototype = {
+
+  render: function(data){
+    console.log(data);
+  }
+}
+
+module.exports = MainView;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// Constructor
+var AjaxRequest = function(url){
+  this.url = url;
+  this.data = [];
+}
+
+// Methods
+
+AjaxRequest.prototype = {
+
+  getData: function(callback){
+    var request = new XMLHttpRequest();
+    request.open("GET", this.url);
+    request.onload = function(){
+      if (request.status === 200){
+        var jsonString = request.responseText;
+        console.log(jsonString);
+        //localStorage.setItem('countries', jsonString);
+        this.data = JSON.parse(jsonString);
+        callback(this.data);
+      }
+    }.bind(this);
+    request.send();
+  }
+}
+
+module.exports = AjaxRequest;
 
 /***/ })
 /******/ ]);
