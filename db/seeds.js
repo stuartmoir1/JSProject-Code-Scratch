@@ -24,7 +24,8 @@ db.data.insert([
   {
     "name": "method",
     "description": "An action that an object is able to perform.",
-    "keywords": ["object"],
+    "keywords": ["action", "object"],
+    "testDescription": ["An ", " that an ", "is able to perform."],
     "image": "",
     "tags": ["function", "class", "object"],
     "add_info": "A method defines the behaviour of the objects that are created from the class. Consider the example of an object of the type 'person,' created using the person class. Methods associated with this class could consist of things like walking and driving. Methods are sometimes confused with functions, but they are distinct.",
@@ -41,6 +42,7 @@ db.data.insert([
     "name": "properties",
     "description": "Variables declared within a class.",
     "keywords": ["variables", "class"],
+    "testDescription": ["", "declared within a ", "."],
     "image": "",
     "tags": ["object-oriented programming", "class"],
     "add_info": "A property, in object-oriented programming languages, is a special sort of class member, intermediate in functionality between a field (or data member) and a method. The syntax for reading and writing of properties is like for fields, but property reads and writes are (usually) translated to 'getter' and 'setter' method calls. The field-like syntax is easier to read and write than lots of method calls, yet the interposition of method calls 'under the hood' allows for data validation, active updating (eg of GUI elements), or implementation of what may be called 'read-only fields'.",
