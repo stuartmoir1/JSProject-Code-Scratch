@@ -41,7 +41,7 @@ db.data.insert([
   {
     "name": "properties",
     "description": "Variables declared within a class.",
-    "keywords": ["variables", "class"],
+    "keywords": ["Variables", "class"],
     "testDescription": ["", "declared within a ", "."],
     "image": "",
     "tags": ["object-oriented programming", "class"],
@@ -59,22 +59,40 @@ db.data.insert([
   },
 
   {
-    "name": "",
-    "description": "",
-    "keywords": ["", ""],
-    "testDescription": ["", "", "."],
+    "name": "variable",
+    "description": "A variable is a named piece of computer memory, containing some information inside.",
+    "keywords": ["memory", "information"],
+    "testDescription": ["A variable is a named piece of computer ", ", containing some ", " inside."],
     "image": "",
-    "tags": ["", ""],
-    "add_info": "",
+    "tags": ["object-oriented programming", "array", "integer"],
+    "add_info": "A variable is a storage location paired with an associated symbolic name (an identifier), which contains some known or unknown quantity of information referred to as a value. The variable name is the usual way to reference the stored value; this separation of name and content allows the name to be used independently of the exact information it represents. The identifier in computer source code can be bound to a value during run time, and the value of the variable may thus change during the course of program execution.",
     "webpages": [
-      {"What is a ": ""},
-      {" in StackOverflow": ""},
-      {"Wikipedia ()": ""}
+      {"What is a variable": "https://launchschool.com/books/ruby/read/variables"},
+      {"Variable in StackOverflow": "https://stackoverflow.com/questions/1137158/what-is-a-variable"},
+      {"Wikipedia (variable)": "https://en.wikipedia.org/wiki/Variable_(computer_science)"}
     ],
     "videos": [
-      {"Video discussing Properties": "https://www.youtube.com/watch?v=grcPxVOnZpY"},
-      {"Functional Properties": "https://www.youtube.com/watch?v=qzzFHpn69UQ"},
-      {"hasattr": "https://www.youtube.com/watch?v=GAlH10AY7YI"}
+      {"Video discussing variables": "https://www.youtube.com/watch?v=aeoGGabJhAQ"},
+      {"Programming fundamentals - variables": "https://www.youtube.com/watch?v=t4ND-_kTxcI"}
     ]
   }
+
+  // {
+  //   "name": "",
+  //   "description": "",
+  //   "keywords": ["", ""],
+  //   "testDescription": [" ", "", ""],
+  //   "image": "",
+  //   "tags": ["", "", ""],
+  //   "add_info": "",
+  //   "webpages": [
+  //     {"What is a variable": ""},
+  //     {"Variable in StackOverflow": ""},
+  //     {"Wikipedia (variable)": ""}
+  //   ],
+  //   "videos": [
+  //     {"Video discussing variables": ""},
+  //     {"Programming fundamentals - variables": ""}
+  //   ]
+  // }
 ]);
