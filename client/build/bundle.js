@@ -210,8 +210,10 @@ TestView.prototype = {
   render: function(term) {
     console.log(term.keywords);
     var section = document.querySelector('#description-text');
+    var button = document.querySelector('#test-button');
     var testView = new TestView();
-    testView.fade(section)
+    testView.fade(section);
+    testView.fade(button);
   },
 
   fade: function(keyWord){
