@@ -221,6 +221,8 @@ DescriptionView.prototype = {
   // More info popup.
   moreInfoPopup: function(term){
 
+    console.log(term);
+
     var anchor = document.querySelector('#popup-anchor');
     while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
 

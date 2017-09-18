@@ -36,7 +36,7 @@ strong {
 
 .popup h2 {
   margin-top: 0;
-  color: #333;
+  /*color: #333;*/
   /*font-family: Tahoma, Arial, sans-serif;*/
 }
 .popup .close {
@@ -47,7 +47,7 @@ strong {
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  /*color: #333;*/
 }
 .popup .close:hover {
   color: #EBBAB9;
