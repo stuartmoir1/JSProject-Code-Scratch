@@ -11,10 +11,11 @@ DescriptionView.prototype = {
 
     var section = document.querySelector('#description-section');
     while (section.firstChild){ section.removeChild(section.firstChild); };
-    
+
     var pName = document.createElement('p');
     pName.innerText = term.name;
-    section.appendChild(pName)
+    section.appendChild(pName);
+
     var pDescription = document.createElement('p');
     pDescription.innerText = term.description;
     section.appendChild(pDescription);
@@ -32,6 +33,9 @@ DescriptionView.prototype = {
         var descriptionView = new DescriptionView();
         descriptionView.getKeyword(term);
       })
+
+    // Load pop-up
+    this.moreInfo();
   },
 
   getKeyword: function(term) {
@@ -53,8 +57,41 @@ DescriptionView.prototype = {
         op -= op * 0.1;
     }, 50);
     console.log("section faded");
-  }
+  },
 
+  // More info popup.
+  moreInfo: function(){
+    console.log('In moreInfo...');
+
+    var anchor = document.querySelector('#popup-anchor');
+    while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
+
+    var div1 = document.createElement('div');
+    anchor.appendChild(div1);
+    div1.outerHTML = '<div id="popup" class="overlayX"></div>';
+
+    var innerDiv1= document.querySelector('#popup');
+    console.log(innerDiv1.outerHTML);
+
+    var div2 = document.createElement('div');
+    innerDiv1.appendChild(div2);
+    div2.outerHTML = '<div class="popup"></div>';
+
+    var innerDiv2 = document.querySelector('.popup');
+    console.log(innerDiv2.outerHTML);
+
+    var h2 = document.createElement('h2');
+    innerDiv2.appendChild(h2);
+    h2.innerHTML = 'Name';
+
+    var a = document.createElement('a');
+    innerDiv2.appendChild(a);
+    a.outerHTML = '<a class="close" href="#">&times</a>';
+
+    var div3 = document.createElement('div');
+    innerDiv2.appendChild(div3);
+    div3.outerHTML = '<div class="description">Description</div>';
+  }  
 }
 
 module.exports = DescriptionView;
