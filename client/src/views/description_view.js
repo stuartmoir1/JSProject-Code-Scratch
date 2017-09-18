@@ -98,7 +98,27 @@ DescriptionView.prototype = {
 
     var div3 = document.createElement('div');
     innerDiv2.appendChild(div3);
-    div3.outerHTML = '<div class="description">' + term.add_info + '</div>';
+    div3.outerHTML = '<div class="description">' + term.add_info + '<br><br></div>';
+
+    var div4 = document.createElement('div');
+    innerDiv2.appendChild(div4);
+    term.webpages.forEach(function(webpage){
+      Object.keys(webpage).forEach(function eachKey(key){
+        var a = document.createElement('a');
+        div4.appendChild(a);
+        a.outerHTML = '<a href="' + webpage[key] + '" target="_blank">' + key + '</a><br>';
+      });
+    });
+
+    // var div5 = document.createElement('div');
+    // innerDiv2.appendChild(div5);
+    // term.videos.forEach(function(video){
+    //   Object.keys(video).forEach(function eachKey(key){
+    //     var a = document.createElement('a');
+    //     div4.appendChild(a);
+    //     a.outerHTML = '<a href="' + video[key] + '" target="_blank">' + key + '</a><br>';
+    //   });
+    // });    
   },
 
   moreInfoButton: function(term){
