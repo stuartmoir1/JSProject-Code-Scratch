@@ -13,19 +13,20 @@ TestView.prototype = {
     testView.fade(button);
   },
 
-  fade: function(keyWord){
+  fade: function(section){
     var op = 1;  // initial opacity
     var timer = setInterval(function () {
         if (op <= 0.1){
             clearInterval(timer);
-            keyWord.style.display = 'none';
+            section.style.display = 'none';
         }
-        keyWord.style.opacity = op;
-        keyWord.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        section.style.opacity = op;
+        section.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op -= op * 0.1;
     }, 50);
     console.log("section faded");
-  }
+  },
+
 }
 
 module.exports = TestView;
