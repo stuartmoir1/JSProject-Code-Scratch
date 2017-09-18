@@ -3,8 +3,24 @@
 <head>
   <meta charset="utf-8">
   <title>JavaScript Project</title>
+  <script src='bundle.js'></script>
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="bundle.js"></script>
+  <script>
+  function allowDrop(ev) {
+      ev.preventDefault();
+  }
+
+  function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+  }
+  </script>
 </head>
 <body>
 
@@ -20,6 +36,9 @@
   <section id="description-section">
     
   </section>
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <br>
+  <p id="drag1" draggable="true" ondragstart="drag(event)">Demo</p>
 
 </body>
 </html>
