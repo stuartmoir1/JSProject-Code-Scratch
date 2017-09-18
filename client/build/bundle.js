@@ -223,26 +223,30 @@ DescriptionView.prototype = {
 
     console.log(term);
 
-    var anchor = document.querySelector('#popup-anchor');
-    while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
+    var anchor = this.popupRemoveChildren();
 
-    var div1 = document.createElement('div');
-    anchor.appendChild(div1);
-    div1.outerHTML = '<div id="popup" class="overlay"></div>';
+    // var anchor = document.querySelector('#popup-anchor');
+    // while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
 
-    var innerDiv1= document.querySelector('#popup');
-    console.log(innerDiv1.outerHTML);
+    var div1 = this.createPopupDiv(anchor);
+    
+    // var div1 = document.createElement('div');
+    // anchor.appendChild(div1);
+    // div1.outerHTML = '<div id="popup" class="overlay"></div>';
 
-    var div2 = document.createElement('div');
-    innerDiv1.appendChild(div2);
-    div2.outerHTML = '<div class="popup"></div>';
+    this.createPopupInnerDiv();
 
-    var innerDiv2 = document.querySelector('.popup');
-    console.log(innerDiv2.outerHTML);
+    // var innerDiv1= document.querySelector('#popup');
+    // var div2 = document.createElement('div');
+    // innerDiv1.appendChild(div2);
+    // div2.outerHTML = '<div class="popup"></div>';
 
-    var h2 = document.createElement('h2');
-    innerDiv2.appendChild(h2);
-    h2.innerHTML = term.name;
+    div2 = this.setPopupName(term);
+
+    // var innerDiv2 = document.querySelector('.popup');
+    // var h2 = document.createElement('h2');
+    // innerDiv2.appendChild(h2);
+    // h2.innerHTML = term.name;
 
     var a = document.createElement('a');
     a.href = "#";
@@ -251,15 +255,15 @@ DescriptionView.prototype = {
     a.addEventListener('click', function(){
       while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
     });
-    innerDiv2.appendChild(a);
+    div2.appendChild(a);
 
     var div3 = document.createElement('div');
-    innerDiv2.appendChild(div3);
+    div2.appendChild(div3);
     div3.outerHTML = '<div class="description">' + term.add_info + '</div>';
 
     var div4 = document.createElement('div');
     div4.classList.add('webpages');
-    innerDiv2.appendChild(div4);
+    div2.appendChild(div4);
     term.webpages.forEach(function(webpage){
       Object.keys(webpage).forEach(function eachKey(key){
         var a = document.createElement('a');
@@ -269,15 +273,25 @@ DescriptionView.prototype = {
     });
 
     var div5 = document.createElement('div');
-    div4.classList.add('videos');
-    innerDiv2.appendChild(div5);
+    div5.classList.add('videos');
+    div2.appendChild(div5);
     term.videos.forEach(function(video){
       Object.keys(video).forEach(function eachKey(key){
         var a = document.createElement('a');
         div5.appendChild(a);
         a.outerHTML = '<a href="' + video[key] + '" target="_blank">' + key + '</a><br>';
       });
-    });    
+    });
+
+    var div6 = document.createElement('div');
+    div6.classList.add('image');
+    div2.appendChild(div6);
+    div6.outerHTML = '<img src="' + term.image + '" alt="Image">';
+
+    var div7 = document.createElement('div');
+    div7.classList.add('video');
+    div2.appendChild(div7);
+    div7.outerHTML = '<iframe src="' + term.embed_video + '</iframe>';
   },
 
   moreInfoButton: function(term){
@@ -292,6 +306,34 @@ DescriptionView.prototype = {
       event.preventDefault();
       this.moreInfoPopup(term);
     }.bind(this));
+  },
+
+  popupRemoveChildren: function(){
+    var anchor = document.querySelector('#popup-anchor');
+    while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
+    return anchor;
+  },
+
+  createPopupDiv: function(anchor){
+    var div = document.createElement('div');
+    anchor.appendChild(div);
+    div.outerHTML = '<div id="popup" class="overlay"></div>';
+    return div;
+  },
+
+  createPopupInnerDiv: function(){
+    var outerDiv = document.querySelector('#popup');
+    var innerDiv = document.createElement('div');
+    outerDiv.appendChild(innerDiv);
+    innerDiv.outerHTML = '<div class="popup"></div>';
+  },
+
+  setPopupName: function(term){
+    var div = document.querySelector('.popup');
+    var h2 = document.createElement('h2');
+    div.appendChild(h2);
+    h2.innerHTML = term.name;
+    return div;
   }
 }
 

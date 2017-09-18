@@ -39,6 +39,7 @@ strong {
   /*color: #333;*/
   /*font-family: Tahoma, Arial, sans-serif;*/
 }
+
 .popup .close {
   position: absolute;
   top: 20px;
@@ -49,6 +50,7 @@ strong {
   text-decoration: none;
   /*color: #333;*/
 }
+
 .popup .close:hover {
   color: #EBBAB9;
 }
@@ -65,17 +67,25 @@ strong {
 }
 
 .popup .webpages {
-  overflow: auto;
   padding: 0 0 20px 0; 
 }
 
 .popup .videos {
-  overflow: auto;
   padding: 0 0 20px 0;
+}
+
+.popup .image {
+  height: 50;
+  width: 50;
+}
+
+.popup .video {
+  height: 315;
+  width: 420;
 }
 
 /*@media screen and (max-width: 700px){
   .popup{
     width: 70%;
-  }*/
-}
+  }
+}*/
