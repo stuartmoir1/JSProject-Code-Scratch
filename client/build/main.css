@@ -1,10 +1,8 @@
+body {
+  background-color: #EBBAB9;
+  font-family: 'Courier New';
+},
+
 strong {
   font-weight: bold;
-}
-
-#div1 {
-    width: 350px;
-    height: 70px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;
 }
