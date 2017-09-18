@@ -60,12 +60,6 @@ TestView.prototype = {
 
 
 
-      var elementArray = term.testDescription
-      for(element of elementArray){
-        var p = document.createElement('p');
-        p.innerText = element;
-        section.appendChild(p);
-      };
     }
 
       // var answerDiv1 = document.createElement('div');
