@@ -72,7 +72,7 @@ DescriptionView.prototype = {
 
     var div1 = document.createElement('div');
     anchor.appendChild(div1);
-    div1.outerHTML = '<div id="popup" class="overlayX"></div>';
+    div1.outerHTML = '<div id="popup" class="overlay"></div>';
 
     var innerDiv1= document.querySelector('#popup');
     console.log(innerDiv1.outerHTML);
@@ -91,7 +91,9 @@ DescriptionView.prototype = {
     var a = document.createElement('a');
     innerDiv2.appendChild(a);
     a.outerHTML = '<a class="close" href="#">&times</a>';
-
+    a.addEventListener('click', function(){
+      console.log('The popup should close...', this);
+    })
     var div3 = document.createElement('div');
     innerDiv2.appendChild(div3);
     div3.outerHTML = '<div class="description">' + term.add_info + '</div>';

@@ -7,7 +7,19 @@ strong {
   font-weight: bold;
 }
 
-.overlayX {
+/*.overlayX {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: visible;
+  opacity: 1;
+}*/
+
+.overlay {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -19,20 +31,9 @@ strong {
   opacity: 1;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
+.overlay:target {
   visibility: hidden;
   opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
 }
 
 .popup {
@@ -61,7 +62,7 @@ strong {
   color: #333;
 }
 .popup .close:hover {
-  color: #06D85F;
+  color: #EBBAB9;
 }
 .popup .content {
   max-height: 30%;
