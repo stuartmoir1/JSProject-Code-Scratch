@@ -9,7 +9,9 @@ DescriptionView.prototype = {
 
   render: function(term){
 
+    
     var section = document.querySelector('#description-section');
+        while (section.firstChild){ section.removeChild(section.firstChild); };
     var pName = document.createElement('p');
     pName.innerText = term.name;
     section.appendChild(pName)
@@ -52,6 +54,7 @@ DescriptionView.prototype = {
     }, 50);
     // console.log("section faded");
   }
+
 
 }
 
