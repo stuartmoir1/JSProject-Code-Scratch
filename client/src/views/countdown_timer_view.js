@@ -22,7 +22,7 @@ CountdownTimerView.prototype = {
     var countdown = setInterval(function(){
       count--;
       display.innerText = count;
-      if (count <= 0) clearInterval(countdown);
+      if (count <= 0) { clearInterval(countdown) };
     }, 1000);
 
     // Display count complete message.
