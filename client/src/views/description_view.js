@@ -13,9 +13,11 @@ DescriptionView.prototype = {
 
     var section = document.querySelector('#description-section');
     while (section.firstChild){ section.removeChild(section.firstChild); };
+
     var pName = document.createElement('p');
     pName.innerText = term.name;
     section.appendChild(pName)
+
     var pDescription = document.createElement('p');
     section.appendChild(pDescription);
     pDescription.outerHTML = '<p id="description-text">' + term.description + '</p>'
