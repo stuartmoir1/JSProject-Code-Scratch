@@ -10,7 +10,7 @@ var MainView = function(){
 MainView.prototype = {
 
   render: function(data){
-    console.log(data);
+    //console.log(data);
 
     var button = document.querySelector('#button-submit');
     button.addEventListener('click', function(event){

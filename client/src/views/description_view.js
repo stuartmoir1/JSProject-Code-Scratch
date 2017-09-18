@@ -35,7 +35,8 @@ DescriptionView.prototype = {
       })
 
     // Load pop-up
-    this.moreInfo();
+    this.moreInfoPopup();
+    this.moreInfoButton();
   },
 
   getKeyword: function(term) {
@@ -60,8 +61,8 @@ DescriptionView.prototype = {
   },
 
   // More info popup.
-  moreInfo: function(){
-    console.log('In moreInfo...');
+  moreInfoPopup: function(){
+    console.log('In function moreInfoPopup...');
 
     var anchor = document.querySelector('#popup-anchor');
     while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
@@ -91,7 +92,24 @@ DescriptionView.prototype = {
     var div3 = document.createElement('div');
     innerDiv2.appendChild(div3);
     div3.outerHTML = '<div class="description">Description</div>';
-  }  
+  },
+
+  moreInfoButton: function(){
+
+    console.log('In function moreInfoButton...')
+
+    var section = document.querySelector('#description-section');
+
+    var infoButton = document.createElement('button');
+    section.appendChild(infoButton);
+    infoButton.outerHTML = '<button type="button" id="info-button>Info</button>';
+
+    infoButton = document.querySelector('#info-button');
+    infoButton.addEventListener('click', function(event){
+      event.preventDefault();
+      console.log('Info button clicked...');
+    });
+  }
 }
 
 module.exports = DescriptionView;
