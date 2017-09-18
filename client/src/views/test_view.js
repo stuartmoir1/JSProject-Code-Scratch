@@ -24,12 +24,9 @@ TestView.prototype = {
         section.style.opacity = op;
         section.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op -= op * 0.1;
-        // var testView = new TestView();
-        // callback(term);
     }, 50);
     console.log("section faded");
     var self = this;
-    // var testView = new TestView();
     setTimeout(function(){
       self.repopulate(term);
     }, 1500);
@@ -38,35 +35,20 @@ TestView.prototype = {
 
   repopulate: function(term) {
 
-    console.log(term);
-      var section = document.querySelector('#description-section');
-      while (section.firstChild){ section.removeChild(section.firstChild); };
+    var section = document.querySelector('#description-section');
+    while (section.firstChild){ section.removeChild(section.firstChild); };
 
-      var form = document.createElement('form');
-      // var answer1 = document.createElement('input');
-      // var answer2 = document.createElement('input');
+    var form = document.createElement('form');
+    section.appendChild(form);
+    form.outerHTML = '<form id="test-form" alt="test question">'
+      + term.testDescription[0] + ' '
+      + '<input type="text" id="answer1" alt="Enter answer 1 here">' + ' '
+      + term.testDescription[1] + ' '
+      + '<input type="text" id="answer2" alt="Enter answer 2 here">' + ' '
+      + term.testDescription[2] + ' '
+      + '<input type="submit" id="submit" value="submit"' + ' ' + '</form>';
 
-      section.appendChild(form);
-
-      // form.appendChild(answer1);
-      // form.appendChild(answer2);
-
-      form.outerHTML = '<form id="test-form" alt="test question">' + term.testDescription[0] + ' ' + '<input type="text" id="answer1" alt="Enter answer 1 here">' + ' ' + term.testDescription[1] + ' ' + '<input type="text" id="answer2" alt="Enter answer 2 here">' + ' ' + term.testDescription[2] +'</form>';
-
-
-      // answer1.outerHTML = '<input type="text" id="answer1" alt="Enter answer 1 here">';
-      // answer2.outerHTML = '<input type="text" id="answer2" alt="Enter answer 2 here">';
-
-
-
-
-    }
-
-      // var answerDiv1 = document.createElement('div');
-      // answerDiv1.outerHTML =
-
-
-
+  }
 
 
 }
