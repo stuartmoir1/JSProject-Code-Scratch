@@ -14,8 +14,8 @@ DescriptionView.prototype = {
     pName.innerText = term.name;
     section.appendChild(pName)
     var pDescription = document.createElement('p');
-    pDescription.innerText = term.description;
     section.appendChild(pDescription);
+    pDescription.outerHTML = '<p id="description-text">' + term.description + '</p>'
 
     var testButton = document.createElement('button');
       section.appendChild(testButton);
@@ -34,7 +34,7 @@ DescriptionView.prototype = {
 
   getKeyword: function(term) {
     console.log(term.keywords);
-    var section = document.querySelector('#description-section');
+    var section = document.querySelector('#description-text');
     var descriptionView = new DescriptionView();
     descriptionView.fade(section)
   },
