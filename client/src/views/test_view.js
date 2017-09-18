@@ -63,15 +63,19 @@ TestView.prototype = {
   compare: function(data, term){
     console.log(term);
     if (data[0] === term.keywords[0]){
-      console.log("Answer 1 correct");
+      var answ1 = document.getElementById('answer1');
+      answ1.style.color = "Green";
     } else {
-      console.log("Answer 1 incorrect");
+      var answ1 = document.getElementById('answer1');
+      answ1.style.color = "Red";
     };
 
     if (data[1] == term.keywords[1]){
-      console.log("Answer 2 correct");
+      var answ2 = document.getElementById('answer2');
+      answ2.style.color = "Green";
     } else {
-      console.log("Answer 2 incorrect");
+      var answ2 = document.getElementById('answer2');
+      answ2.style.color = "Red";
     };
   }
 
