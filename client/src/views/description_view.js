@@ -26,6 +26,8 @@ DescriptionView.prototype = {
       testButton.outerHTML = '<button type="button" id="test-button" alt="test understanding">Test Understanding</button>'
       // This is new; you need to select the test button separately.
       button = document.querySelector('#test-button');
+      console.log(button);
+
       button.addEventListener('click', function(event){
         event.preventDefault();
         console.log("test button clicked");
@@ -34,9 +36,8 @@ DescriptionView.prototype = {
         descriptionView.getKeyword(term);
       })
 
-    // Load pop-up
-    this.moreInfoPopup();
-    this.moreInfoButton();
+    // Load info button.
+    this.moreInfoButton(term);
   },
 
   getKeyword: function(term) {
@@ -61,8 +62,10 @@ DescriptionView.prototype = {
   },
 
   // More info popup.
-  moreInfoPopup: function(){
+  moreInfoPopup: function(term){
     console.log('In function moreInfoPopup...');
+
+    console.log('Argument: ', term);
 
     var anchor = document.querySelector('#popup-anchor');
     while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
@@ -83,7 +86,7 @@ DescriptionView.prototype = {
 
     var h2 = document.createElement('h2');
     innerDiv2.appendChild(h2);
-    h2.innerHTML = 'Name';
+    h2.innerHTML = term.name;
 
     var a = document.createElement('a');
     innerDiv2.appendChild(a);
@@ -91,24 +94,27 @@ DescriptionView.prototype = {
 
     var div3 = document.createElement('div');
     innerDiv2.appendChild(div3);
-    div3.outerHTML = '<div class="description">Description</div>';
+    div3.outerHTML = '<div class="description">' + term.add_info + '</div>';
   },
 
-  moreInfoButton: function(){
+  moreInfoButton: function(term){
 
-    console.log('In function moreInfoButton...')
+    console.log('In function moreInfoButton...');
 
     var section = document.querySelector('#description-section');
 
     var infoButton = document.createElement('button');
     section.appendChild(infoButton);
-    infoButton.outerHTML = '<button type="button" id="info-button>Info</button>';
+    infoButton.outerHTML = '<button type="button" id="info-button" alt="Info">Info</button>';
 
-    infoButton = document.querySelector('#info-button');
-    infoButton.addEventListener('click', function(event){
+    console.log(infoButton.outerHTML);
+
+    var button = document.querySelector('#info-button');
+    button.addEventListener('click', function(event){
       event.preventDefault();
       console.log('Info button clicked...');
-    });
+      this.moreInfoPopup(term);
+    }.bind(this));
   }
 }
 
