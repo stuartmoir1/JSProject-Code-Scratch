@@ -207,6 +207,8 @@ var TestView = function() {
 
 TestView.prototype = {
 
+
+
   render: function(term) {
     console.log(term.keywords);
     var section = document.querySelector('#description-text');
@@ -216,7 +218,7 @@ TestView.prototype = {
     testView.fade(button, term);
   },
 
-  fade: function(section, term){
+  fade: function(section, term, callback){
     var op = 1;  // initial opacity
     var timer = setInterval(function () {
         if (op <= 0.1){
@@ -226,6 +228,8 @@ TestView.prototype = {
         section.style.opacity = op;
         section.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op -= op * 0.1;
+        // var testView = new TestView();
+        // callback(term);
     }, 50);
     console.log("section faded");
     var testView = new TestView();
@@ -234,14 +238,20 @@ TestView.prototype = {
 
   repopulate: function(term) {
     var section = document.querySelector('#description-section');
-    var p = document.createElement('p');
-    p.innerText = term.testDescription;
+    while (section.firstChild){ section.removeChild(section.firstChild); };
 
-    section.appendChild(p);
+    for(element of term.testDescription){
+      var p = document.createElement('p');
+      p.innerText = element;
+      section.appendChild(p);
+    }
+
 
 
     console.log(term.testDescription);
   }
+
+
 }
 
 module.exports = TestView;
