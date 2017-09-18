@@ -61,6 +61,17 @@ strong {
 .popup .description {
   max-height: 50%;
   overflow: auto;
+  padding: 0 0 20px 0;
+}
+
+.popup .webpages {
+  overflow: auto;
+  padding: 0 0 20px 0; 
+}
+
+.popup .videos {
+  overflow: auto;
+  padding: 0 0 20px 0;
 }
 
 /*@media screen and (max-width: 700px){
