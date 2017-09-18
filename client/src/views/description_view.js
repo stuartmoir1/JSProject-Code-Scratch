@@ -61,32 +61,6 @@ DescriptionView.prototype = {
     console.log("section faded");
   },
 
-  // More info popup.
-  moreInfoPopup: function(term){
-
-    // console.log(term);
-
-    var anchor = this.popupRemoveChildren();
-    var div1 = this.createPopupDiv(anchor);
-    this.createPopupInnerDiv();
-
-    div2 = this.createPopupName(term);
-    this.createPopupClose(div2);
-    this.createPopupDescription(term, div2);
-    this.createPopupWebpagesList(term, div2);
-    this.createPopupVideosList(term, div2);
-
-    var div6 = document.createElement('div');
-    div6.classList.add('image');
-    div2.appendChild(div6);
-    div6.outerHTML = '<img src="' + term.image + '" alt="Image">';
-
-    var div7 = document.createElement('div');
-    div7.classList.add('video');
-    div2.appendChild(div7);
-    div7.outerHTML = '<iframe src="' + term.embed_video + '</iframe>';
-  },
-
   moreInfoButton: function(term){
     
     var section = document.querySelector('#description-section');
@@ -99,6 +73,32 @@ DescriptionView.prototype = {
       event.preventDefault();
       this.moreInfoPopup(term);
     }.bind(this));
+  },
+
+  // More info popup.
+  moreInfoPopup: function(term){
+
+    // console.log(term);
+
+    var anchor = this.popupRemoveChildren();
+    var div1 = this.createPopupDiv(anchor);
+    this.createPopupInnerDiv();
+
+    div2 = this.createPopupName(term);
+    this.createPopupClose(div2);
+    this.createPopupDescription(term, div2);
+    this.createPopupList(term, div2, 'webpages',);
+    this.createPopupList(term, div2, 'videos');
+
+    var div6 = document.createElement('div');
+    div6.classList.add('image');
+    div2.appendChild(div6);
+    div6.outerHTML = '<img src="' + term.image + '" alt="Image">';
+
+    var div7 = document.createElement('div');
+    div7.classList.add('video');
+    div2.appendChild(div7);
+    div7.outerHTML = '<iframe src="' + term.embed_video + '</iframe>';
   },
 
   popupRemoveChildren: function(){
@@ -146,28 +146,15 @@ DescriptionView.prototype = {
     div.outerHTML = '<div class="description">' + term.add_info + '</div>';
   },
 
-  createPopupWebpagesList: function(term, outerDiv){
+  createPopupList: function(term, outerDiv, item){
     var div = document.createElement('div');
-    div.classList.add('webpages');
+    div.classList.add(item);
     outerDiv.appendChild(div);
-    term.webpages.forEach(function(webpage){
-      Object.keys(webpage).forEach(function eachKey(key){
+    term[item].forEach(function(obj){
+      Object.keys(obj).forEach(function eachKey(key){
         var a = document.createElement('a');
         div.appendChild(a);
-        a.outerHTML = '<a href="' + webpage[key] + '" target="_blank">' + key + '</a><br>';
-      });
-    });
-  },
-
-  createPopupVideosList: function(term, outerDiv){
-    var div = document.createElement('div');
-    div.classList.add('videos');
-    outerDiv.appendChild(div);
-    term.videos.forEach(function(video){
-      Object.keys(video).forEach(function eachKey(key){
-        var a = document.createElement('a');
-        div.appendChild(a);
-        a.outerHTML = '<a href="' + video[key] + '" target="_blank">' + key + '</a><br>';
+        a.outerHTML = '<a href="' + obj[key] + '" target="_blank">' + key + '</a><br>';
       });
     });
   },
