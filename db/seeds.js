@@ -24,7 +24,7 @@ db.data.insert([
     "name": "method",
     "description": "An action that an object is able to perform.",
     "keywords": ["object"],
-    "image": "",
+    "image": "/client/build/images/method.png",
     "tags": ["function", "class", "object"],
     "add_info": "A method defines the behaviour of the objects that are created from the class. Consider the example of an object of the type 'person,' created using the person class. Methods associated with this class could consist of things like walking and driving. Methods are sometimes confused with functions, but they are distinct.",
     "webpages": [
