@@ -18,13 +18,14 @@ db.data.insert([
     "videos": [
       {"YouTube video": "https://www.youtube.com/watch?v=1OZrWqVncsU"}
     ],
+    "embed_video": "",
     "audio": ""
   },
   {
     "name": "method",
     "description": "An action that an object is able to perform.",
     "keywords": ["object"],
-    "image": "/client/build/images/method.png",
+    "image": "./client/build/images/method.png",
     "tags": ["function", "class", "object"],
     "add_info": "A method defines the behaviour of the objects that are created from the class. Consider the example of an object of the type 'person,' created using the person class. Methods associated with this class could consist of things like walking and driving. Methods are sometimes confused with functions, but they are distinct.",
     "webpages": [
@@ -34,6 +35,7 @@ db.data.insert([
     "videos": [
       {"YouTube video:": "https://www.youtube.com/watch?v=_rsKeFaGx48"}
     ],
+    "embed_video": "https://www.youtube.com/embed/1OZrWqVncsU",
     "audio": ""
   },
   {
@@ -52,6 +54,8 @@ db.data.insert([
       {"Video discussing Properties": "https://www.youtube.com/watch?v=grcPxVOnZpY"},
       {"Functional Properties": "https://www.youtube.com/watch?v=qzzFHpn69UQ"},
       {"hasattr": "https://www.youtube.com/watch?v=GAlH10AY7YI"}
-    ]
+    ],
+    "embed_video": "",
+    "audio": ""
   }
 ]);
