@@ -228,8 +228,13 @@ TestView.prototype = {
         op -= op * 0.1;
     }, 50);
     console.log("section faded");
+    var testView = new TestView();
+    testView.repopulate(section)
   },
 
+  repopulate: function(section) {
+    console.log(section);
+  }
 }
 
 module.exports = TestView;
