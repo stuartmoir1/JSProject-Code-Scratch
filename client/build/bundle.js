@@ -70,6 +70,7 @@
 // 
 var AjaxRequest = __webpack_require__(1);
 var MainView = __webpack_require__(2);
+var DropdownView = __webpack_require__(4)
 
 var url = 'http://localhost:3000/api/main';
 
@@ -77,8 +78,10 @@ window.addEventListener('load', function(){
 
   var ajaxRequest = new AjaxRequest(url);
   var mainView = new MainView();
+  var dropdownView = new DropdownView()
 
   ajaxRequest.getData(mainView.render);
+  ajaxRequest.getData(dropdownView.render);
   
 });
 
@@ -102,7 +105,7 @@ AjaxRequest.prototype = {
     request.onload = function(){
       if (request.status === 200){
         var jsonString = request.responseText;
-        console.log(jsonString);
+        // console.log(jsonString);
         //localStorage.setItem('countries', jsonString);
         this.data = JSON.parse(jsonString);
         callback(this.data);
@@ -130,7 +133,7 @@ var MainView = function(){
 MainView.prototype = {
 
   render: function(data){
-    console.log(data);
+    // console.log(data);
 
     var button = document.querySelector('#button-submit');
     button.addEventListener('click', function(event){
@@ -138,7 +141,7 @@ MainView.prototype = {
       
       var input = document.querySelector('#search-text').value;
 
-      var term = data.find(function(element){
+      var term = data.find(function(element,){
         return element.name === input;
       });
 
@@ -149,7 +152,12 @@ MainView.prototype = {
   }
 }
 
+
 module.exports = MainView;
+
+
+
+
 
 /***/ }),
 /* 3 */
@@ -182,7 +190,7 @@ DescriptionView.prototype = {
       button = document.querySelector('#test-button');
       button.addEventListener('click', function(event){
         event.preventDefault();
-        console.log("test button clicked");
+        // console.log("test button clicked");
         //link from here to another view which allows us to add the fade function
         var descriptionView = new DescriptionView();
         descriptionView.getKeyword(term);
@@ -190,7 +198,7 @@ DescriptionView.prototype = {
   },
 
   getKeyword: function(term) {
-    console.log(term.keywords);
+    // console.log(term.keywords);
     var section = document.querySelector('#description-section');
     var descriptionView = new DescriptionView();
     descriptionView.fade(section)
@@ -207,12 +215,70 @@ DescriptionView.prototype = {
         keyWord.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op -= op * 0.1;
     }, 50);
-    console.log("section faded");
+    // console.log("section faded");
   }
 
 }
 
 module.exports = DescriptionView;
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var DescriptionView = __webpack_require__(3);
+
+// Constructor
+var DropdownView = function(){
+
+}
+
+// Methods
+
+DropdownView.prototype = {
+
+  render: function(data){
+    console.log(data);
+
+      // ******=============================================================
+
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      
+      var dropDown = document.querySelector("#dropdown-content");
+      for (var element of data){  
+        var section = dropDown.appendChild(document.createElement('a'))
+        section.outerHTML = '<a href=" ">' + element.name + '</a>'
+      }
+
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+          // var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    }
+  }
+
+    // ******================================================================
+
+   
+ 
+
+module.exports = DropdownView;
+
+
+
+
 
 
 /***/ })

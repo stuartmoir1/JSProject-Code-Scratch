@@ -25,7 +25,7 @@ DescriptionView.prototype = {
       button = document.querySelector('#test-button');
       button.addEventListener('click', function(event){
         event.preventDefault();
-        console.log("test button clicked");
+        // console.log("test button clicked");
         //link from here to another view which allows us to add the fade function
         var descriptionView = new DescriptionView();
         descriptionView.getKeyword(term);
@@ -33,7 +33,7 @@ DescriptionView.prototype = {
   },
 
   getKeyword: function(term) {
-    console.log(term.keywords);
+    // console.log(term.keywords);
     var section = document.querySelector('#description-section');
     var descriptionView = new DescriptionView();
     descriptionView.fade(section)
@@ -50,7 +50,7 @@ DescriptionView.prototype = {
         keyWord.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op -= op * 0.1;
     }, 50);
-    console.log("section faded");
+    // console.log("section faded");
   }
 
 }
