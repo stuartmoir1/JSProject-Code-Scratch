@@ -252,7 +252,16 @@ TestView.prototype = {
       + '<input type="text" id="answer2" alt="Enter answer 2 here">' + ' '
       + term.testDescription[2] + ' '
       + '<input type="submit" id="submit" value="submit"' + ' ' + '</form>';
+    var submitButton = document.querySelector('#submit');
+    submitButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      var testAnswers = [];
+      var answ1 = document.getElementById('answer1').value;
+      var answ2 = document.getElementById('answer2').value;
+      testAnswers.push(answ1, answ2);
+      console.log(testAnswers);
 
+    })
   }
 
 
