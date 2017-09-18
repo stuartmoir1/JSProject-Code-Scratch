@@ -56,5 +56,25 @@ db.data.insert([
       {"Functional Properties": "https://www.youtube.com/watch?v=qzzFHpn69UQ"},
       {"hasattr": "https://www.youtube.com/watch?v=GAlH10AY7YI"}
     ]
+  },
+
+  {
+    "name": "",
+    "description": "",
+    "keywords": ["", ""],
+    "testDescription": ["", "", "."],
+    "image": "",
+    "tags": ["", ""],
+    "add_info": "",
+    "webpages": [
+      {"What is a ": ""},
+      {" in StackOverflow": ""},
+      {"Wikipedia ()": ""}
+    ],
+    "videos": [
+      {"Video discussing Properties": "https://www.youtube.com/watch?v=grcPxVOnZpY"},
+      {"Functional Properties": "https://www.youtube.com/watch?v=qzzFHpn69UQ"},
+      {"hasattr": "https://www.youtube.com/watch?v=GAlH10AY7YI"}
+    ]
   }
 ]);
