@@ -220,9 +220,6 @@ DescriptionView.prototype = {
 
   // More info popup.
   moreInfoPopup: function(term){
-    console.log('In function moreInfoPopup...');
-
-    console.log('Argument: ', term);
 
     var anchor = document.querySelector('#popup-anchor');
     while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
@@ -246,32 +243,29 @@ DescriptionView.prototype = {
     h2.innerHTML = term.name;
 
     var a = document.createElement('a');
-    innerDiv2.appendChild(a);
-    a.outerHTML = '<a class="close" href="#">&times</a>';
+    a.href = "#";
+    a.innerHTML = "&times";
+    a.classList.add('close');
     a.addEventListener('click', function(){
-      console.log('The popup should close...', this);
-    })
+      while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
+    });
+    innerDiv2.appendChild(a);
+
     var div3 = document.createElement('div');
     innerDiv2.appendChild(div3);
     div3.outerHTML = '<div class="description">' + term.add_info + '</div>';
   },
 
   moreInfoButton: function(term){
-
-    console.log('In function moreInfoButton...');
-
+    
     var section = document.querySelector('#description-section');
-
     var infoButton = document.createElement('button');
     section.appendChild(infoButton);
-    infoButton.outerHTML = '<button type="button" id="info-button" alt="Info">Info</button>';
-
-    console.log(infoButton.outerHTML);
+    infoButton.outerHTML = '<button type="button" id="info-button">Info</button>';
 
     var button = document.querySelector('#info-button');
     button.addEventListener('click', function(event){
       event.preventDefault();
-      console.log('Info button clicked...');
       this.moreInfoPopup(term);
     }.bind(this));
   }
