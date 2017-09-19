@@ -178,6 +178,25 @@ db.data.insert([
     ],
      "embed_video": "https://www.youtube.com/watch?v=szYzBC89CPE",
      "audio": "./client/build/audio/encapsulation.mp3"
+  },
+
+  {
+    "name": "hash",
+    "description": "A Hash is a dictionary-like collection of unique keys and their values.",
+    "keywords": ["keys", "values"],
+    "testDescription": ["A Hash is a dictionary-like collection of unique ", " and their ", "."],
+    "tags": ["Ruby", "variable"],
+    "add_info": "A Hash is a collection of key-value pairs like this: 'employee' => 'salary'. It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.  The order in which you traverse a hash by either key or value may seem arbitrary and will generally not be in the insertion order. If you attempt to access a hash with a key that does not exist, the method will return nil.",
+    "webpages": [
+      {"What is a hash": "http://rubylearning.com/satishtalim/ruby_hashes.html"},
+      {"Hash syntax in StackOverflow": "https://stackoverflow.com/questions/4563766/hash-syntax-in-ruby"}
+    ],
+    "videos": [
+      {"Video writing hashes": "https://www.youtube.com/watch?v=3tSPTv27QcY"},
+      {"Ruby data structures - hashes": "https://www.youtube.com/watch?v=QOytrJL4c2c"}
+    ],
+     "embed_video": "https://www.youtube.com/watch?v=SYMM9qNOXg8",
+     "audio": "./client/build/audio/hash"
   }
 
   // {
