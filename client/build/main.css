@@ -6,60 +6,36 @@ body {
 }
 
 h1 {
-    text-align: center;
+/*    text-align: center;
     font-size: 40px;
-}
-
-/*=======Input & Search========*/
-/*input[type="text"] {
-height: 20px;
-width: 100px;
--webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-color: black;
-align-self: center;
-border-radius: 5%;
-border-style: solid;
-border-color: white;
-background-color: white;
-}
-
-input[type=text]:focus {
+    width: 89%;*/
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
     width: 80%;
-}
-
-  background-color: #EBBAB9;
-  font-family: 'Courier New';
-  text-align: center;
-},
-*/
-
-.searchForm {
-    text-align: -webkit-center;
-}
-
-
-input[type="submit"] {
-    color: black;
-    height: 20px;
-    width: 50px;
-    border-radius: 5%;
-    border: none;
-    background-color: white
 }
 
 /* ========Dropdown Button======== */
 
 .name {
-  font-size: 48px;
+  font-size: 64px;
+}
+
+#searchForm{
+  text-align: center;
+  padding-top: 20px;
 }
 
 .form-control {
-  font-size: 48px;
-  background-color: #EBBAB9;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 64px;
+  background-color: #2DAAE1;
   text-align: center;
-  border: 0;
-  font-family: 'Courier New';
+  border-width: 0px;
+  border: none;
+  align-self: center;
+  width: 80%;
+  color: white;
 }
 
 .button {
@@ -68,6 +44,8 @@ input[type="submit"] {
   font-family: 'Courier New';
   border-radius: 5px;
 }
+
+/* Popup */
 
 .overlay {
   position: fixed;
@@ -232,27 +210,27 @@ form#test-form {
 }
 
 /*=========Description================*/
-#description-section {
+/*#description-section {
     margin-right: 100px;
     margin-left: 100px;
     text-align: -webkit-left;
     font-size: 30px;
-}
+}*/
 
 /* Container for flexboxes */
-.direct-search {
+/*.direct-search {
     display: -webkit-flex;
     display: flex;
-}
+}*/
 
 /* Create three equal columns that sits next to each other */
-.column {
+/*.column {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     padding: 10px;
     text-align: -webkit-center;
-}
+}*/
 
 @media (max-width: 600px) {
     .row {
