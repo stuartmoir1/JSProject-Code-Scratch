@@ -210,7 +210,6 @@ var TestView = function() {
 TestView.prototype = {
 
   render: function(term) {
-    console.log(term.keywords);
     var section = document.querySelector('#description-text');
     var button = document.querySelector('#test-button');
     var testView = new TestView();
@@ -230,7 +229,6 @@ TestView.prototype = {
         section.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op -= op * 0.1;
     }, 50);
-    console.log("section faded");
     var self = this;
     setTimeout(function(){
       self.repopulate(term);
@@ -271,7 +269,6 @@ TestView.prototype = {
   },
 
   compare: function(data, term){
-    console.log(term);
     if (data[0] === term.keywords[0]){
       var answ1 = document.getElementById('answer1');
       answ1.style.color = "Green";
