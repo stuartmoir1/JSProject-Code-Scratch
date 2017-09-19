@@ -113,4 +113,23 @@ db.data.insert([
   //     {"Programming fundamentals - variables": ""}
   //   ]
   // }
+
+  // {
+  //   "name": "",
+  //   "description": "",
+  //   "keywords": ["", ""],
+  //   "testDescription": [" ", "", ""],
+  //   "image": "",
+  //   "tags": ["", "", ""],
+  //   "add_info": "",
+  //   "webpages": [
+  //     {"What is a variable": ""},
+  //     {"Variable in StackOverflow": ""},
+  //     {"Wikipedia (variable)": ""}
+  //   ],
+  //   "videos": [
+  //     {"Video discussing variables": ""},
+  //     {"Programming fundamentals - variables": ""}
+  //   ]
+  // }
 ]);
