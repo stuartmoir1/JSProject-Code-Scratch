@@ -2,49 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
   <title>JavaScript Project</title>
   <script src='bundle.js'></script>
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="bundle.js"></script>
   <script>
-  function allowDrop(ev) {
+    function allowDrop(ev) {
       ev.preventDefault();
-  }
+    }
 
-  function drag(ev) {
+    function drag(ev) {
       ev.dataTransfer.setData("text", ev.target.id);
-  }
+    }
 
-  function drop(ev) {
+    function drop(ev) {
       ev.preventDefault();
       var data = ev.dataTransfer.getData("text");
       ev.target.appendChild(document.getElementById(data));
-  }
+    }
   </script>
 </head>
 <body>
 
-  <h1>newbie</h1>
+  <h1>noobie</h1>
+
+<!-- ======================dropdown menu============================ -->
 
   <nav class="dropdown">
-  <button onclick="" class="dropbtn">Dropdown</button>
+    <button onclick="" class="dropbtn">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </button>
     <section class="dropdown-content" id="dropdown-content">
     </section>  
-  </nav><br><br>
+  </nav>
+
+  <!-- ====================search box & sumit button================== -->
 
   <section id="search-section">
-    <form id="searchForm" autocomplete="on">
-      <input type="text" class="form-control" id="search-text" placeholder="Enter Search" alt="Search Box"><br><br>
-      <input type="submit" class="button" id="button-submit" value="Search" alt="Submit search">
+    <form class="searchForm" id="searchForm" autocomplete="on">
+      <input type="text" class="form-control" id="search-text" placeholder="Search term" alt="Search Box">
+      <input type="submit" class="button" id="button-submit" value="Find" alt="Submit search">
     </form>
-  </section>
+  </section><br><br>
+
+  <!-- ================================description================================ -->
 
   <section id="description-section">
-    
-  </section>
+
+  </section><br><br>
+
+  <!-- =================================drag & drop=============================== -->
   <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
   <br>
-  <p id="drag1" draggable="true" ondragstart="drag(event)">Demo</p>
+  <p id="drag1" draggable="true" ondragstart="drag(event)"></p>
+
+  <section class="direct-search">
+    <section class="column1">
+    <img src="/images/image.png" class="image">
+      <h3>Heading One</h3>
+      <p>This is where the content will go</p>
+    </section>
+    <section class="column2">
+    <img src="/images/image.png" class="image">
+      <h3>Heading Two</h3>
+      <p>This is where the content will go</p>
+    </section>
+    <section class="column3">
+    <img src="/images/image.png" class="image">
+      <h3>Heading Three</h3>
+      <p>This is where the content will go</p>
+    </section>
+  </section>
 
 </body>
 </html>
