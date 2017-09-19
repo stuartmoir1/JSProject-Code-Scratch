@@ -35,8 +35,13 @@ TestView.prototype = {
 
   repopulate: function(term) {
     var self = this;
+
     var section = document.querySelector('#description-section');
     while (section.firstChild){ section.removeChild(section.firstChild); };
+    //
+    // var pName = document.createElement('p');
+    // pName.innerText = term.name;
+    // section.appendChild(pName)
 
     var form = document.createElement('form');
     section.appendChild(form);
@@ -47,8 +52,8 @@ TestView.prototype = {
       + '<input type="text" id="answer2" alt="Enter answer 2 here">' + ' '
       + term.testDescription[2] + ' '
       + '<input type="submit" id="submit" value="submit"' + ' ' + '</form>';
-    var submitButton = document.querySelector('#submit');
 
+    var submitButton = document.querySelector('#submit');
     submitButton.addEventListener('click', function(e) {
       e.preventDefault();
       var testAnswers = [];
@@ -62,9 +67,16 @@ TestView.prototype = {
 
   compare: function(data, term){
     console.log(term);
+    // if(data[0] === term.keywords[0] && data[1] === term.keywords[1]) {
+    //   section = document.querySelector('#test-form')
+    //   section.style.transform = "rotate(360deg)";
+    // }
+
     if (data[0] === term.keywords[0]){
       var answ1 = document.getElementById('answer1');
       answ1.style.color = "Green";
+      // answ1.style.transform = "rotate(360deg)";
+      // answ1.style.transitionDuration = "5s";
     } else {
       var answ1 = document.getElementById('answer1');
       answ1.style.color = "Red";
@@ -73,13 +85,15 @@ TestView.prototype = {
     if (data[1] == term.keywords[1]){
       var answ2 = document.getElementById('answer2');
       answ2.style.color = "Green";
+      // answ2.style.transform = "rotate(360deg)";
+
     } else {
       var answ2 = document.getElementById('answer2');
       answ2.style.color = "Red";
     };
+    }
   }
 
 
-}
 
 module.exports = TestView;
