@@ -119,6 +119,26 @@ db.data.insert([
     ],
      "embed_video": "https://www.youtube.com/watch?v=L1-zCdrx8Lk",
      "audio": "./client/build/audio/abstraction.mp3"
+  },
+
+  {
+    "name": "array",
+    "description": "An array is a data structure that contains a group of elements, which are typically all of the same data type",
+    "keywords": ["elements", "data"],
+    "testDescription": ["An array is a data structure that contains a group of ", ", which are typically all of the same ", " type"],
+    "tags": ["variable", "string", "integer"],
+    "add_info": "An array, is a data structure consisting of a collection of elements (values or variables), each identified by at least one array index or key. An array is stored so that the position of each element can be computed from its index tuple by a mathematical formula.",
+    "webpages": [
+      {"What is an array": "https://techterms.com/definition/array"},
+      {"Array in StackOverflow (Java)": "https://stackoverflow.com/documentation/java/99/arrays#t=201709192017060243788"},
+      {"Wikipedia (array)": "https://en.wikipedia.org/wiki/Array_data_structure"}
+    ],
+    "videos": [
+      {"Explaining Java array": "https://www.youtube.com/watch?v=7VWPiKoia8o"},
+      {"Explaining Ruby array": "https://www.youtube.com/watch?v=REDH9OzdQ_I"}
+    ],
+     "embed_video": "https://www.youtube.com/watch?v=Zj_UC7c1nh4",
+     "audio": "./client/build/audio/array.mp3"
   }
 
   // {
@@ -126,7 +146,6 @@ db.data.insert([
   //   "description": "",
   //   "keywords": ["", ""],
   //   "testDescription": [" ", "", ""],
-  //   "image": "",
   //   "tags": ["", "", ""],
   //   "add_info": "",
   //   "webpages": [
