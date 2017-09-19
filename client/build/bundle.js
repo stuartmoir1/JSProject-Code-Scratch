@@ -232,7 +232,6 @@ DescriptionView.prototype = {
     }.bind(this));
   },
 
-  // More info popup.
   moreInfoPopup: function(term){
 
     // console.log(term);
@@ -241,7 +240,7 @@ DescriptionView.prototype = {
     this.createPopupInnerDiv();
 
     div2 = this.createPopupName(term);
-    this.createPopupClose(div2);
+    this.createPopupClose(anchor, div2);
     this.createPopupDescription(term, div2);
     this.createPopupList(term, div2, 'webpages',);
     this.createPopupList(term, div2, 'videos');
@@ -278,7 +277,7 @@ DescriptionView.prototype = {
     return div;
   },
 
-  createPopupClose: function(div){
+  createPopupClose: function(anchor, div){
     var a = document.createElement('a');
     a.href = "#";
     a.innerHTML = "&times";
