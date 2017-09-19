@@ -52,8 +52,10 @@ h1 {
 }
 
 #button-go {
-  /*margin-right: 20px;*/
-  /*height: 35px;
+  background-color: #2DAAE1;
+  border-color: #2DAAE1;
+  /*margin-right: 20px;
+  height: 105px;
   width: 105px;*/
 }
 
