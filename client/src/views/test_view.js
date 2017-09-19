@@ -95,9 +95,11 @@ TestView.prototype = {
       if(element === term.keywords[count]){
           var answer = document.getElementById('answer'+(count+1));
           answer.style.color = "Green";
+          alert('Well done, Noobie! You got it right!');
         } else {
           var answer = document.getElementById('answer'+(count+1));
           answer.style.color = "Red";
+          alert('Doh, Noobie! That\`s the wrong answer! Try again');
         };
         count ++;
     })
