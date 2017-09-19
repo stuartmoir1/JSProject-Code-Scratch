@@ -37,15 +37,23 @@ TestView.prototype = {
     var section = document.querySelector('#description-section');
     while (section.firstChild){ section.removeChild(section.firstChild); };
 
+    var questionText = [];
+    var count = 0;
+
     var form = document.createElement('form');
     section.appendChild(form);
-    form.outerHTML = '<form id="test-form" alt="test question">'
-      + term.testDescription[0] + ' '
-      + '<input type="text" id="answer1" alt="Enter answer 1 here">' + ' '
-      + term.testDescription[1] + ' '
-      + '<input type="text" id="answer2" alt="Enter answer 2 here">' + ' '
-      + term.testDescription[2] + ' '
+
+    for (var i = 0; i < term.keywords.length; i++) {
+      var text = term.testDescription[i] + ' ' + '<input type="text" id="answer' +(i+1)+'" alt="Enter answer ' +(i+1)+' here">';
+      questionText.push(text);
+    }
+    var joinedText = questionText.join(' ');
+    var lastElement = term.testDescription[term.testDescription.length-1];
+
+    form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
       + '<input type="submit" id="submit" value="submit"' + ' ' + '</form>';
+
+    console.log(form.outerHTML);
 
     var submitButton = document.querySelector('#submit');
     submitButton.addEventListener('click', function(e) {
