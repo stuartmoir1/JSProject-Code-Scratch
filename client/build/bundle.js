@@ -299,7 +299,7 @@ MainView.prototype = {
     button.addEventListener('click', function(event){
       event.preventDefault();
       
-      var input = document.querySelector('#search-text').value;
+      var input = document.querySelector('#search-text').value.toLowerCase();
 
       var term = data.find(function(element,){
         return element.name === input;
