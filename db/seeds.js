@@ -107,7 +107,7 @@ db.data.insert([
     "testDescription": ["Using abstraction, a ", " hides all but the relevant data about an ", " in order to reduce complexity and increase ", "."],
     "image": "",
     "tags": ["object", "object-oriented propgramming", "variable"],
-    "add_info": "Abstraction is a technique for arranging complexity of computer systems. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level. The programmer works with an idealized interface (usually well defined) and can add additional levels of functionality that would otherwise be too complex to handle.",
+    "add_info": "Abstraction is one of the four fundamental OOP concepts. The other three are inheritance, polymorphism, and encapsulation.  Abstraction is a technique for arranging complexity of computer systems. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level. The programmer works with an idealized interface (usually well defined) and can add additional levels of functionality that would otherwise be too complex to handle.",
     "webpages": [
       {"What is abstraction": "http://whatis.techtarget.com/definition/abstraction"},
       {"Abstraction in StackOverflow": "https://stackoverflow.com/questions/7028242/what-is-abstraction"},
@@ -158,6 +158,26 @@ db.data.insert([
     ],
      "embed_video": "https://www.youtube.com/watch?v=G0q78w5dmcE",
      "audio": "./client/build/audio/casting.mp3"
+  },
+
+  {
+    "name": "encapsulation",
+    "description": "Encapsulation in Java is a mechanism of wrapping the variables and the methods together as a single unit.",
+    "keywords": ["variables", "methods"],
+    "testDescription": ["Encapsulation in Java is a mechanism of wrapping the ", " and the ", " together as a single unit."],
+    "tags": ["inheritance", "polymorphism", "abstraction", "Java"],
+    "add_info": "Encapsulation is one of the four fundamental OOP concepts. The other three are inheritance, polymorphism, and abstraction. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class.",
+    "webpages": [
+      {"What is encapsulation Java": "https://beginnersbook.com/2013/05/encapsulation-in-java/"},
+      {"Encapsulation in StackOverflow": "https://stackoverflow.com/questions/4772956/encapsulation-concept"},
+      {"Wikipedia (encapsulation)": "https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)"}
+    ],
+    "videos": [
+      {"Video tutorial encapsulation": "https://www.youtube.com/watch?v=JQ8CuedDchw"},
+      {"Video explaining encapsulation": "https://www.youtube.com/watch?v=tt_astMjep0"}
+    ],
+     "embed_video": "https://www.youtube.com/watch?v=szYzBC89CPE",
+     "audio": "./client/build/audio/encapsulation.mp3"
   }
 
   // {
@@ -179,5 +199,4 @@ db.data.insert([
   //    "embed_video": "",
   //    "audio": "./client/build/audio/"
   // }
-
 ]);
