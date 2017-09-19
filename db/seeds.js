@@ -19,7 +19,7 @@ db.data.insert([
     "videos": [
       {"YouTube video": "https://www.youtube.com/watch?v=1OZrWqVncsU"}
     ],
-    "embed_video": "",
+    "embed_video": "https://www.youtube.com/watch?v=1OZrWqVncsU",
     "audio": "./client/build/audio/object.mp3"
   },
   {
@@ -38,7 +38,7 @@ db.data.insert([
       {"YouTube video:": "https://www.youtube.com/watch?v=_rsKeFaGx48"}
     ],
     "embed_video": "https://www.youtube.com/embed/1OZrWqVncsU",
-    "audio": ""
+    "audio": "./client/build/audio/method.mp3"
   },
   {
     "name": "properties",
@@ -55,10 +55,10 @@ db.data.insert([
     ],
     "videos": [
       {"Video discussing Properties": "https://www.youtube.com/watch?v=grcPxVOnZpY"},
-      {"Functional Properties": "https://www.youtube.com/watch?v=qzzFHpn69UQ"},
-      {"hasattr": "https://www.youtube.com/watch?v=GAlH10AY7YI"}
+      {"Functional Properties": "https://www.youtube.com/watch?v=qzzFHpn69UQ"}
     ],
-    "audio": "./client/build/audio/"
+    "embed_video": "https://www.youtube.com/watch?v=GAlH10AY7YI",
+    "audio": "./client/build/audio/property.mp3"
   },
 
   {
@@ -75,9 +75,9 @@ db.data.insert([
       {"Wikipedia (variable)": "https://en.wikipedia.org/wiki/Variable_(computer_science)"}
     ],
     "videos": [
-      {"Video discussing variables": "https://www.youtube.com/watch?v=aeoGGabJhAQ"},
-      {"Programming fundamentals - variables": "https://www.youtube.com/watch?v=t4ND-_kTxcI"}
+      {"Video discussing variables": "https://www.youtube.com/watch?v=aeoGGabJhAQ"}
     ],
+    "embed_video": "https://www.youtube.com/watch?v=t4ND-_kTxcI",
     "audio": "./client/build/audio/variable.mp3"
   },
 
@@ -94,10 +94,9 @@ db.data.insert([
       {"Wikipedia (class)": "https://en.wikipedia.org/wiki/Class_(computer_programming)"}
     ],
     "videos": [
-      {"OO classes and objects": "https://www.youtube.com/watch?v=POrU7vcKB_k"},
-      {"What are classes in programming?": "https://www.youtube.com/watch?v=BZ8r7pC9bHY"}
+      {"OO classes and objects": "https://www.youtube.com/watch?v=POrU7vcKB_k"}
     ],
-    "embed_video": "",
+    "embed_video": "https://www.youtube.com/watch?v=BZ8r7pC9bHY",
     "audio": "./client/build/audio/class.mp3"
   }
 
