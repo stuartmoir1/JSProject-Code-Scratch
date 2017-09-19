@@ -14,7 +14,7 @@ AjaxRequest.prototype = {
     request.onload = function(){
       if (request.status === 200){
         var jsonString = request.responseText;
-        // console.log(jsonString);
+        //console.log(jsonString);
         //localStorage.setItem('countries', jsonString);
         this.data = JSON.parse(jsonString);
         callback(this.data);
