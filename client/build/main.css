@@ -1,4 +1,4 @@
-/*body {
+body {
 
   background-color: #2DAAE1;
   font-family: 'Cutive Mono', monospace;
@@ -6,68 +6,68 @@
 }
 
 h1 {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
-    font-size: 40px;
-}
-
-/*=======Input & Search========*/
-/*input[type="text"] {
-height: 20px;
-width: 100px;
--webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-color: black;
-align-self: center;
-border-radius: 5%;
-border-style: solid;
-border-color: white;
-background-color: white;
-}
-
-input[type=text]:focus {
     width: 80%;
-}
-
-  background-color: #EBBAB9;
-  font-family: 'Courier New';
-  text-align: center;
-},
-*/
-
-.searchForm {
-    text-align: -webkit-center;
-}
-
-
-input[type="submit"] {
-    color: black;
-    height: 20px;
-    width: 50px;
-    border-radius: 5%;
-    border: none;
-    background-color: white
 }
 
 /* ========Dropdown Button======== */
 
 .name {
-  font-size: 48px;
+  font-size: 96px;
+}
+
+#searchForm {
+  text-align: center;
+  padding-top: 20px;
 }
 
 .form-control {
-  font-size: 48px;
-  background-color: #EBBAB9;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 64px;
+  background-color: #2DAAE1;
   text-align: center;
-  border: 0;
-  font-family: 'Courier New';
+  border-width: 0px;
+  border: none;
+  align-self: center;
+  width: 80%;
+  color: white;
+  border-style: none;
 }
 
 .button {
   font-size: 24px;
   background-color: #EBBAB9;
-  font-family: 'Courier New';
+  font-family: 'Cutive Mono', monospace;
   border-radius: 5px;
+  height: 35px;
+  width: 105px;
+  border-style: solid;
+  color: white;
+  border-width: 1px;
+  border-color: #ffffff;
+  margin: 0 20px 0 20px;
 }
+
+#button-go {
+  /*margin-right: 20px;*/
+  /*height: 35px;
+  width: 105px;*/
+}
+
+#button-random {
+  /*margin-left: 20px;*/
+ /* height: 35px;
+  width: 105px;*/
+}
+
+#button-go, #button-random {
+  display: inline-block;
+}
+
+/* Popup */
 
 .overlay {
   position: fixed;
@@ -87,7 +87,7 @@ input[type="submit"] {
 }
 
 .popup {
-  margin: 70px auto;
+  margin: 50px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
@@ -99,6 +99,8 @@ input[type="submit"] {
 
 .popup h2 {
   margin-top: 0;
+  color: black;
+  font-style: ;
   /*color: #333;*/
   /*font-family: Tahoma, Arial, sans-serif;*/
 }
@@ -110,43 +112,18 @@ input[type="submit"] {
   /*transition: all 200ms;*/
   font-size: 30px;
   font-weight: bold;
-},
-/*
-form#test-form {
-  transform:rotate(360deg);
-  transition-duration:5s;
-}*/
-
-/*#answer1 {
-    width: 80px;
-    height: 20px;
-    background: blue;
-    position: relative;
-    animation: mymove 3s;
-    animation-fill-mode: forwards;
-},
-
-@keyframes mymove {
-    from {top: 40px;}
-    to {top: 200px;}
-}*/
   text-decoration: none;
-  /*color: #333;*/
 }
 
 .popup .close:hover {
-  color: #EBBAB9;
+  color: #2DAAE1;
 }
-
-/*.popup .content {
-  max-height: 50%;
-  overflow: auto;
-}*/
 
 .popup .description {
   max-height: 50%;
   overflow: auto;
   padding: 0 0 20px 0;
+  color: black;
 }
 
 .popup .webpages {
@@ -161,18 +138,19 @@ form#test-form {
   height: 50;
   width: 50;
   padding: 0 0 20px 0;
+  color: black;
 }
 
 .popup .video {
-  height: 315;
-  width: 420;
+  height: 50;
+  width: 100;
 }
 
-/*@media screen and (max-width: 700px){
+@media screen and (max-width: 700px){
   .popup{
     width: 70%;
   }
-}*/
+}
 
 /* Dropdown Button */
 
@@ -233,26 +211,23 @@ form#test-form {
 
 /*=========Description================*/
 #description-section {
-    margin-right: 100px;
-    margin-left: 100px;
-    text-align: -webkit-left;
-    font-size: 30px;
+    text-align: center;
 }
 
 /* Container for flexboxes */
-.direct-search {
+/*.direct-search {
     display: -webkit-flex;
     display: flex;
-}
+}*/
 
 /* Create three equal columns that sits next to each other */
-.column {
+/*.column {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     padding: 10px;
     text-align: -webkit-center;
-}
+}*/
 
 @media (max-width: 600px) {
     .row {
@@ -267,5 +242,31 @@ img.image {
     align-items: -webkit-center;
 }
 
+#description-text {
+  text-align: center;
+  font-size: 36px;
+  padding: 0 10px 0 10px;
+}
 
+/*
+form#test-form {
+  transform:rotate(360deg);
+  transition-duration:5s;
+}*/
 
+/*#answer1 {
+    width: 80px;
+    height: 20px;
+    background: blue;
+    position: relative;
+    animation: mymove 3s;
+    animation-fill-mode: forwards;
+},
+
+@keyframes mymove {
+    from {top: 40px;}
+    to {top: 200px;}
+}*/
+  /*text-decoration: none;*/
+  /*color: #333;*/
+/*}*/
