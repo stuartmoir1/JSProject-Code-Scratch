@@ -70,6 +70,7 @@
 // 
 var AjaxRequest = __webpack_require__(1);
 var MainView = __webpack_require__(2);
+var DropdownView = __webpack_require__(4)
 
 var url = 'http://localhost:3000/api/main';
 
@@ -77,8 +78,10 @@ window.addEventListener('load', function(){
 
   var ajaxRequest = new AjaxRequest(url);
   var mainView = new MainView();
+  var dropdownView = new DropdownView()
 
   ajaxRequest.getData(mainView.render);
+  ajaxRequest.getData(dropdownView.render);
   
 });
 
@@ -130,6 +133,7 @@ var MainView = function(){
 MainView.prototype = {
 
   render: function(data){
+    
     //console.log(data);
 
     var button = document.querySelector('#button-submit');
@@ -138,7 +142,7 @@ MainView.prototype = {
       
       var input = document.querySelector('#search-text').value;
 
-      var term = data.find(function(element){
+      var term = data.find(function(element,){
         return element.name === input;
       });
 
@@ -149,7 +153,12 @@ MainView.prototype = {
   }
 }
 
+
 module.exports = MainView;
+
+
+
+
 
 /***/ }),
 /* 3 */
@@ -166,6 +175,7 @@ DescriptionView.prototype = {
 
   render: function(term){
 
+    
     var section = document.querySelector('#description-section');
     while (section.firstChild){ section.removeChild(section.firstChild); };
 
@@ -187,7 +197,7 @@ DescriptionView.prototype = {
 
       button.addEventListener('click', function(event){
         event.preventDefault();
-        console.log("test button clicked");
+        // console.log("test button clicked");
         //link from here to another view which allows us to add the fade function
         var descriptionView = new DescriptionView();
         descriptionView.getKeyword(term);
@@ -198,7 +208,7 @@ DescriptionView.prototype = {
   },
 
   getKeyword: function(term) {
-    console.log(term.keywords);
+    // console.log(term.keywords);
     var section = document.querySelector('#description-section');
     var descriptionView = new DescriptionView();
     descriptionView.fade(section)
@@ -323,6 +333,72 @@ DescriptionView.prototype = {
 }
 
 module.exports = DescriptionView;
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var DescriptionView = __webpack_require__(3);
+
+// Constructor
+var DropdownView = function(){
+
+}
+
+// Methods
+DropdownView.prototype = {
+
+  render: function(data){
+    console.log(data);
+    
+    var descriptionView = new DescriptionView();
+    var dropDown = document.querySelector("#dropdown-content");
+    while (dropDown.firstChild){ dropDown.removeChild(dropDown.firstChild); };
+    for (var element of data){  
+      var anchor = document.createElement('a')
+      anchor.innerText = element.name;
+      anchor.href = "#"
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        for (var object of data){
+          if (object.name === this.innerText){
+            descriptionView.render(object);
+          }
+        }
+        
+      })
+      var section = dropDown.appendChild(anchor)
+    }
+
+
+      // Close the dropdown menu if the user clicks outside of it
+      // window.onclick = function(event) {
+      //   if (!event.target.matches('.dropbtn')) {
+
+      //     // var dropdowns = document.getElementsByClassName("dropdown-content");
+      //     var i;
+      //     for (i = 0; i < dropdowns.length; i++) {
+      //       var openDropdown = dropdowns[i];
+      //       if (openDropdown.classList.contains('show')) {
+      //         openDropdown.classList.remove('show');
+      //       }
+      //     }
+      //   }
+      // }
+    }
+  }
+
+    // ******================================================================
+
+   
+ 
+
+module.exports = DropdownView;
+
+
+
+
 
 
 /***/ })

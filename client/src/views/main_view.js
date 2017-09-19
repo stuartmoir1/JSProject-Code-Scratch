@@ -10,6 +10,7 @@ var MainView = function(){
 MainView.prototype = {
 
   render: function(data){
+    
     //console.log(data);
 
     var button = document.querySelector('#button-submit');
@@ -18,7 +19,7 @@ MainView.prototype = {
       
       var input = document.querySelector('#search-text').value;
 
-      var term = data.find(function(element){
+      var term = data.find(function(element,){
         return element.name === input;
       });
 
@@ -29,4 +30,8 @@ MainView.prototype = {
   }
 }
 
+
 module.exports = MainView;
+
+
+
