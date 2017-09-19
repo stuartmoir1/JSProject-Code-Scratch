@@ -7,9 +7,12 @@ TestView.prototype = {
   render: function(term) {
     var section = document.querySelector('#description-text');
     var button = document.querySelector('#test-button');
+    var infoButton = document.querySelector('#info-button');
+
     var testView = new TestView();
     testView.fade(section, term);
     testView.fade(button, term);
+    testView.fade(infoButton, term);
   },
 
   fade: function(section, term){
