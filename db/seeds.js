@@ -197,6 +197,26 @@ db.data.insert([
     ],
      "embed_video": "https://www.youtube.com/watch?v=SYMM9qNOXg8",
      "audio": "./client/build/audio/hash"
+  },
+
+  {
+    "name": "inheritance",
+    "description": "In object-oriented programming, inheritance enables new objects to take on the properties of existing objects.",
+    "keywords": ["object-oriented", "objects", "properties"],
+    "testDescription": ["In ", " programming, inheritance enables new ", " to take on the ", " of existing objects."],
+    "tags": ["object-oriented programming", "object", "properties", "encapsulation", "polymorphism", "abstraction"],
+    "add_info": "Inheritance is one of the four fundamental OOP concepts. The other three are encapsulation, polymorphism, and abstraction. A class that is used as the basis for inheritance is called a superclass or base class. A class that inherits from a superclass is called a subclass or derived class. The terms parent class and child class are also acceptable terms to use respectively. A child inherits visible properties and methods from its parent while adding additional properties and methods of its own.",
+    "webpages": [
+      {"What is inheritance": "http://whatis.techtarget.com/definition/inheritance"},
+      {"Difference between inheritance and polymorphism": "https://stackoverflow.com/questions/6308178/what-is-the-main-difference-between-inheritance-and-polymorphism"},
+      {"Wikipedia (inheritance)": "https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)"}
+    ],
+    "videos": [
+      {"Video what is inheritance": "https://www.youtube.com/watch?v=aFZ-0bbSLi8&t=111s"},
+      {"Tutorial for beginners": "https://www.youtube.com/watch?v=lz1Cx6GzOuc"}
+    ],
+     "embed_video": "https://www.youtube.com/watch?v=0PPKccntohM",
+     "audio": "./client/build/audio/inheritance.mp3"
   }
 
   // {
