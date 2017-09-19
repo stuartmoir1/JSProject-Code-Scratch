@@ -98,6 +98,27 @@ db.data.insert([
     ],
     "embed_video": "https://www.youtube.com/watch?v=BZ8r7pC9bHY",
     "audio": "./client/build/audio/class.mp3"
+  },
+
+  {
+    "name": "abstraction",
+    "description": "Using abstraction, a programmer hides all but the relevant data about an object in order to reduce complexity and increase efficiency.",
+    "keywords": ["programmer", "object", "efficiency"],
+    "testDescription": ["Using abstraction, a ", " hides all but the relevant data about an ", " in order to reduce complexity and increase ", "."],
+    "image": "",
+    "tags": ["object", "object-oriented propgramming", "variable"],
+    "add_info": "Abstraction is a technique for arranging complexity of computer systems. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level. The programmer works with an idealized interface (usually well defined) and can add additional levels of functionality that would otherwise be too complex to handle.",
+    "webpages": [
+      {"What is a variable": ""},
+      {"Variable in StackOverflow": ""},
+      {"Wikipedia (abstraction)": "https://en.wikipedia.org/wiki/Abstraction_(software_engineering)"}
+    ],
+    "videos": [
+      {"Video discussing variables": ""},
+      {"Programming fundamentals - variables": ""}
+    ],
+     "embed_video": "",
+     "audio": "./client/build/audio/abstraction.mp3"
   }
 
   // {
@@ -116,25 +137,9 @@ db.data.insert([
   //   "videos": [
   //     {"Video discussing variables": ""},
   //     {"Programming fundamentals - variables": ""}
-  //   ]
+  //   ],
+  //    "embed_video": "",
+  //    "audio": "./client/build/audio/"
   // }
 
-  // {
-  //   "name": "",
-  //   "description": "",
-  //   "keywords": ["", ""],
-  //   "testDescription": [" ", "", ""],
-  //   "image": "",
-  //   "tags": ["", "", ""],
-  //   "add_info": "",
-  //   "webpages": [
-  //     {"What is a variable": ""},
-  //     {"Variable in StackOverflow": ""},
-  //     {"Wikipedia (variable)": ""}
-  //   ],
-  //   "videos": [
-  //     {"Video discussing variables": ""},
-  //     {"Programming fundamentals - variables": ""}
-  //   ]
-  // }
 ]);
