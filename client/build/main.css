@@ -157,9 +157,9 @@ h1 {
 /* Dropdown Button */
 
 .dropbtn {
-    background-color: #134A61;
-    color: white;
-    font-family: 'Cutive Mono', monospace;
+    background-color: #2DAAE1;
+    /*color: white;
+    font-family: 'Cutive Mono', monospace;*/
     /*padding: 16px;*/
     font-size: 30px;
     width: 40px;
