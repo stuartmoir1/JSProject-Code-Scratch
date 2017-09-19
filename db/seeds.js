@@ -139,6 +139,25 @@ db.data.insert([
     ],
      "embed_video": "https://www.youtube.com/watch?v=Zj_UC7c1nh4",
      "audio": "./client/build/audio/array.mp3"
+  },
+
+  {
+    "name": "casting",
+    "description": "Casting takes an object of one particular type and turns it into another object type.",
+    "keywords": ["object", "object"],
+    "testDescription": ["Casting takes an ", " of one particular type and turns it into another ", " type."],
+    "tags": ["object", "Java"],
+    "add_info": "Casting is a way of changing an entity of one data type into another. An example would be the conversion of an integer value into a floating point value or its textual representation as a string, and vice versa.  It can also be used with changing an object to another object allowing you to call methods on the converted object type.",
+    "webpages": [
+      {"What is casting": "http://www.studytonight.com/java/type-casting-in-java"},
+      {"Wikipedia (type casting)": "https://en.wikipedia.org/wiki/Type_conversion#C-like_languages"}
+    ],
+    "videos": [
+      {"Video what is casting": "https://www.youtube.com/watch?v=00oyrMoKpKc"},
+      {"Variables, ints, doubles casting": "https://www.youtube.com/watch?v=BPEaPjHtTxE"}
+    ],
+     "embed_video": "https://www.youtube.com/watch?v=G0q78w5dmcE",
+     "audio": "./client/build/audio/casting.mp3"
   }
 
   // {
