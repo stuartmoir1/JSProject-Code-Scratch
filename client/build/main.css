@@ -6,11 +6,9 @@ body {
 }
 
 h1 {
-/*    text-align: center;
-    font-size: 40px;
-    width: 89%;*/
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
     width: 80%;
 }
@@ -18,7 +16,7 @@ h1 {
 /* ========Dropdown Button======== */
 
 .name {
-  font-size: 64px;
+  font-size: 96px;
 }
 
 #searchForm {
@@ -36,25 +34,33 @@ h1 {
   align-self: center;
   width: 80%;
   color: white;
+  border-style: none;
 }
 
 .button {
   font-size: 24px;
   background-color: #EBBAB9;
-  font-family: 'Courier New';
+  font-family: 'Cutive Mono', monospace;
   border-radius: 5px;
+  height: 35px;
+  width: 105px;
+  border-style: solid;
+  color: white;
+  border-width: 1px;
+  border-color: #ffffff;
+  margin: 0 20px 0 20px;
 }
 
 #button-go {
   /*margin-right: 20px;*/
-  height: 35px;
-  width: 105px;
+  /*height: 35px;
+  width: 105px;*/
 }
 
 #button-random {
   /*margin-left: 20px;*/
-  height: 35px;
-  width: 105px;
+ /* height: 35px;
+  width: 105px;*/
 }
 
 #button-go, #button-random {
@@ -226,12 +232,9 @@ form#test-form {
 }
 
 /*=========Description================*/
-/*#description-section {
-    margin-right: 100px;
-    margin-left: 100px;
-    text-align: -webkit-left;
-    font-size: 30px;
-}*/
+#description-section {
+    text-align: center;
+}
 
 /* Container for flexboxes */
 /*.direct-search {
