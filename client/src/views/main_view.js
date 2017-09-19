@@ -2,7 +2,6 @@ var DescriptionView = require('./description_view.js');
 
 // Constructor
 var MainView = function(){
-
 }
 
 // Methods
@@ -10,8 +9,6 @@ var MainView = function(){
 MainView.prototype = {
 
   render: function(data){
-    
-    //console.log(data);
 
     var button = document.querySelector('#button-go');
     button.addEventListener('click', function(event){
@@ -23,13 +20,13 @@ MainView.prototype = {
         return element.name === input;
       });
 
+      if (term === undefined) { alert('Doh, Noobie! That term is not supported! Try again.') };
+
       var descriptionView = new DescriptionView();
       descriptionView.render(term);
-
     });
   }
 }
-
 
 module.exports = MainView;
 
