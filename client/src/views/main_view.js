@@ -13,7 +13,7 @@ MainView.prototype = {
     
     //console.log(data);
 
-    var button = document.querySelector('#button-submit');
+    var button = document.querySelector('#button-go');
     button.addEventListener('click', function(event){
       event.preventDefault();
       
