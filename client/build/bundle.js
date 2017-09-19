@@ -70,6 +70,7 @@
 // 
 var AjaxRequest = __webpack_require__(1);
 var MainView = __webpack_require__(2);
+var DropdownView = __webpack_require__(5)
 
 var url = 'http://localhost:3000/api/main';
 
@@ -77,8 +78,10 @@ window.addEventListener('load', function(){
 
   var ajaxRequest = new AjaxRequest(url);
   var mainView = new MainView();
+  var dropdownView = new DropdownView()
 
   ajaxRequest.getData(mainView.render);
+  ajaxRequest.getData(dropdownView.render);
   
 });
 
@@ -102,7 +105,7 @@ AjaxRequest.prototype = {
     request.onload = function(){
       if (request.status === 200){
         var jsonString = request.responseText;
-        console.log(jsonString);
+        //console.log(jsonString);
         //localStorage.setItem('countries', jsonString);
         this.data = JSON.parse(jsonString);
         callback(this.data);
@@ -130,7 +133,8 @@ var MainView = function(){
 MainView.prototype = {
 
   render: function(data){
-    console.log(data);
+    
+    //console.log(data);
 
     var button = document.querySelector('#button-submit');
     button.addEventListener('click', function(event){
@@ -138,7 +142,7 @@ MainView.prototype = {
       
       var input = document.querySelector('#search-text').value;
 
-      var term = data.find(function(element){
+      var term = data.find(function(element,){
         return element.name === input;
       });
 
@@ -149,7 +153,12 @@ MainView.prototype = {
   }
 }
 
+
 module.exports = MainView;
+
+
+
+
 
 /***/ }),
 /* 3 */
@@ -168,12 +177,13 @@ DescriptionView.prototype = {
 
   render: function(term){
 
+    
     var section = document.querySelector('#description-section');
     while (section.firstChild){ section.removeChild(section.firstChild); };
 
     var pName = document.createElement('p');
     pName.innerText = term.name;
-    section.appendChild(pName)
+    section.appendChild(pName);
 
     var pDescription = document.createElement('p');
     section.appendChild(pDescription);
@@ -186,13 +196,122 @@ DescriptionView.prototype = {
       testButton.outerHTML = '<button type="button" id="test-button" alt="test understanding">Test Understanding</button>'
       // This is new; you need to select the test button separately.
       button = document.querySelector('#test-button');
+      console.log(button);
+
       button.addEventListener('click', function(event){
         event.preventDefault();
-        console.log("test button clicked");
+        // console.log("test button clicked");
         //link from here to another view which allows us to add the fade function
         var testView = new TestView();
         testView.render(term);
       })
+
+
+    // Load info button.
+    this.moreInfoButton(term);
+  },
+
+  moreInfoButton: function(term){
+    
+    var section = document.querySelector('#description-section');
+    var infoButton = document.createElement('button');
+    section.appendChild(infoButton);
+    infoButton.outerHTML = '<button type="button" id="info-button">Info</button>';
+
+    var button = document.querySelector('#info-button');
+    button.addEventListener('click', function(event){
+      event.preventDefault();
+      this.moreInfoPopup(term);
+    }.bind(this));
+  },
+
+  moreInfoPopup: function(term){
+
+    // console.log(term);
+    var anchor = this.popupRemoveChildren();
+    var div1 = this.createPopupDiv(anchor);
+    this.createPopupInnerDiv();
+
+    div2 = this.createPopupName(term);
+    this.createPopupClose(anchor, div2);
+    this.createPopupDescription(term, div2);
+    this.createPopupList(term, div2, 'webpages',);
+    this.createPopupList(term, div2, 'videos');
+    
+    this.createPopupImage(term, div2);
+    this.createPopupVideo(term, div2);
+  },
+
+  popupRemoveChildren: function(){
+    var anchor = document.querySelector('#popup-anchor');
+    while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
+    return anchor;
+  },
+
+  createPopupDiv: function(anchor){
+    var div = document.createElement('div');
+    anchor.appendChild(div);
+    div.outerHTML = '<div id="popup" class="overlay"></div>';
+    return div;
+  },
+
+  createPopupInnerDiv: function(){
+    var outerDiv = document.querySelector('#popup');
+    var innerDiv = document.createElement('div');
+    outerDiv.appendChild(innerDiv);
+    innerDiv.outerHTML = '<div class="popup"></div>';
+  },
+
+  createPopupName: function(term){
+    var div = document.querySelector('.popup');
+    var h2 = document.createElement('h2');
+    div.appendChild(h2);
+    h2.innerHTML = term.name;
+    return div;
+  },
+
+  createPopupClose: function(anchor, div){
+    var a = document.createElement('a');
+    a.href = "#";
+    a.innerHTML = "&times";
+    a.classList.add('close');
+    a.addEventListener('click', function(){
+      while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
+    });
+    div.appendChild(a);
+  },
+
+  createPopupDescription: function(term, outerDiv){
+    var div = document.createElement('div');
+    outerDiv.appendChild(div);
+    div.outerHTML = '<div class="description">' + term.add_info + '</div>';
+  },
+
+  createPopupList: function(term, outerDiv, item){
+    var div = document.createElement('div');
+    div.classList.add(item);
+    outerDiv.appendChild(div);
+    term[item].forEach(function(obj){
+      Object.keys(obj).forEach(function eachKey(key){
+        var a = document.createElement('a');
+        div.appendChild(a);
+        a.outerHTML = '<a href="' + obj[key] + '" target="_blank">' + key + '</a><br>';
+      });
+    });
+  },
+
+  createPopupImage: function(term, outerDiv){
+    var div = document.createElement('div');
+    div.classList.add('image');
+    outerDiv.appendChild(div);
+    div.innerHTML = '<img src="' + term.image + '" alt="Image">';
+  },
+
+  createPopupVideo: function(term, outerDiv){
+    var div = document.createElement('div');
+    div.classList.add('video');
+    outerDiv.appendChild(div)
+    div.innerHTML = '<iframe src="' + term.embed_video + '"></iframe>';
   }
 }
 
@@ -306,6 +425,72 @@ TestView.prototype = {
 
 
 module.exports = TestView;
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var DescriptionView = __webpack_require__(3);
+
+// Constructor
+var DropdownView = function(){
+
+}
+
+// Methods
+DropdownView.prototype = {
+
+  render: function(data){
+    console.log(data);
+    
+    var descriptionView = new DescriptionView();
+    var dropDown = document.querySelector("#dropdown-content");
+    while (dropDown.firstChild){ dropDown.removeChild(dropDown.firstChild); };
+    for (var element of data){  
+      var anchor = document.createElement('a')
+      anchor.innerText = element.name;
+      anchor.href = "#"
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        for (var object of data){
+          if (object.name === this.innerText){
+            descriptionView.render(object);
+          }
+        }
+        
+      })
+      var section = dropDown.appendChild(anchor)
+    }
+
+
+      // Close the dropdown menu if the user clicks outside of it
+      // window.onclick = function(event) {
+      //   if (!event.target.matches('.dropbtn')) {
+
+      //     // var dropdowns = document.getElementsByClassName("dropdown-content");
+      //     var i;
+      //     for (i = 0; i < dropdowns.length; i++) {
+      //       var openDropdown = dropdowns[i];
+      //       if (openDropdown.classList.contains('show')) {
+      //         openDropdown.classList.remove('show');
+      //       }
+      //     }
+      //   }
+      // }
+    }
+  }
+
+    // ******================================================================
+
+   
+ 
+
+module.exports = DropdownView;
+
+
+
+
 
 
 /***/ })

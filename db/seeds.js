@@ -19,6 +19,7 @@ db.data.insert([
     "videos": [
       {"YouTube video": "https://www.youtube.com/watch?v=1OZrWqVncsU"}
     ],
+    "embed_video": "",
     "audio": ""
   },
   {
@@ -26,7 +27,7 @@ db.data.insert([
     "description": "An action that an object is able to perform.",
     "keywords": ["action", "object"],
     "testDescription": ["An ", " that an ", "is able to perform."],
-    "image": "",
+    "image": "./client/build/images/method.png",
     "tags": ["function", "class", "object"],
     "add_info": "A method defines the behaviour of the objects that are created from the class. Consider the example of an object of the type 'person,' created using the person class. Methods associated with this class could consist of things like walking and driving. Methods are sometimes confused with functions, but they are distinct.",
     "webpages": [
@@ -36,6 +37,7 @@ db.data.insert([
     "videos": [
       {"YouTube video:": "https://www.youtube.com/watch?v=_rsKeFaGx48"}
     ],
+    "embed_video": "https://www.youtube.com/embed/1OZrWqVncsU",
     "audio": ""
   },
   {
@@ -92,7 +94,9 @@ db.data.insert([
     "videos": [
       {"OO classes and objects": "https://www.youtube.com/watch?v=POrU7vcKB_k"},
       {"What are classes in programming?": "https://www.youtube.com/watch?v=BZ8r7pC9bHY"}
-    ]
+    ],
+    "embed_video": "",
+    "audio": ""
   }
 
   // {

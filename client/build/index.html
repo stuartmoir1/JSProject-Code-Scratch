@@ -2,25 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
   <title>JavaScript Project</title>
   <script src='bundle.js'></script>
   <link rel="stylesheet" type="text/css" href="main.css">
+
+  <script src="bundle.js"></script>
+  
 </head>
 <body>
 
-  <h1>newbie</h1>
+
+
+<!-- ======================dropdown menu============================ -->
+
+  <h1 class="name">newbie</h1>
+
+
+  <nav class="dropdown">
+    <button onclick="" class="dropbtn">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </button>
+    <section class="dropdown-content" id="dropdown-content">
+    </section>  
+  </nav>
+
+  <!-- ====================search box & sumit button================== -->
 
   <section id="search-section">
+
     <form id="searchForm" autocomplete="on">
-      <input type="text" class="form-control" id="search-text" placeholder="Enter Search" alt="Search Box"><br><br>
+      <!-- <input type="text" class="form-control" id="search-text" placeholder="Enter Search" alt="Search Box" autofocus><br><br> -->
+      <input type="text" class="form-control" id="search-text" placeholder="" alt="Search Box" autofocus><br><br>
       <input type="submit" class="button" id="button-submit" value="Search" alt="Submit search">
     </form>
-  </section>
+  </section><br><br>
+
+  <!-- ================================description================================ -->
 
   <section id="description-section">
 
-  </section>
   
+  </section><br><br>
+
+  <!-- =================================drag & drop=============================== -->
+  
+
+  <section class="direct-search">
+    <section class="column1">
+    <img src="/images/image.png" class="image">
+      <h3>Heading One</h3>
+      <p>This is where the content will go</p>
+    </section>
+    <section class="column2">
+    <img src="/images/image.png" class="image">
+      <h3>Heading Two</h3>
+      <p>This is where the content will go</p>
+    </section>
+    <section class="column3">
+    <img src="/images/image.png" class="image">
+      <h3>Heading Three</h3>
+      <p>This is where the content will go</p>
+    </section>
+  </section>
+
+  <section id="popup-anchor"></section>
+
 
 </body>
 </html>
