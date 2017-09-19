@@ -295,9 +295,8 @@ MainView.prototype = {
     var button = document.querySelector('#button-go');
     button.addEventListener('click', function(event){
       event.preventDefault();
-      
+  
       var input = document.querySelector('#search-text').value.toLowerCase();
-
       var term = data.find(function(element,){
         return element.name === input;
       });
@@ -311,10 +310,6 @@ MainView.prototype = {
 }
 
 module.exports = MainView;
-
-
-
-
 
 /***/ }),
 /* 4 */
