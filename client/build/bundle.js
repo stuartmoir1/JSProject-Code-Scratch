@@ -97,7 +97,7 @@ DescriptionView.prototype = {
     var testButton = document.createElement('button');
       section.appendChild(testButton);
       // Changed class attribute to id attribute.
-      testButton.outerHTML = '<button type="button" class="button" id="test-button" alt="test understanding">Test</button>'
+      testButton.outerHTML = '<button type="button" class="button" id="test-button" alt="test understanding" >Test</button>'
       // This is new; you need to select the test button separately.
       button = document.querySelector('#test-button');
       console.log(button);
@@ -397,7 +397,7 @@ TestView.prototype = {
     var lastElement = term.testDescription[term.testDescription.length-1];
 
     form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
-      + '<input type="submit" id="submit" value="Check"' + ' ' + '</form>';
+      + '<input type="image" id="submit" value="Check" src="/images/mark.png" alt="A Random Selection" style="width:50px;height:50px;"' + ' ' + '</form>';
 
     var submitButton = document.querySelector('#submit');
     submitButton.addEventListener('click', function(e) {

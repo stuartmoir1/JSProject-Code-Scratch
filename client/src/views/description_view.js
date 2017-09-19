@@ -28,7 +28,7 @@ DescriptionView.prototype = {
     var testButton = document.createElement('button');
       section.appendChild(testButton);
       // Changed class attribute to id attribute.
-      testButton.outerHTML = '<button type="button" class="button" id="test-button" alt="test understanding">Test</button>'
+      testButton.outerHTML = '<button type="button" class="button" id="test-button" alt="test understanding" >Test</button>'
       // This is new; you need to select the test button separately.
       button = document.querySelector('#test-button');
       console.log(button);
