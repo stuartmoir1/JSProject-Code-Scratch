@@ -20,7 +20,7 @@ db.data.insert([
       {"YouTube video": "https://www.youtube.com/watch?v=1OZrWqVncsU"}
     ],
     "embed_video": "",
-    "audio": ""
+    "audio": "./client/build/audio/object.mp3"
   },
   {
     "name": "method",
@@ -57,7 +57,8 @@ db.data.insert([
       {"Video discussing Properties": "https://www.youtube.com/watch?v=grcPxVOnZpY"},
       {"Functional Properties": "https://www.youtube.com/watch?v=qzzFHpn69UQ"},
       {"hasattr": "https://www.youtube.com/watch?v=GAlH10AY7YI"}
-    ]
+    ],
+    "audio": "./client/build/audio/"
   },
 
   {
@@ -76,7 +77,8 @@ db.data.insert([
     "videos": [
       {"Video discussing variables": "https://www.youtube.com/watch?v=aeoGGabJhAQ"},
       {"Programming fundamentals - variables": "https://www.youtube.com/watch?v=t4ND-_kTxcI"}
-    ]
+    ],
+    "audio": "./client/build/audio/variable.mp3"
   },
 
   {
@@ -96,7 +98,7 @@ db.data.insert([
       {"What are classes in programming?": "https://www.youtube.com/watch?v=BZ8r7pC9bHY"}
     ],
     "embed_video": "",
-    "audio": ""
+    "audio": "./client/build/audio/class.mp3"
   }
 
   // {
