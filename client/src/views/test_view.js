@@ -59,9 +59,11 @@ TestView.prototype = {
     submitButton.addEventListener('click', function(e) {
       e.preventDefault();
       var testAnswers = [];
-      var answ1 = document.getElementById('answer1').value;
-      var answ2 = document.getElementById('answer2').value;
-      testAnswers.push(answ1, answ2);
+      for (var i = 0; i < term.keywords.length; i++) {
+        var element = document.getElementById('answer'+(i+1)).value;
+        testAnswers.push(element);
+      };
+
       self.compare(testAnswers, term);
 
     })
@@ -69,34 +71,20 @@ TestView.prototype = {
 
   compare: function(data, term){
 
-    console.log(term);
-    // if(data[0] === term.keywords[0] && data[1] === term.keywords[1]) {
-    //   section = document.querySelector('#test-form')
-    //   section.style.transform = "rotate(360deg)";
-    // }
+    var count = 0;
+    data.forEach(function(element) {
+      if(element === term.keywords[count]){
+          var answer = document.getElementById('answer'+(count+1));
+          answer.style.color = "Green";
+        } else {
+          var answer = document.getElementById('answer'+(count+1));
+          answer.style.color = "Red";
+        };
+        count ++;
+    })
 
-
-    if (data[0] === term.keywords[0]){
-      var answ1 = document.getElementById('answer1');
-      answ1.style.color = "Green";
-      // answ1.style.transform = "rotate(360deg)";
-      // answ1.style.transitionDuration = "5s";
-    } else {
-      var answ1 = document.getElementById('answer1');
-      answ1.style.color = "Red";
-    };
-
-    if (data[1] == term.keywords[1]){
-      var answ2 = document.getElementById('answer2');
-      answ2.style.color = "Green";
-      // answ2.style.transform = "rotate(360deg)";
-
-    } else {
-      var answ2 = document.getElementById('answer2');
-      answ2.style.color = "Red";
-    };
-    }
   }
+}
 
 
 
