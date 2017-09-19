@@ -360,14 +360,6 @@ TestView.prototype = {
 
     var section = document.querySelector('#description-section');
     while (section.firstChild){ section.removeChild(section.firstChild); };
-    //
-    // var pName = document.createElement('p');
-    // pName.innerText = term.name;
-    // section.appendChild(pName)
-
-    var pName = document.createElement('p');
-    pName.innerText = term.name;
-    section.appendChild(pName);
 
     var form = document.createElement('form');
     section.appendChild(form);
