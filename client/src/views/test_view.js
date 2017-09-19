@@ -68,15 +68,14 @@ TestView.prototype = {
   },
 
   compare: function(data, term){
-<<<<<<< HEAD
+
     console.log(term);
     // if(data[0] === term.keywords[0] && data[1] === term.keywords[1]) {
     //   section = document.querySelector('#test-form')
     //   section.style.transform = "rotate(360deg)";
     // }
 
-=======
->>>>>>> 7824bacce8260bc8bc9293b7d191e20a0188b9fd
+
     if (data[0] === term.keywords[0]){
       var answ1 = document.getElementById('answer1');
       answ1.style.color = "Green";
