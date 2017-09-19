@@ -87,7 +87,7 @@ h1 {
 }
 
 .popup {
-  margin: 70px auto;
+  margin: 50px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
@@ -100,6 +100,7 @@ h1 {
 .popup h2 {
   margin-top: 0;
   color: black;
+  font-style: ;
   /*color: #333;*/
   /*font-family: Tahoma, Arial, sans-serif;*/
 }
@@ -141,15 +142,15 @@ h1 {
 }
 
 .popup .video {
-  height: 315;
-  width: 420;
+  height: 50;
+  width: 100;
 }
 
-/*@media screen and (max-width: 700px){
+@media screen and (max-width: 700px){
   .popup{
     width: 70%;
   }
-}*/
+}
 
 /* Dropdown Button */
 
