@@ -181,9 +181,9 @@ DescriptionView.prototype = {
     var section = document.querySelector('#description-section');
     while (section.firstChild){ section.removeChild(section.firstChild); };
 
-    var pName = document.createElement('p');
-    pName.innerText = term.name;
-    section.appendChild(pName);
+    // var pName = document.createElement('p');
+    // pName.innerText = term.name;
+    // section.appendChild(pName);
 
     var pDescription = document.createElement('p');
     section.appendChild(pDescription);
@@ -351,15 +351,33 @@ TestView.prototype = {
     var self = this;
     setTimeout(function(){
       self.repopulate(term);
-    }, 1500);
-
+    },2000 );
   },
 
   repopulate: function(term) {
-    var self = this;
+
+    
+    // setTimeout(function(){
+    //   self.unfade(section);
+    // }, 0);
+    // console.log(self);
+    
 
     var section = document.querySelector('#description-section');
     while (section.firstChild){ section.removeChild(section.firstChild); };
+
+    var op = 0.01;  // initial opacity
+    section.style.opacity = 0.01;
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        section.style.opacity = op;
+        section.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 50);
+
+    var self = this;
 
     var questionText = [];
     var count = 0;
@@ -376,8 +394,6 @@ TestView.prototype = {
 
     form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
       + '<input type="submit" id="submit" value="submit"' + ' ' + '</form>';
-
-    console.log(form.outerHTML);
 
     var submitButton = document.querySelector('#submit');
     submitButton.addEventListener('click', function(e) {
