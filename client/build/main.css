@@ -99,6 +99,7 @@ h1 {
 
 .popup h2 {
   margin-top: 0;
+  color: black;
   /*color: #333;*/
   /*font-family: Tahoma, Arial, sans-serif;*/
 }
@@ -110,43 +111,18 @@ h1 {
   /*transition: all 200ms;*/
   font-size: 30px;
   font-weight: bold;
-},
-/*
-form#test-form {
-  transform:rotate(360deg);
-  transition-duration:5s;
-}*/
-
-/*#answer1 {
-    width: 80px;
-    height: 20px;
-    background: blue;
-    position: relative;
-    animation: mymove 3s;
-    animation-fill-mode: forwards;
-},
-
-@keyframes mymove {
-    from {top: 40px;}
-    to {top: 200px;}
-}*/
   text-decoration: none;
-  /*color: #333;*/
 }
 
 .popup .close:hover {
-  color: #EBBAB9;
+  color: #2DAAE1;
 }
-
-/*.popup .content {
-  max-height: 50%;
-  overflow: auto;
-}*/
 
 .popup .description {
   max-height: 50%;
   overflow: auto;
   padding: 0 0 20px 0;
+  color: black;
 }
 
 .popup .webpages {
@@ -161,6 +137,7 @@ form#test-form {
   height: 50;
   width: 50;
   padding: 0 0 20px 0;
+  color: black;
 }
 
 .popup .video {
@@ -270,4 +247,25 @@ img.image {
   padding: 0 10px 0 10px;
 }
 
+/*
+form#test-form {
+  transform:rotate(360deg);
+  transition-duration:5s;
+}*/
 
+/*#answer1 {
+    width: 80px;
+    height: 20px;
+    background: blue;
+    position: relative;
+    animation: mymove 3s;
+    animation-fill-mode: forwards;
+},
+
+@keyframes mymove {
+    from {top: 40px;}
+    to {top: 200px;}
+}*/
+  /*text-decoration: none;*/
+  /*color: #333;*/
+/*}*/

@@ -142,7 +142,7 @@ DescriptionView.prototype = {
     this.createPopupList(term, div2, 'webpages',);
     this.createPopupList(term, div2, 'videos');
     
-    this.createPopupImage(term, div2);
+    //this.createPopupImage(term, div2);
     this.createPopupVideo(term, div2);
   },
 
