@@ -217,6 +217,26 @@ db.data.insert([
     ],
      "embed_video": "https://www.youtube.com/watch?v=0PPKccntohM",
      "audio": "./client/build/audio/inheritance.mp3"
+  },
+
+  {
+    "name": "interface",
+    "description": "An interface is a collection of abstract methods. A class implements an interface, thereby inheriting the abstract methods of the interface.",
+    "keywords": ["methods", "class", "abstract"],
+    "testDescription": ["An interface is a collection of abstract ", ". A ", " implements an interface, thereby inheriting the ", " methods of the interface."],
+    "tags": ["method", "class", "Java"],
+    "add_info": "An interface can be thought of as a blueprint of a class. Interfaces cannot be instantiated, but rather are implemented. A class that implements an interface must implement all of the methods described in the interface, or be an abstract class.",
+    "webpages": [
+      {"What is an interface": "https://www.javatpoint.com/interface-in-java"},
+      {"Interface in StackOverflow": "https://stackoverflow.com/questions/1321122/what-is-an-interface-in-java"},
+      {"Wikipedia (interface)": "https://en.wikipedia.org/wiki/Interface_(Java)"}
+    ],
+    "videos": [
+      {"Video explaining interface": "https://www.youtube.com/watch?v=Yaa3QroWe7Q"},
+      {"Tutorial for beginners": "https://www.youtube.com/watch?v=HxmP7ZVUeGU"}
+    ],
+     "embed_video": "https://www.youtube.com/watch?v=NnZQ-C0x4hs",
+     "audio": "./client/build/audio/interface.mp3"
   }
 
   // {
