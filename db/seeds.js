@@ -109,15 +109,15 @@ db.data.insert([
     "tags": ["object", "object-oriented propgramming", "variable"],
     "add_info": "Abstraction is a technique for arranging complexity of computer systems. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level. The programmer works with an idealized interface (usually well defined) and can add additional levels of functionality that would otherwise be too complex to handle.",
     "webpages": [
-      {"What is a variable": ""},
-      {"Variable in StackOverflow": ""},
+      {"What is abstraction": "http://whatis.techtarget.com/definition/abstraction"},
+      {"Abstraction in StackOverflow": "https://stackoverflow.com/questions/7028242/what-is-abstraction"},
       {"Wikipedia (abstraction)": "https://en.wikipedia.org/wiki/Abstraction_(software_engineering)"}
     ],
     "videos": [
-      {"Video discussing variables": ""},
-      {"Programming fundamentals - variables": ""}
+      {"Video discussing abstraction": "https://www.youtube.com/watch?v=6V1sr0XV_Ng"},
+      {"Abstraction is a core idea": "https://www.youtube.com/watch?v=HJ6rX5qBPIc"}
     ],
-     "embed_video": "",
+     "embed_video": "https://www.youtube.com/watch?v=L1-zCdrx8Lk",
      "audio": "./client/build/audio/abstraction.mp3"
   }
 
