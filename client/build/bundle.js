@@ -236,7 +236,6 @@ DescriptionView.prototype = {
   moreInfoPopup: function(term){
 
     // console.log(term);
-
     var anchor = this.popupRemoveChildren();
     var div1 = this.createPopupDiv(anchor);
     this.createPopupInnerDiv();
@@ -246,16 +245,9 @@ DescriptionView.prototype = {
     this.createPopupDescription(term, div2);
     this.createPopupList(term, div2, 'webpages',);
     this.createPopupList(term, div2, 'videos');
-
-    var div6 = document.createElement('div');
-    div6.classList.add('image');
-    div2.appendChild(div6);
-    div6.outerHTML = '<img src="' + term.image + '" alt="Image">';
-
-    var div7 = document.createElement('div');
-    div7.classList.add('video');
-    div2.appendChild(div7);
-    div7.outerHTML = '<iframe src="' + term.embed_video + '</iframe>';
+    
+    this.createPopupImage(term, div2);
+    this.createPopupVideo(term, div2);
   },
 
   popupRemoveChildren: function(){
@@ -316,7 +308,19 @@ DescriptionView.prototype = {
     });
   },
 
+  createPopupImage: function(term, outerDiv){
+    var div = document.createElement('div');
+    div.classList.add('image');
+    outerDiv.appendChild(div);
+    div.innerHTML = '<img src="' + term.image + '" alt="Image">';
+  },
 
+  createPopupVideo: function(term, outerDiv){
+    var div = document.createElement('div');
+    div.classList.add('video');
+    outerDiv.appendChild(div)
+    div.innerHTML = '<iframe src="' + term.embed_video + '"></iframe>';
+  }
 }
 
 module.exports = DescriptionView;
