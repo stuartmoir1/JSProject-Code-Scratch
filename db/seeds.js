@@ -130,7 +130,7 @@ db.data.insert([
     "add_info": "Inheritance is one of the four fundamental OOP concepts. The other three are encapsulation, polymorphism, and abstraction. A class that is used as the basis for inheritance is called a superclass or base class. A class that inherits from a superclass is called a subclass or derived class. The terms parent class and child class are also acceptable terms to use respectively. A child inherits visible properties and methods from its parent while adding additional properties and methods of its own.",
     "webpages": [
       {"What is inheritance (techtarget)": "http://whatis.techtarget.com/definition/inheritance"},
-      {"Difference between inheritance and polymorphism? (stackoverflow)": "https://stackoverflow.com/questions/6308178/what-is-the-main-difference-between-inheritance-and-polymorphism"},
+      {"Difference between inheritance and polymorphism? (StackOverflow)": "https://stackoverflow.com/questions/6308178/what-is-the-main-difference-between-inheritance-and-polymorphism"},
       {"Inheritance (Wikipedia)": "https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)"}
     ],
     "videos": [
@@ -165,15 +165,15 @@ db.data.insert([
     "name": "method",
     "description": "An action that an object is able to perform.",
     "keywords": ["action", "object"],
-    "testDescription": ["An ", " that an ", "is able to perform."],
+    "testDescription": ["An ", " that an ", " is able to perform."],
     "tags": ["function", "class", "object"],
     "add_info": "A method defines the behaviour of the objects that are created from the class. Consider the example of an object of the type 'person,' created using the person class. Methods associated with this class could consist of things like walking and driving. Methods are sometimes confused with functions, but they are distinct.",
     "webpages": [
-      {"Wikipedia (Method)": "https://en.wikipedia.org/wiki/Method_(computer_programming)"},
-      {"Codecademy (Method)": "https://www.codecademy.com/courses/learn-ruby/lessons/methods-blocks-sorting/exercises/why-methods?action=lesson_resume"}
+      {"Method (Wikipedia)": "https://en.wikipedia.org/wiki/Method_(computer_programming)"},
+      {"Why methods (Codecademy)": "https://www.codecademy.com/courses/learn-ruby/lessons/methods-blocks-sorting/exercises/why-methods?action=lesson_resume"}
     ],
     "videos": [
-      {"YouTube video:": "https://www.youtube.com/watch?v=_rsKeFaGx48"}
+      {"Methods (Udacity)": "https://www.youtube.com/watch?v=_rsKeFaGx48"}
     ],
     "embed_video": "https://www.youtube.com/embed/1OZrWqVncsU",
     "audio": "./client/build/audio/method.mp3"
@@ -185,14 +185,14 @@ db.data.insert([
     "keywords": ["properties", "methods"],
     "testDescription": ["A self-contained component that contains ", " and ", " needed to make a certain type of data useful."],
     "tags": ["object-oriented programming", "class"],
-    "add_info": "Software objects are conceptually similar to real-world objects: An object’s properties are what it knows and its methods are what it can do. they too consist of state and related behavior. An object stores its state in fields (variables in some programming languages) and exposes its behavior through methods (functions in some programming languages). Methods operate on an object's internal state and serve as the primary mechanism for object-to-object communication. Hiding internal state and requiring all interaction to be performed through an object's methods is known as data encapsulation — a fundamental principle of object-oriented programming.",
+    "add_info": "Software objects are conceptually similar to real-world objects: an object’s properties are what it knows and its methods are what it can do. They too consist of state and related behavior. An object stores its state in properties and exposes its behaviour through methods. Methods operate on an object's internal state and serve as the primary mechanism for object-to-object communication. Hiding internal state and requiring all interaction to be performed through an object's methods is known as data encapsulation — a fundamental principle of object-oriented programming.",
     "webpages": [
-      {"Wikipedia (Object)": "https://en.wikipedia.org/wiki/Object_(computer_science)"},
-      {"Oracle (Object)": "http://docs.oracle.com/javase/tutorial/java/concepts/object.html"},
-      {"Codecademy (Object)": "https://www.codecademy.com/courses/learn-ruby/lessons/object-oriented-programming-i/exercises/why-classes?action=lesson_resume"}
+      {"Object (Wikipedia)": "https://en.wikipedia.org/wiki/Object_(computer_science)"},
+      {"Object (Oracle)": "http://docs.oracle.com/javase/tutorial/java/concepts/object.html"},
+      {"Why classes (Codecademy)": "https://www.codecademy.com/courses/learn-ruby/lessons/object-oriented-programming-i/exercises/why-classes?action=lesson_resume"}
     ],
     "videos": [
-      {"YouTube video": "https://www.youtube.com/watch?v=1OZrWqVncsU"}
+      {"What is an object? (java breakpoint)": "https://www.youtube.com/watch?v=1OZrWqVncsU"}
     ],
     "embed_video": "https://www.youtube.com/embed/1OZrWqVncsU",
     "audio": "./client/build/audio/object.mp3"
@@ -206,13 +206,13 @@ db.data.insert([
     "tags": ["method", "class", "overriding"],
     "add_info": "Function overloading or method overloading is the ability to create multiple methods of the same name with different implementations. Calls to an overloaded function will run a specific implementation of that function appropriate to the context of the call, allowing one function call to perform different tasks depending on context.",
     "webpages": [
-      {"Example of overloading": "https://www.tutorialspoint.com/javaexamples/method_overloading.htm"},
-      {"Constructor overloading in StackOverflow": "https://stackoverflow.com/questions/1182153/constructor-overloading-in-java-best-practice"},
-      {"Wikipedia (function overloading)": "https://en.wikipedia.org/wiki/Function_overloading"}
+      {"Method overloading (tutorialspoint)": "https://www.tutorialspoint.com/javaexamples/method_overloading.htm"},
+      {"Constructor overloading in Java (StackOverflow)": "https://stackoverflow.com/questions/1182153/constructor-overloading-in-java-best-practice"},
+      {"Function overloading (Wikipedia)": "https://en.wikipedia.org/wiki/Function_overloading"}
     ],
     "videos": [
-      {"Video tutorial overloading": "https://www.youtube.com/watch?v=pBe4hLdrMHA"},
-      {"Difference between overloading and overriding": "https://www.youtube.com/watch?v=4HJUX_BQgGI"}
+      {"Method overloading in Java (programmingKnowledge)": "https://www.youtube.com/watch?v=pBe4hLdrMHA"},
+      {"Difference between overloading and overriding (Durga Education)": "https://www.youtube.com/watch?v=4HJUX_BQgGI"}
     ],
      "embed_video": "https://www.youtube.com/embed/hGRSyIvoIT4",
      "audio": "./client/build/audio/overload.mp3"
@@ -226,13 +226,13 @@ db.data.insert([
     "tags": ["class", "method", "overloading"],
     "add_info": "Overriding allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its superclasses or parent classes. The implementation in the subclass overrides (replaces) the implementation in the superclass by providing a method that has same name, same parameters or signature, and same return type as the method in the parent class.",
     "webpages": [
-      {"What is overriding": "https://www.tutorialspoint.com/java/java_overriding.htm"},
-      {"Overriding in StackOverflow": "https://stackoverflow.com/questions/8813599/overriding-in-java"},
-      {"Wikipedia (method overloading)": "https://en.wikipedia.org/wiki/Method_overriding"}
+      {"Overriding Java (tutorialspoint)": "https://www.tutorialspoint.com/java/java_overriding.htm"},
+      {"Overriding in Java (StackOverflow)": "https://stackoverflow.com/questions/8813599/overriding-in-java"},
+      {"Method overriding (Wikipedia)": "https://en.wikipedia.org/wiki/Method_overriding"}
     ],
     "videos": [
-      {"Video tutorial overriding": "https://www.youtube.com/watch?v=rVSlCg2ttZ0"},
-      {"Difference between overloading and overriding": "https://www.youtube.com/watch?v=4HJUX_BQgGI"}
+      {"Method overriding in Java (programmingKnowledge)": "https://www.youtube.com/watch?v=rVSlCg2ttZ0"},
+      {"Difference between overloading and overriding (Durga Education)": "https://www.youtube.com/watch?v=4HJUX_BQgGI"}
     ],
      "embed_video": "https://www.youtube.com/embed/ouI9Qarbbik",
      "audio": "./client/build/audio/override.mp3"
@@ -244,15 +244,15 @@ db.data.insert([
     "keywords": ["object", "object-orientated programming"],
     "testDescription": ["object"],
     "tags": ["object", "object-orientated programming"],
-    "add_info": "Polymorphism is one of the four fundamental OOP concepts. The other three are encapsulation, inheritance, and abstraction. Ts the characteristic of being able to assign a different meaning or usage to something in different contexts - specifically, to allow an entity such as a variable, a function, or an object to have more than one form. There are several different kinds of polymorphism, including ad hoc polymorphism, parametric polymorphism and subtyping.",
+    "add_info": "Polymorphism is one of the four fundamental object-orientated programming concepts. The other three are encapsulation, inheritance and abstraction. It's the characteristic of being able to assign a different meaning or usage to something in different contexts - specifically, to allow an entity such as a variable, a function, or an object to have more than one form. There are several different kinds of polymorphism, including ad hoc polymorphism, parametric polymorphism and subtyping.",
     "webpages": [
-      {"Wikipedia": "https://en.wikipedia.org/wiki/Polymorphism_(computer_science)"},
-      {"Polymorphism in Java": "https://beginnersbook.com/2013/03/polymorphism-in-java/"},
-      {"What is Polymorphism in Java?": "http://www.developer.com/java/data/what-is-polymorphism-in-java.html"}
+      {"Polymorphism (Wikipedia)": "https://en.wikipedia.org/wiki/Polymorphism_(computer_science)"},
+      {"Polymorphism in Java (beginnersbook)": "https://beginnersbook.com/2013/03/polymorphism-in-java/"},
+      {"What is Polymorphism in Java? (developer.com)": "http://www.developer.com/java/data/what-is-polymorphism-in-java.html"}
     ],
     "videos": [
-      {"Java Porgramming Tutorial - Java": "https://www.youtube.com/watch?v=0xw06loTm1k"},
-      {"Introduction to Polymorphism": "https://vimeo.com/60187931"}
+      {"Introduction to polymorphism (thenewboston)": "https://www.youtube.com/watch?v=0xw06loTm1k"},
+      {"Introduction to Polymorphism (shiffman)": "https://vimeo.com/60187931"}
     ],
      "embed_video": "https://www.youtube.com/embed/0xw06loTm1k",
      "audio": "./client/build/audio/polymorphism.mp3"
@@ -264,40 +264,37 @@ db.data.insert([
     "keywords": ["variable", "class"],
     "testDescription": ["A ", " declared within a ", "."],
     "tags": ["object-oriented programming", "class"],
-    "add_info": "A property, in object-oriented programming languages, is a special sort of class member, intermediate in functionality between a field (or data member) and a method. The syntax for reading and writing of properties is like for fields, but property reads and writes are (usually) translated to 'getter' and 'setter' method calls. The field-like syntax is easier to read and write than lots of method calls, yet the interposition of method calls 'under the hood' allows for data validation, active updating (eg of GUI elements), or implementation of what may be called 'read-only fields'.",
+    "add_info": "A property, in some object-oriented programming languages, is a special sort of class member, intermediate in functionality between a field (or data member) and a method. The syntax for reading and writing of properties is like for fields, but property reads and writes are (usually) translated to 'getter' and 'setter' method calls. The field-like syntax is easier to read and write than lots of method calls, yet the interposition of method calls 'under the hood' allows for data validation, active updating (e.g., of GUI elements), or implementation of what may be called 'read-only fields'.",
     "webpages": [
-      {"What is a Property": "http://study.com/academy/lesson/what-is-an-attribute-in-computer-programming-definition-examples.html"},
-      {"Property in StackOverflow": "https://stackoverflow.com/questions/4246883/what-is-method-property-and-function"},
-      {"Wikipedia (Property)": "https://en.wikipedia.org/wiki/Property_(programming)"}
+      {"What is Method, Property and Function? (StackOverflow)": "https://stackoverflow.com/questions/4246883/what-is-method-property-and-function"},
+      {"Property (Wikipedia)": "https://en.wikipedia.org/wiki/Property_(programming)"}
     ],
     "videos": [
-      {"Video discussing Properties": "https://www.youtube.com/watch?v=grcPxVOnZpY"},
-      {"Functional Properties": "https://www.youtube.com/watch?v=qzzFHpn69UQ"}
+      {"VUnderstanding OOP Classes, Objects, Methods and Properties (Gary Bennett)": "https://www.youtube.com/watch?v=9FQ4zqfsYbQ"},
+      {"Object Oriented Programming Concepts (BBarters)": "https://www.youtube.com/watch?v=5SWKbS87p98"}
     ],
-    "embed_video": "https://www.youtube.com/embed/GAlH10AY7YI",
+    "embed_video": "https://www.youtube.com/embed/3bMsY5a7cBo",
     "audio": "./client/build/audio/property.mp3"
   },
 
   {
     "name": "variable",
-    "description": "A variable is a named piece of computer memory, containing some information inside.",
-    "keywords": ["variable", "memory", "information"],
-    "testDescription": ["A",  "is a named piece of computer ", ", containing some ", " inside."],
+    "description": "A named piece of computer memory, containing some information inside.",
+    "keywords": ["memory", "information"],
+    "testDescription": ["A named piece of computer ", ", containing some ", " inside."],
     "tags": ["object-oriented programming", "array", "integer"],
     "add_info": "A variable is a storage location paired with an associated symbolic name (an identifier), which contains some known or unknown quantity of information referred to as a value. The variable name is the usual way to reference the stored value; this separation of name and content allows the name to be used independently of the exact information it represents. The identifier in computer source code can be bound to a value during run time, and the value of the variable may thus change during the course of program execution.",
     "webpages": [
-      {"What is a variable": "https://launchschool.com/books/ruby/read/variables"},
-      {"Variable in StackOverflow": "https://stackoverflow.com/questions/1137158/what-is-a-variable"},
-      {"Wikipedia (variable)": "https://en.wikipedia.org/wiki/Variable_(computer_science)"}
+      {"What is a variable? (LaunchSchool)": "https://launchschool.com/books/ruby/read/variables"},
+      {"What is a variable? (StackOverflow)": "https://stackoverflow.com/questions/1137158/what-is-a-variable"},
+      {"Variable (Wikipedia)": "https://en.wikipedia.org/wiki/Variable_(computer_science)"}
     ],
     "videos": [
-      {"Video discussing variables": "https://www.youtube.com/watch?v=aeoGGabJhAQ"}
+      {"Variables, arrays, strings and length (ExplainTechnology)": "https://www.youtube.com/watch?v=aeoGGabJhAQ"}
     ],
     "embed_video": "https://www.youtube.com/watch?v=t4ND-_kTxcI",
     "audio": "./client/build/audio/variable.mp3"
   }
-
-  
 
   // {
   //   "name": "",
@@ -318,5 +315,4 @@ db.data.insert([
   //    "embed_video": "",
   //    "audio": "./client/build/audio/"
   // }
-
 ]);
