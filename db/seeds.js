@@ -235,13 +235,27 @@ db.data.insert([
     ],
     "embed_video": "https://www.youtube.com/watch?v=t4ND-_kTxcI",
     "audio": "./client/build/audio/variable.mp3"
-  }
+  },
 
-  
-
-  
-
-  
+  {
+    "name": "overloading",
+    "description": "Overloading is the ability to define more than one method with the same name in a class.",
+    "keywords": ["method", "class"],
+    "testDescription": ["Overloading is the ability to define more than one ", " with the same name in a ", "."],
+    "tags": ["method", "class", "overriding"],
+    "add_info": "Function overloading or method overloading is the ability to create multiple methods of the same name with different implementations. Calls to an overloaded function will run a specific implementation of that function appropriate to the context of the call, allowing one function call to perform different tasks depending on context.",
+    "webpages": [
+      {"Example of overloading": "https://www.tutorialspoint.com/javaexamples/method_overloading.htm"},
+      {"Constructor overloading in StackOverflow": "https://stackoverflow.com/questions/1182153/constructor-overloading-in-java-best-practice"},
+      {"Wikipedia (function overloading)": "https://en.wikipedia.org/wiki/Function_overloading"}
+    ],
+    "videos": [
+      {"Video tutorial overloading": "https://www.youtube.com/watch?v=pBe4hLdrMHA"},
+      {"Difference between overloading and overriding": "https://www.youtube.com/watch?v=4HJUX_BQgGI"}
+    ],
+     "embed_video": "https://www.youtube.com/watch?v=hGRSyIvoIT4",
+     "audio": "./client/build/audio/overload.mp3"
+  },
 
   // {
   //   "name": "",
