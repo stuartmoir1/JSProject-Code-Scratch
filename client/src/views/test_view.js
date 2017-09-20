@@ -89,22 +89,27 @@ TestView.prototype = {
   },
 
   compare: function(data, term){
-
+  
     var count = 0;
+    var response = true;
     data.forEach(function(element) {
       if(element === term.keywords[count]){
-          var answer = document.getElementById('answer'+(count+1));
-          answer.style.color = "Green";
-        } else {
-          var answer = document.getElementById('answer'+(count+1));
-          answer.style.color = "Red";
-        };
-        count ++;
-    })
+        var answer = document.getElementById('answer' + (count + 1));
+        answer.style.color = "Green";
+      } else {
+        var answer = document.getElementById('answer' + (count + 1));
+        answer.style.color = "Red";
+        response = false;
+      };
+      count++;
+    });
 
+    if (response === true){
+      alert('Well done, Noobie! You got it right!');
+    } else {
+      alert('Doh, Noobie! That\`s the wrong answer! Try again');
+    }
   }
 }
-
-
 
 module.exports = TestView;

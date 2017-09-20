@@ -284,7 +284,6 @@ var DescriptionView = __webpack_require__(0);
 
 // Constructor
 var MainView = function(){
-
 }
 
 // Methods
@@ -292,32 +291,25 @@ var MainView = function(){
 MainView.prototype = {
 
   render: function(data){
-    
-    //console.log(data);
 
     var button = document.querySelector('#button-go');
     button.addEventListener('click', function(event){
       event.preventDefault();
-      
-      var input = document.querySelector('#search-text').value;
-
+  
+      var input = document.querySelector('#search-text').value.toLowerCase();
       var term = data.find(function(element,){
         return element.name === input;
       });
 
+      if (term === undefined) { alert('Doh, Noobie! That term is not supported! Try again.') };
+
       var descriptionView = new DescriptionView();
       descriptionView.render(term);
-
     });
   }
 }
 
-
 module.exports = MainView;
-
-
-
-
 
 /***/ }),
 /* 4 */
@@ -414,23 +406,28 @@ TestView.prototype = {
   },
 
   compare: function(data, term){
-
+  
     var count = 0;
+    var response = true;
     data.forEach(function(element) {
       if(element === term.keywords[count]){
-          var answer = document.getElementById('answer'+(count+1));
-          answer.style.color = "Green";
-        } else {
-          var answer = document.getElementById('answer'+(count+1));
-          answer.style.color = "Red";
-        };
-        count ++;
-    })
+        var answer = document.getElementById('answer' + (count + 1));
+        answer.style.color = "Green";
+      } else {
+        var answer = document.getElementById('answer' + (count + 1));
+        answer.style.color = "Red";
+        response = false;
+      };
+      count++;
+    });
 
+    if (response === true){
+      alert('Well done, Noobie! You got it right!');
+    } else {
+      alert('Doh, Noobie! That\`s the wrong answer! Try again');
+    }
   }
 }
-
-
 
 module.exports = TestView;
 
@@ -443,14 +440,13 @@ var DescriptionView = __webpack_require__(0);
 
 // Constructor
 var DropdownView = function(){
-
 }
 
 // Methods
 DropdownView.prototype = {
 
   render: function(data){
-    console.log(data);
+    //console.log(data);
     
     var descriptionView = new DescriptionView();
     var dropDown = document.querySelector("#dropdown-content");
@@ -463,11 +459,12 @@ DropdownView.prototype = {
         e.preventDefault();
         for (var object of data){
           if (object.name === this.innerText){
+            var searchValue = document.querySelector('#search-text');
+            searchValue.value = object.name;
             descriptionView.render(object);
           }
         }
-        
-      })
+      });
       var section = dropDown.appendChild(anchor)
     }
 

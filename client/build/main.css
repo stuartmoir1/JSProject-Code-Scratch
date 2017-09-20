@@ -123,7 +123,7 @@ h1 {
 
 .popup .close {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 30px;
   /*transition: all 200ms;*/
   font-size: 30px;
