@@ -63,7 +63,7 @@ DescriptionView.prototype = {
         
 
 
-      })
+      
 
 
     // Load info button.

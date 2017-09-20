@@ -10,7 +10,7 @@ DropdownView.prototype = {
   render: function(data){
     //console.log(data);
     
-    var descriptionView = new DescriptionView();
+    var descriptionView = new DescriptionView(data);
     var dropDown = document.querySelector("#dropdown-content");
     while (dropDown.firstChild){ dropDown.removeChild(dropDown.firstChild); };
     for (var element of data){  

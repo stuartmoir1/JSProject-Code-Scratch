@@ -75,32 +75,33 @@ TestView.prototype = {
     var lastElement = term.testDescription[term.testDescription.length-1];
 
     form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
-      + '<br><br><input type="text" id="submit" value="Check" alt="Check answers" ' + ' ' + '<input type="image" id="random-test" value="Die" src="/images/preview.png"></form>';
+      + '<br><br><input type="text" id="submit" value="Check" alt="Check answers" ' + ' ' + '><input type="image" id="random-test" value="Die" src="/images/preview.png"></form>';
 
 
-    var submitButton = document.querySelector('#submit');
-    submitButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      var testAnswers = [];
-      for (var i = 0; i < term.keywords.length; i++) {
-        var element = document.getElementById('answer'+(i+1)).value;
-        testAnswers.push(element);
-      };
-      self.compare(testAnswers, term);
+      var submitButton = document.querySelector('#submit');
+      submitButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        var testAnswers = [];
+        for (var i = 0; i < term.keywords.length; i++) {
+          var element = document.getElementById('answer'+(i+1)).value;
+          testAnswers.push(element);
+        };
+        self.compare(testAnswers, term);
 
-    })
+      })
 
-    console.log(this.data);
+      console.log(form.outerHTML);
 
-    var randomTestButton = document.querySelector('#random-test');
-    randomTestButton.addEventListener('click', function(e){
-      e.preventDefault();
-      var number = this.data.length;
-      var randomTerm = this.data[Math.floor(Math.random() * number)];
-      var searchValue = document.querySelector('#search-text');
-      searchValue.value = randomTerm.name;
-      this.repopulate(randomTerm);
-    }.bind(this));
+      var randomTestButton = document.querySelector('#random-test');
+      console.log(randomTestButton);
+      randomTestButton.addEventListener('click', function(e){
+        e.preventDefault();
+        var number = this.data.length;
+        var randomTerm = this.data[Math.floor(Math.random() * number)];
+        var searchValue = document.querySelector('#search-text');
+        searchValue.value = randomTerm.name;
+        this.repopulate(randomTerm);
+      }.bind(this));
 
       
   },
