@@ -32,6 +32,9 @@ MainView.prototype = {
       var number = data.length;
       var randomTerm = data[Math.floor(Math.random() * number)];
 
+      var searchValue = document.querySelector('#search-text');
+      searchValue.value = randomTerm.name;
+
       var descriptionView = new DescriptionView();
       descriptionView.render(randomTerm);
     });
