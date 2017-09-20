@@ -75,6 +75,14 @@ var DropdownView = __webpack_require__(5)
 var url = 'http://localhost:3000/api/main';
 
 window.addEventListener('load', function(){
+  var score = 0;
+  var testTaken = 0;
+
+  var jsonString = JSON.stringify(score);
+  var jsonString2 = JSON.stringify(testTaken);
+
+  localStorage.setItem('score', jsonString);
+  localStorage.setItem('testTaken', jsonString2);
 
   var ajaxRequest = new AjaxRequest(url);
   var mainView = new MainView();
