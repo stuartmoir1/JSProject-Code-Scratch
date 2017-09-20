@@ -72,7 +72,7 @@ h1 {
 }
 
 .button:hover {background-color: #134A61}
-#submit:hover {background-color: #134A61}
+#submit:hover, #random-test:hover {background-color: #134A61}
 
 #button-go {
   /*background-color: #2DAAE1;
