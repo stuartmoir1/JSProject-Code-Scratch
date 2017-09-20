@@ -60,11 +60,100 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 
+var AjaxRequest = __webpack_require__(1);
+var MainView = __webpack_require__(2);
+var DropdownView = __webpack_require__(5)
+
+var url = 'http://localhost:3000/api/main';
+
+window.addEventListener('load', function(){
+
+  var ajaxRequest = new AjaxRequest(url);
+  var mainView = new MainView();
+  var dropdownView = new DropdownView()
+
+  ajaxRequest.getData(mainView.render);
+  ajaxRequest.getData(dropdownView.render);
+  
+});
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// Constructor
+var AjaxRequest = function(url){
+  this.url = url;
+  this.data = [];
+}
+
+// Methods
+
+AjaxRequest.prototype = {
+
+  getData: function(callback){
+    var request = new XMLHttpRequest();
+    request.open("GET", this.url);
+    request.onload = function(){
+      if (request.status === 200){
+        var jsonString = request.responseText;
+        //console.log(jsonString);
+        //localStorage.setItem('countries', jsonString);
+        this.data = JSON.parse(jsonString);
+        callback(this.data);
+      }
+    }.bind(this);
+    request.send();
+  }
+}
+
+module.exports = AjaxRequest;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var DescriptionView = __webpack_require__(3);
+
+// Constructor
+var MainView = function(){
+}
+
+// Methods
+
+MainView.prototype = {
+
+  render: function(data){
+
+    var button = document.querySelector('#button-go');
+    button.addEventListener('click', function(event){
+      event.preventDefault();
+  
+      var input = document.querySelector('#search-text').value.toLowerCase();
+      var term = data.find(function(element,){
+        return element.name === input;
+      });
+
+      if (term === undefined) { alert('Doh, Noobie! That term is not supported! Try again.') };
+
+      var descriptionView = new DescriptionView();
+      descriptionView.render(term);
+    });
+  }
+}
+
+module.exports = MainView;
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var TestView = __webpack_require__(4);
@@ -223,95 +312,6 @@ module.exports = DescriptionView;
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 
-var AjaxRequest = __webpack_require__(2);
-var MainView = __webpack_require__(3);
-var DropdownView = __webpack_require__(5)
-
-var url = 'http://localhost:3000/api/main';
-
-window.addEventListener('load', function(){
-
-  var ajaxRequest = new AjaxRequest(url);
-  var mainView = new MainView();
-  var dropdownView = new DropdownView()
-
-  ajaxRequest.getData(mainView.render);
-  ajaxRequest.getData(dropdownView.render);
-  
-});
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// Constructor
-var AjaxRequest = function(url){
-  this.url = url;
-  this.data = [];
-}
-
-// Methods
-
-AjaxRequest.prototype = {
-
-  getData: function(callback){
-    var request = new XMLHttpRequest();
-    request.open("GET", this.url);
-    request.onload = function(){
-      if (request.status === 200){
-        var jsonString = request.responseText;
-        //console.log(jsonString);
-        //localStorage.setItem('countries', jsonString);
-        this.data = JSON.parse(jsonString);
-        callback(this.data);
-      }
-    }.bind(this);
-    request.send();
-  }
-}
-
-module.exports = AjaxRequest;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var DescriptionView = __webpack_require__(0);
-
-// Constructor
-var MainView = function(){
-}
-
-// Methods
-
-MainView.prototype = {
-
-  render: function(data){
-
-    var button = document.querySelector('#button-go');
-    button.addEventListener('click', function(event){
-      event.preventDefault();
-  
-      var input = document.querySelector('#search-text').value.toLowerCase();
-      var term = data.find(function(element,){
-        return element.name === input;
-      });
-
-      if (term === undefined) { alert('Doh, Noobie! That term is not supported! Try again.') };
-
-      var descriptionView = new DescriptionView();
-      descriptionView.render(term);
-    });
-  }
-}
-
-module.exports = MainView;
-
-/***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
@@ -436,7 +436,7 @@ module.exports = TestView;
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DescriptionView = __webpack_require__(0);
+var DescriptionView = __webpack_require__(3);
 
 // Constructor
 var DropdownView = function(){

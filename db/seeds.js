@@ -20,7 +20,7 @@ db.data.insert([
       {"Video discussing abstraction": "https://www.youtube.com/watch?v=6V1sr0XV_Ng"},
       {"Abstraction is a core idea": "https://www.youtube.com/watch?v=HJ6rX5qBPIc"}
     ],
-     "embed_video": "https://www.youtube.com/watch?v=L1-zCdrx8Lk",
+     "embed_video": "https://www.youtube.com/embed/v2ogKZWkkFg",
      "audio": "./client/build/audio/abstraction.mp3"
   },
 
@@ -40,7 +40,7 @@ db.data.insert([
       {"Explaining Java array": "https://www.youtube.com/watch?v=7VWPiKoia8o"},
       {"Explaining Ruby array": "https://www.youtube.com/watch?v=REDH9OzdQ_I"}
     ],
-     "embed_video": "https://www.youtube.com/watch?v=Zj_UC7c1nh4",
+     "embed_video": "https://www.youtube.com/embed/Zj_UC7c1nh4",
      "audio": "./client/build/audio/array.mp3"
   },
 
@@ -59,7 +59,7 @@ db.data.insert([
       {"Video what is casting": "https://www.youtube.com/watch?v=00oyrMoKpKc"},
       {"Variables, ints, doubles casting": "https://www.youtube.com/watch?v=BPEaPjHtTxE"}
     ],
-     "embed_video": "https://www.youtube.com/watch?v=G0q78w5dmcE",
+     "embed_video": "https://www.youtube.com/embed/G0q78w5dmcE",
      "audio": "./client/build/audio/casting.mp3"
   },
 
@@ -78,7 +78,7 @@ db.data.insert([
     "videos": [
       {"OO classes and objects": "https://www.youtube.com/watch?v=POrU7vcKB_k"}
     ],
-    "embed_video": "https://www.youtube.com/watch?v=BZ8r7pC9bHY",
+    "embed_video": "https://www.youtube.com/embed/BZ8r7pC9bHY",
     "audio": "./client/build/audio/class.mp3"
   },
 
@@ -98,7 +98,7 @@ db.data.insert([
       {"Video tutorial encapsulation": "https://www.youtube.com/watch?v=JQ8CuedDchw"},
       {"Video explaining encapsulation": "https://www.youtube.com/watch?v=tt_astMjep0"}
     ],
-     "embed_video": "https://www.youtube.com/watch?v=szYzBC89CPE",
+     "embed_video": "https://www.youtube.com/embed/szYzBC89CPE",
      "audio": "./client/build/audio/encapsulation.mp3"
   },
 
@@ -117,7 +117,7 @@ db.data.insert([
       {"Video writing hashes": "https://www.youtube.com/watch?v=3tSPTv27QcY"},
       {"Ruby data structures - hashes": "https://www.youtube.com/watch?v=QOytrJL4c2c"}
     ],
-     "embed_video": "https://www.youtube.com/watch?v=SYMM9qNOXg8",
+     "embed_video": "https://www.youtube.com/embed/SYMM9qNOXg8",
      "audio": "./client/build/audio/hash"
   },
 
@@ -137,7 +137,7 @@ db.data.insert([
       {"Video what is inheritance": "https://www.youtube.com/watch?v=aFZ-0bbSLi8&t=111s"},
       {"Tutorial for beginners": "https://www.youtube.com/watch?v=lz1Cx6GzOuc"}
     ],
-     "embed_video": "https://www.youtube.com/watch?v=0PPKccntohM",
+     "embed_video": "https://www.youtube.com/embed/0PPKccntohM",
      "audio": "./client/build/audio/inheritance.mp3"
   },
 
@@ -157,7 +157,7 @@ db.data.insert([
       {"Video explaining interface": "https://www.youtube.com/watch?v=Yaa3QroWe7Q"},
       {"Tutorial for beginners": "https://www.youtube.com/watch?v=HxmP7ZVUeGU"}
     ],
-     "embed_video": "https://www.youtube.com/watch?v=NnZQ-C0x4hs",
+     "embed_video": "https://www.youtube.com/embed/NnZQ-C0x4hs",
      "audio": "./client/build/audio/interface.mp3"
   },
 
@@ -194,7 +194,7 @@ db.data.insert([
     "videos": [
       {"YouTube video": "https://www.youtube.com/watch?v=1OZrWqVncsU"}
     ],
-    "embed_video": "https://www.youtube.com/watch?v=1OZrWqVncsU",
+    "embed_video": "https://www.youtube.com/embed/1OZrWqVncsU",
     "audio": "./client/build/audio/object.mp3"
   },
 
@@ -214,7 +214,7 @@ db.data.insert([
       {"Video tutorial overloading": "https://www.youtube.com/watch?v=pBe4hLdrMHA"},
       {"Difference between overloading and overriding": "https://www.youtube.com/watch?v=4HJUX_BQgGI"}
     ],
-     "embed_video": "https://www.youtube.com/watch?v=hGRSyIvoIT4",
+     "embed_video": "https://www.youtube.com/embed/hGRSyIvoIT4",
      "audio": "./client/build/audio/overload.mp3"
   },
 
@@ -234,13 +234,13 @@ db.data.insert([
       {"Video tutorial overriding": "https://www.youtube.com/watch?v=rVSlCg2ttZ0"},
       {"Difference between overloading and overriding": "https://www.youtube.com/watch?v=4HJUX_BQgGI"}
     ],
-     "embed_video": "https://www.youtube.com/watch?v=ouI9Qarbbik",
+     "embed_video": "https://www.youtube.com/embed/ouI9Qarbbik",
      "audio": "./client/build/audio/override.mp3"
   },
 
   {
     "name": "polymorphism",
-    "description": "In object-orientated programming, the ability of an object to take on many forms."
+    "description": "In object-orientated programming, the ability of an object to take on many forms.",
     "keywords": ["object", "object-orientated programming"],
     "testDescription": ["object"],
     "tags": ["object", "object-orientated programming"],
@@ -274,7 +274,7 @@ db.data.insert([
       {"Video discussing Properties": "https://www.youtube.com/watch?v=grcPxVOnZpY"},
       {"Functional Properties": "https://www.youtube.com/watch?v=qzzFHpn69UQ"}
     ],
-    "embed_video": "https://www.youtube.com/watch?v=GAlH10AY7YI",
+    "embed_video": "https://www.youtube.com/embed/GAlH10AY7YI",
     "audio": "./client/build/audio/property.mp3"
   },
 
