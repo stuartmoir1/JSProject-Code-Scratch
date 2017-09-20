@@ -21,9 +21,9 @@ MainView.prototype = {
 
       if (term === undefined) { alert('Doh, Noobie! That term is not supported! Try again.') };
 
-      var descriptionView = new DescriptionView();
+      var descriptionView = new DescriptionView(data);
       descriptionView.render(term);
-    });
+    }.bind(this));
 
     var randomButton = document.querySelector('#button-random');
     randomButton.addEventListener('click', function(event){

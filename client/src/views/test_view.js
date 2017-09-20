@@ -1,5 +1,5 @@
-var TestView = function() {
-
+var TestView = function(data) {
+  this.data = data;
 }
 
 TestView.prototype = {
@@ -9,10 +9,10 @@ TestView.prototype = {
     var button = document.querySelector('#test-button');
     var infoButton = document.querySelector('#info-button');
 
-    var testView = new TestView();
-    testView.fade(section, term);
-    testView.fade(button, term);
-    testView.fade(infoButton, term);
+    // var testView = new TestView();
+    this.fade(section, term);
+    this.fade(button, term);
+    this.fade(infoButton, term);
   },
 
   fade: function(section, term){
@@ -72,7 +72,7 @@ TestView.prototype = {
     var lastElement = term.testDescription[term.testDescription.length-1];
 
     form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
-      + '<input type="image" id="submit" value="Check" src="/images/mark.png" alt="A Random Selection" style="width:50px;height:50px;"' + ' ' + '</form>';
+      + '<input type="image" id="submit" value="Check" src="/images/mark.png" alt="A Random Selection" style="width:50px;height:50px;">' + ' ' + '<input type="image" id="random-test" value="Die" src="/images/preview.png"></form>';
 
     var submitButton = document.querySelector('#submit');
     submitButton.addEventListener('click', function(e) {
@@ -82,10 +82,23 @@ TestView.prototype = {
         var element = document.getElementById('answer'+(i+1)).value;
         testAnswers.push(element);
       };
-
       self.compare(testAnswers, term);
 
     })
+
+    console.log(this.data);
+
+    var randomTestButton = document.querySelector('#random-test');
+    randomTestButton.addEventListener('click', function(e){
+      e.preventDefault();
+      var number = this.data.length;
+      var randomTerm = this.data[Math.floor(Math.random() * number)];
+      var searchValue = document.querySelector('#search-text');
+      searchValue.value = randomTerm.name;
+      this.repopulate(randomTerm);
+    }.bind(this));
+
+      
   },
 
   compare: function(data, term){

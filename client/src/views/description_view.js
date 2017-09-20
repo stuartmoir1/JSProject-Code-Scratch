@@ -1,8 +1,8 @@
 var TestView = require('./test_view.js');
 
 // Constructor
-var DescriptionView = function(){
-
+var DescriptionView = function(data){
+  this.data = data;
 }
 
 // Methods
@@ -11,7 +11,7 @@ DescriptionView.prototype = {
 
   render: function(term){
 
-    //console.log(term);
+
     
     var section = document.querySelector('#description-section');
     while (section.firstChild){ section.removeChild(section.firstChild); };
@@ -37,9 +37,9 @@ DescriptionView.prototype = {
         event.preventDefault();
         // console.log("test button clicked");
         //link from here to another view which allows us to add the fade function
-        var testView = new TestView();
+        var testView = new TestView(this.data);
         testView.render(term);
-      })
+      }.bind(this))
 
 
     // Load info button.
