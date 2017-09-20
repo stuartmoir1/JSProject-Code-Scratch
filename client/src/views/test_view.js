@@ -8,11 +8,13 @@ TestView.prototype = {
     var section = document.querySelector('#description-text');
     var button = document.querySelector('#test-button');
     var infoButton = document.querySelector('#info-button');
+    var audioButton = document.querySelector('.speak')
 
     var testView = new TestView();
     testView.fade(section, term);
     testView.fade(button, term);
     testView.fade(infoButton, term);
+    testView.fade(audioButton, term);
   },
 
   fade: function(section, term){

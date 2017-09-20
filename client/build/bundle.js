@@ -102,6 +102,23 @@ DescriptionView.prototype = {
       button = document.querySelector('#test-button');
       console.log(button);
 
+    var audioButton = document.createElement('button')
+      section.appendChild(audioButton);
+      audioButton.className += "speak";
+      
+    // var audioButton = document.querySelector("#button-audio");
+    // while (audioButton.firstChild){ audioButton.removeChild(audioButton.firstChild); };
+    //   var audioElement = ""
+
+      audioElement = document.createElement('audio');
+      audioElement.setAttribute('src', term.audio)
+      // audioButton.outerHTML = '<input type="image" class="speak" id="button-audio" value="Listen" alt="Submit search" src="images/play_arrow.png" style="width:50px;height:50px;">'
+      audioButton.addEventListener('click', function(event){
+        event.preventDefault();
+        audioElement.play();
+
+      });
+
       button.addEventListener('click', function(event){
         event.preventDefault();
         // console.log("test button clicked");
@@ -110,19 +127,9 @@ DescriptionView.prototype = {
         testView.render(term);
 
       
-        // <input type="image" class="button" id="button-audio" value="Listen" alt="Submit search" src="images/play_arrow.png" style="width:50px;height:50px;">
-        // var audioButton = document.querySelector("#button-audio");
-        // while (audioButton.firstChild){ audioButton.removeChild(audioButton.firstChild); };
-        //   // var audioElement = ""
+        
 
-        //   audioElement = document.createElement('audio');
-        //   audioElement.setAttribute('src', term.audio)
-        //   audioButton.addEventListener('click', function(event){
-        //   event.preventDefault();
-        //   audioElement.play();
-          
-          
-        // });
+
       })
 
 
@@ -344,11 +351,13 @@ TestView.prototype = {
     var section = document.querySelector('#description-text');
     var button = document.querySelector('#test-button');
     var infoButton = document.querySelector('#info-button');
+    var audioButton = document.querySelector('.speak')
 
     var testView = new TestView();
     testView.fade(section, term);
     testView.fade(button, term);
     testView.fade(infoButton, term);
+    testView.fade(audioButton, term);
   },
 
   fade: function(section, term){

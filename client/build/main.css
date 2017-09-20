@@ -62,6 +62,16 @@ h1 {
   margin: 0 20px 0 20px;
 }
 
+
+.speak {
+      background: url(images/play_arrow.png);
+      height: 30px;
+      width: 30px;
+      border: none;
+      background-size: cover;
+      padding-bottom: 10px;
+}
+
 .button:hover {background-color: #134A61}
 #submit:hover {background-color: #134A61}
 
