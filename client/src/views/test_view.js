@@ -103,6 +103,22 @@ TestView.prototype = {
         this.repopulate(randomTerm);
       }.bind(this));
 
+      var jsonString = localStorage.getItem('score');
+      var savedScore = JSON.parse(jsonString);
+
+      jsonString = localStorage.getItem('testTaken');
+      var savedTests = JSON.parse(jsonString);
+
+      var testResult = document.createElement('div');
+      testResult.setAttribute("id", "test-result");
+      section.appendChild(testResult);
+
+
+      // testResult.outerHTML = '<div id="test-results" alt="Results of tests">"Test Results:   " + savedScore + "/" + savedTests</div>';
+      testResult.innerText = "Test Results:   " + savedScore + "/" + savedTests;
+
+
+
       
   },
 
@@ -135,6 +151,12 @@ TestView.prototype = {
     var numOfTests = savedTests + count;
     jsonString = JSON.stringify(numOfTests);
     localStorage.setItem('testTaken', jsonString);
+
+    var testResult = document.querySelector('#test-result');
+
+    testResult.innerText = "Test Results:   " + newScore + "/" + numOfTests;
+
+
 
     if (response === true){
       alert('Well done, Noobie! You got it right!');
