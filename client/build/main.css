@@ -42,16 +42,13 @@ h1 {
 .button {
   font-size: 24px;
   background-color: #2DAAE1;
-  /*background-color: #1565C0;*/
   font-family: 'Cutive Mono', monospace;
   border-radius: 5px;
   height: 35px;
   width: 105px;
   border-style: solid;
   color: white;
-  /*color: black;*/
   border-width: 1px;
-  /*border-color: black;*/
   border-color: white;
   margin: 0 20px 0 20px;
 }
@@ -61,9 +58,15 @@ h1 {
 
 #button-go {
   background-color: #2DAAE1;
-  /*background-color: #1565C0;*/
   border-color: #2DAAE1;
-  /*background-color: #1565C0;*/
+  margin: 0px;
+/*  height: 105px;
+  width: 105px;*/
+}
+
+#button-audio {
+  background-color: #2DAAE1;
+  border-color: #2DAAE1;
   margin: 0px;
 /*  height: 105px;
   width: 105px;*/
