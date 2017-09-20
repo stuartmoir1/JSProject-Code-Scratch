@@ -39,6 +39,21 @@ DescriptionView.prototype = {
         //link from here to another view which allows us to add the fade function
         var testView = new TestView();
         testView.render(term);
+
+      
+        // <input type="image" class="button" id="button-audio" value="Listen" alt="Submit search" src="images/play_arrow.png" style="width:50px;height:50px;">
+        // var audioButton = document.querySelector("#button-audio");
+        // while (audioButton.firstChild){ audioButton.removeChild(audioButton.firstChild); };
+        //   // var audioElement = ""
+
+        //   audioElement = document.createElement('audio');
+        //   audioElement.setAttribute('src', term.audio)
+        //   audioButton.addEventListener('click', function(event){
+        //   event.preventDefault();
+        //   audioElement.play();
+          
+          
+        // });
       })
 
 

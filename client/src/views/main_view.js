@@ -25,17 +25,6 @@ MainView.prototype = {
       var descriptionView = new DescriptionView();
       descriptionView.render(term);
 
-      var audioButton = document.querySelector("#button-audio");
-      while (audioButton.firstChild){ audioButton.removeChild(audioButton.firstChild); };
-        // var audioElement = ""
-        audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', term.audio)
-        audioButton.addEventListener('click', function(event){
-        event.preventDefault();
-        audioElement.play();
-        
-        
-      });
 
     });
   },
