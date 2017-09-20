@@ -1,6 +1,7 @@
 body {
 
   background-color: #2DAAE1;
+  /*background-color: #1565C0;*/
   font-family: 'Cutive Mono', monospace;
   color: white;
 }
@@ -28,6 +29,7 @@ h1 {
   font-family: 'Cutive Mono', monospace;
   font-size: 64px;
   background-color: #2DAAE1;
+  /*background-color: #1565C0;*/
   text-align: center;
   border-width: 0px;
   border: none;
@@ -39,25 +41,39 @@ h1 {
 
 .button {
   font-size: 24px;
-  background-color: #EBBAB9;
+  background-color: #2DAAE1;
+  /*background-color: #1565C0;*/
   font-family: 'Cutive Mono', monospace;
   border-radius: 5px;
   height: 35px;
   width: 105px;
   border-style: solid;
   color: white;
+  /*color: black;*/
   border-width: 1px;
-  border-color: #ffffff;
+  /*border-color: black;*/
+  border-color: white;
   margin: 0 20px 0 20px;
 }
 
+/*.button:hover {background-color: #648EAE}*/
+.button:hover {background-color: #134A61}
+
 #button-go {
-  /*margin-right: 20px;*/
-  /*height: 35px;
+  background-color: #2DAAE1;
+  /*background-color: #1565C0;*/
+  border-color: #2DAAE1;
+  /*background-color: #1565C0;*/
+  margin: 0px;
+/*  height: 105px;
   width: 105px;*/
 }
 
 #button-random {
+  background-color: #2DAAE1;
+  /*background-color: #1565C0;*/
+  border-color: #2DAAE1;
+  margin: 0px;
   /*margin-left: 20px;*/
  /* height: 35px;
   width: 105px;*/
@@ -156,21 +172,25 @@ h1 {
 
 .dropbtn {
     background-color: #2DAAE1;
+    /*background-color: #1565C0;*/
     /*color: white;
-    padding: 16px;
-    font-size: 16px;*/
+    font-family: 'Cutive Mono', monospace;*/
+    /*padding: 16px;*/
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
     border: none;
     border-radius: 5%;
     cursor: pointer;
 }
 /*===========Hamburger=============*/
-.bar1, .bar2, .bar3 {
+/*.bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
     background-color: #5D7C94;
     margin: 6px 0;
     transition: 0.4s;
-}
+}*/
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -212,6 +232,8 @@ h1 {
 /*=========Description================*/
 #description-section {
     text-align: center;
+    font-size: 36px;
+    padding: 10px 10px 0 10px;
 }
 
 /* Container for flexboxes */
@@ -245,7 +267,7 @@ img.image {
 #description-text {
   text-align: center;
   font-size: 36px;
-  padding: 0 10px 0 10px;
+  padding: 10px 10px 0 10px;
 }
 
 /*
@@ -270,3 +292,9 @@ form#test-form {
   /*text-decoration: none;*/
   /*color: #333;*/
 /*}*/
+
+.logo {
+  position:relative;
+ float: right;
+ margin-left: 30px;
+}
