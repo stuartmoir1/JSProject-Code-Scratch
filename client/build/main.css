@@ -94,6 +94,7 @@ h1 {
   background: rgba(, 0, 0, 0.3);
   /*visibility: visible;*/
   opacity: 1;
+  overflow-y: scroll;
 }
 
 .overlay:target {
@@ -110,7 +111,6 @@ h1 {
   width: 60%;
   position: relative;
   /*transition: all 5s ease-in-out;*/
-  overflow-y: scroll;
   color: black;
 }
 
@@ -158,9 +158,11 @@ h1 {
   color: black;
 }
 
-.popup .video {
-  height: 50;
-  width: 100;
+.popup .video iframe {
+  frameborder: 0;
+  height: 158;
+  width: 280;
+  allowfullscreen;
 }
 
 @media screen and (max-width: 700px){
