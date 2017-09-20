@@ -257,6 +257,26 @@ db.data.insert([
      "audio": "./client/build/audio/overload.mp3"
   },
 
+  {
+    "name": "overriding",
+    "description": "Overriding enables a child class to provide different implementation for a method that is already defined and/or implemented in its parent class or one of its parent classes.",
+    "keywords": ["child", "method", "parent", "parent"],
+    "testDescription": ["Overriding enables a ", " class to provide different implementation for a ", " that is already defined and/or implemented in its ", " class or one of its ", " classes."],
+    "tags": ["class", "method", "overloading"],
+    "add_info": "Overriding allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its superclasses or parent classes. The implementation in the subclass overrides (replaces) the implementation in the superclass by providing a method that has same name, same parameters or signature, and same return type as the method in the parent class.",
+    "webpages": [
+      {"What is overriding": "https://www.tutorialspoint.com/java/java_overriding.htm"},
+      {"Overriding in StackOverflow": "https://stackoverflow.com/questions/8813599/overriding-in-java"},
+      {"Wikipedia (method overloading)": "https://en.wikipedia.org/wiki/Method_overriding"}
+    ],
+    "videos": [
+      {"Video tutorial overriding": "https://www.youtube.com/watch?v=rVSlCg2ttZ0"},
+      {"Difference between overloading and overriding": "https://www.youtube.com/watch?v=4HJUX_BQgGI"}
+    ],
+     "embed_video": "https://www.youtube.com/watch?v=ouI9Qarbbik",
+     "audio": "./client/build/audio/override.mp3"
+  }
+
   // {
   //   "name": "",
   //   "description": "",
@@ -276,4 +296,5 @@ db.data.insert([
   //    "embed_video": "",
   //    "audio": "./client/build/audio/"
   // }
+
 ]);
