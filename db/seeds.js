@@ -21,7 +21,7 @@ db.data.insert([
       {"Abstraction is a core idea": "https://www.youtube.com/watch?v=HJ6rX5qBPIc"}
     ],
      "embed_video": "https://www.youtube.com/watch?v=L1-zCdrx8Lk",
-     "audio": "./client/build/audio/abstraction.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/abstraction_gb_1_8.mp3"
   },
 
   {
@@ -41,7 +41,7 @@ db.data.insert([
       {"Explaining Ruby array": "https://www.youtube.com/watch?v=REDH9OzdQ_I"}
     ],
      "embed_video": "https://www.youtube.com/watch?v=Zj_UC7c1nh4",
-     "audio": "./client/build/audio/array.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/array_gb_1.mp3"
   },
 
   {
@@ -60,7 +60,7 @@ db.data.insert([
       {"Variables, ints, doubles casting": "https://www.youtube.com/watch?v=BPEaPjHtTxE"}
     ],
      "embed_video": "https://www.youtube.com/watch?v=G0q78w5dmcE",
-     "audio": "./client/build/audio/casting.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/casting_gb_1.mp3"
   },
 
   {
@@ -99,7 +99,7 @@ db.data.insert([
       {"Video explaining encapsulation": "https://www.youtube.com/watch?v=tt_astMjep0"}
     ],
      "embed_video": "https://www.youtube.com/watch?v=szYzBC89CPE",
-     "audio": "./client/build/audio/encapsulation.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/encapsulation_gb_1.mp3"
   },
 
   {
