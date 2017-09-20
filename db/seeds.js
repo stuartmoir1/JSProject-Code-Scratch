@@ -248,7 +248,7 @@ db.data.insert([
     "webpages": [
       {"Polymorphism (Wikipedia)": "https://en.wikipedia.org/wiki/Polymorphism_(computer_science)"},
       {"Polymorphism in Java (beginnersbook)": "https://beginnersbook.com/2013/03/polymorphism-in-java/"},
-      {"What is Polymorphism in Java? (developer.com)": "http://www.developer.com/java/data/what-is-polymorphism-in-java.html"}
+      {"What is Polymorphism in Java? (Developer)": "http://www.developer.com/java/data/what-is-polymorphism-in-java.html"}
     ],
     "videos": [
       {"Introduction to polymorphism (thenewboston)": "https://www.youtube.com/watch?v=0xw06loTm1k"},
