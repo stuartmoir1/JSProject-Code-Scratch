@@ -24,6 +24,17 @@ MainView.prototype = {
       var descriptionView = new DescriptionView();
       descriptionView.render(term);
     });
+
+    var randomButton = document.querySelector('#button-random');
+    randomButton.addEventListener('click', function(event){
+      event.preventDefault();
+
+      var number = data.length;
+      var randomTerm = data[Math.floor(Math.random() * number)];
+
+      var descriptionView = new DescriptionView();
+      descriptionView.render(randomTerm);
+    });
   }
 }
 

@@ -147,6 +147,17 @@ MainView.prototype = {
       var descriptionView = new DescriptionView();
       descriptionView.render(term);
     });
+
+    var randomButton = document.querySelector('#button-random');
+    randomButton.addEventListener('click', function(event){
+      event.preventDefault();
+
+      var number = data.length;
+      var randomTerm = data[Math.floor(Math.random() * number)];
+
+      var descriptionView = new DescriptionView();
+      descriptionView.render(randomTerm);
+    });
   }
 }
 
@@ -281,6 +292,11 @@ DescriptionView.prototype = {
   },
 
   createPopupList: function(term, outerDiv, item){
+    var p = document.createElement('p');
+    outerDiv.appendChild(p);
+    var text = item.charAt(0).toUpperCase() + item.slice(1);
+    console.log(text);
+    p.innerHTML = '<strong>' + text + '<strong>';
     var div = document.createElement('div');
     div.classList.add(item);
     outerDiv.appendChild(div);

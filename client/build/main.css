@@ -111,6 +111,7 @@ h1 {
   position: relative;
   /*transition: all 5s ease-in-out;*/
   overflow-y: scroll;
+  color: black;
 }
 
 .popup h2 {

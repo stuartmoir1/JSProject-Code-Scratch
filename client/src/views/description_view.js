@@ -123,6 +123,11 @@ DescriptionView.prototype = {
   },
 
   createPopupList: function(term, outerDiv, item){
+    var p = document.createElement('p');
+    outerDiv.appendChild(p);
+    var text = item.charAt(0).toUpperCase() + item.slice(1);
+    console.log(text);
+    p.innerHTML = '<strong>' + text + '<strong>';
     var div = document.createElement('div');
     div.classList.add(item);
     outerDiv.appendChild(div);

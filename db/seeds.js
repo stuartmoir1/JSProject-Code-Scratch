@@ -10,15 +10,15 @@ db.data.insert([
     "testDescription": ["Using abstraction, a ", " hides all but the relevant data about an ", " in order to reduce complexity and increase ", "."],
     "image": "",
     "tags": ["object", "object-oriented propgramming", "variable"],
-    "add_info": "Abstraction is one of the four fundamental OOP concepts. The other three are inheritance, polymorphism, and encapsulation.  Abstraction is a technique for arranging complexity of computer systems. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level. The programmer works with an idealized interface (usually well defined) and can add additional levels of functionality that would otherwise be too complex to handle.",
+    "add_info": "Abstraction is one of the four fundamental object-oriented propgramming concepts. The other three are inheritance, polymorphism, and encapsulation.  Abstraction is a technique for arranging complexity of computer systems. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level. The programmer works with an idealized interface (usually well defined) and can add additional levels of functionality that would otherwise be too complex to handle.",
     "webpages": [
-      {"What is abstraction": "http://whatis.techtarget.com/definition/abstraction"},
-      {"Abstraction in StackOverflow": "https://stackoverflow.com/questions/7028242/what-is-abstraction"},
-      {"Wikipedia (abstraction)": "https://en.wikipedia.org/wiki/Abstraction_(software_engineering)"}
+      {"What is abstraction? (TechTarget)": "http://whatis.techtarget.com/definition/abstraction"},
+      {"What is abstraction? (StackOverflow)": "https://stackoverflow.com/questions/7028242/what-is-abstraction"},
+      {"Abstraction (Wikipedia)": "https://en.wikipedia.org/wiki/Abstraction_(software_engineering)"}
     ],
     "videos": [
-      {"Video discussing abstraction": "https://www.youtube.com/watch?v=6V1sr0XV_Ng"},
-      {"Abstraction is a core idea": "https://www.youtube.com/watch?v=HJ6rX5qBPIc"}
+      {"Abstraction (Harvard University)": "https://www.youtube.com/watch?v=6V1sr0XV_Ng"},
+      {"Abstraction (University of Alabama)": "https://www.youtube.com/watch?v=HJ6rX5qBPIc"}
     ],
      "embed_video": "https://www.youtube.com/embed/v2ogKZWkkFg",
      "audio": "./client/build/audio/abstraction.mp3"
@@ -32,13 +32,13 @@ db.data.insert([
     "tags": ["variable", "string", "integer"],
     "add_info": "An array, is a data structure consisting of a collection of elements (values or variables), each identified by at least one array index or key. An array is stored so that the position of each element can be computed from its index tuple by a mathematical formula.",
     "webpages": [
-      {"What is an array": "https://techterms.com/definition/array"},
-      {"Array in StackOverflow (Java)": "https://stackoverflow.com/documentation/java/99/arrays#t=201709192017060243788"},
-      {"Wikipedia (array)": "https://en.wikipedia.org/wiki/Array_data_structure"}
+      {"Array definition (TechTarget)": "https://techterms.com/definition/array"},
+      {"Array (StackOverflow)": "https://stackoverflow.com/documentation/java/99/arrays#t=201709192017060243788"},
+      {"Array (Wikipedia)": "https://en.wikipedia.org/wiki/Array_data_structure"}
     ],
     "videos": [
-      {"Explaining Java array": "https://www.youtube.com/watch?v=7VWPiKoia8o"},
-      {"Explaining Ruby array": "https://www.youtube.com/watch?v=REDH9OzdQ_I"}
+      {"Array - Java (Patrick Washington DC)": "https://www.youtube.com/watch?v=7VWPiKoia8o"},
+      {"Array - Ruby (Educator)": "https://www.youtube.com/watch?v=REDH9OzdQ_I"}
     ],
      "embed_video": "https://www.youtube.com/embed/Zj_UC7c1nh4",
      "audio": "./client/build/audio/array.mp3"
