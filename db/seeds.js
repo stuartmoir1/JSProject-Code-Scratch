@@ -197,45 +197,6 @@ db.data.insert([
     "embed_video": "https://www.youtube.com/watch?v=1OZrWqVncsU",
     "audio": "./client/build/audio/object.mp3"
   },
-  
-  {
-    "name": "properties",
-    "description": "Variables declared within a class.",
-    "keywords": ["Variables", "class"],
-    "testDescription": ["", "declared within a ", "."],
-    "tags": ["object-oriented programming", "class"],
-    "add_info": "A property, in object-oriented programming languages, is a special sort of class member, intermediate in functionality between a field (or data member) and a method. The syntax for reading and writing of properties is like for fields, but property reads and writes are (usually) translated to 'getter' and 'setter' method calls. The field-like syntax is easier to read and write than lots of method calls, yet the interposition of method calls 'under the hood' allows for data validation, active updating (eg of GUI elements), or implementation of what may be called 'read-only fields'.",
-    "webpages": [
-      {"What is a Property": "http://study.com/academy/lesson/what-is-an-attribute-in-computer-programming-definition-examples.html"},
-      {"Property in StackOverflow": "https://stackoverflow.com/questions/4246883/what-is-method-property-and-function"},
-      {"Wikipedia (Property)": "https://en.wikipedia.org/wiki/Property_(programming)"}
-    ],
-    "videos": [
-      {"Video discussing Properties": "https://www.youtube.com/watch?v=grcPxVOnZpY"},
-      {"Functional Properties": "https://www.youtube.com/watch?v=qzzFHpn69UQ"}
-    ],
-    "embed_video": "https://www.youtube.com/watch?v=GAlH10AY7YI",
-    "audio": "./client/build/audio/property.mp3"
-  },
-
-  {
-    "name": "variable",
-    "description": "A variable is a named piece of computer memory, containing some information inside.",
-    "keywords": ["variable", "memory", "information"],
-    "testDescription": ["A",  "is a named piece of computer ", ", containing some ", " inside."],
-    "tags": ["object-oriented programming", "array", "integer"],
-    "add_info": "A variable is a storage location paired with an associated symbolic name (an identifier), which contains some known or unknown quantity of information referred to as a value. The variable name is the usual way to reference the stored value; this separation of name and content allows the name to be used independently of the exact information it represents. The identifier in computer source code can be bound to a value during run time, and the value of the variable may thus change during the course of program execution.",
-    "webpages": [
-      {"What is a variable": "https://launchschool.com/books/ruby/read/variables"},
-      {"Variable in StackOverflow": "https://stackoverflow.com/questions/1137158/what-is-a-variable"},
-      {"Wikipedia (variable)": "https://en.wikipedia.org/wiki/Variable_(computer_science)"}
-    ],
-    "videos": [
-      {"Video discussing variables": "https://www.youtube.com/watch?v=aeoGGabJhAQ"}
-    ],
-    "embed_video": "https://www.youtube.com/watch?v=t4ND-_kTxcI",
-    "audio": "./client/build/audio/variable.mp3"
-  },
 
   {
     "name": "overloading",
@@ -275,7 +236,68 @@ db.data.insert([
     ],
      "embed_video": "https://www.youtube.com/watch?v=ouI9Qarbbik",
      "audio": "./client/build/audio/override.mp3"
+  },
+
+  {
+    "name": "polymorphism",
+    "description": "In object-orientated programming, the ability of an object to take on many forms."
+    "keywords": ["object", "object-orientated programming"],
+    "testDescription": ["object"],
+    "tags": ["object", "object-orientated programming"],
+    "add_info": "Polymorphism is one of the four fundamental OOP concepts. The other three are encapsulation, inheritance, and abstraction. Ts the characteristic of being able to assign a different meaning or usage to something in different contexts - specifically, to allow an entity such as a variable, a function, or an object to have more than one form. There are several different kinds of polymorphism, including ad hoc polymorphism, parametric polymorphism and subtyping.",
+    "webpages": [
+      {"Wikipedia": "https://en.wikipedia.org/wiki/Polymorphism_(computer_science)"},
+      {"Polymorphism in Java": "https://beginnersbook.com/2013/03/polymorphism-in-java/"},
+      {"What is Polymorphism in Java?": "http://www.developer.com/java/data/what-is-polymorphism-in-java.html"}
+    ],
+    "videos": [
+      {"Java Porgramming Tutorial - Java": "https://www.youtube.com/watch?v=0xw06loTm1k"},
+      {"Introduction to Polymorphism": "https://vimeo.com/60187931"}
+    ],
+     "embed_video": "https://www.youtube.com/embed/0xw06loTm1k",
+     "audio": "./client/build/audio/polymorphism.mp3"
+  },
+  
+  {
+    "name": "properties",
+    "description": "Variables declared within a class.",
+    "keywords": ["Variables", "class"],
+    "testDescription": ["", "declared within a ", "."],
+    "tags": ["object-oriented programming", "class"],
+    "add_info": "A property, in object-oriented programming languages, is a special sort of class member, intermediate in functionality between a field (or data member) and a method. The syntax for reading and writing of properties is like for fields, but property reads and writes are (usually) translated to 'getter' and 'setter' method calls. The field-like syntax is easier to read and write than lots of method calls, yet the interposition of method calls 'under the hood' allows for data validation, active updating (eg of GUI elements), or implementation of what may be called 'read-only fields'.",
+    "webpages": [
+      {"What is a Property": "http://study.com/academy/lesson/what-is-an-attribute-in-computer-programming-definition-examples.html"},
+      {"Property in StackOverflow": "https://stackoverflow.com/questions/4246883/what-is-method-property-and-function"},
+      {"Wikipedia (Property)": "https://en.wikipedia.org/wiki/Property_(programming)"}
+    ],
+    "videos": [
+      {"Video discussing Properties": "https://www.youtube.com/watch?v=grcPxVOnZpY"},
+      {"Functional Properties": "https://www.youtube.com/watch?v=qzzFHpn69UQ"}
+    ],
+    "embed_video": "https://www.youtube.com/watch?v=GAlH10AY7YI",
+    "audio": "./client/build/audio/property.mp3"
+  },
+
+  {
+    "name": "variable",
+    "description": "A variable is a named piece of computer memory, containing some information inside.",
+    "keywords": ["variable", "memory", "information"],
+    "testDescription": ["A",  "is a named piece of computer ", ", containing some ", " inside."],
+    "tags": ["object-oriented programming", "array", "integer"],
+    "add_info": "A variable is a storage location paired with an associated symbolic name (an identifier), which contains some known or unknown quantity of information referred to as a value. The variable name is the usual way to reference the stored value; this separation of name and content allows the name to be used independently of the exact information it represents. The identifier in computer source code can be bound to a value during run time, and the value of the variable may thus change during the course of program execution.",
+    "webpages": [
+      {"What is a variable": "https://launchschool.com/books/ruby/read/variables"},
+      {"Variable in StackOverflow": "https://stackoverflow.com/questions/1137158/what-is-a-variable"},
+      {"Wikipedia (variable)": "https://en.wikipedia.org/wiki/Variable_(computer_science)"}
+    ],
+    "videos": [
+      {"Video discussing variables": "https://www.youtube.com/watch?v=aeoGGabJhAQ"}
+    ],
+    "embed_video": "https://www.youtube.com/watch?v=t4ND-_kTxcI",
+    "audio": "./client/build/audio/variable.mp3"
   }
+
+  
 
   // {
   //   "name": "",
