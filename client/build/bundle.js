@@ -448,11 +448,13 @@ TestView.prototype = {
   compare: function(data, term){
   
     var count = 0;
+    var score = 0
     var response = true;
     data.forEach(function(element) {
       if(element === term.keywords[count]){
         var answer = document.getElementById('answer' + (count + 1));
         answer.style.color = "Green";
+        score++; 
       } else {
         var answer = document.getElementById('answer' + (count + 1));
         answer.style.color = "Red";
@@ -460,6 +462,18 @@ TestView.prototype = {
       };
       count++;
     });
+
+    var jsonString = localStorage.getItem('score');
+    var savedScore = JSON.parse(jsonString);
+    var newScore = savedScore + score;
+    jsonString = JSON.stringify(newScore);
+    localStorage.setItem('score', jsonString);
+
+    jsonString = localStorage.getItem('testTaken');
+    var savedTests = JSON.parse(jsonString);
+    var numOfTests = savedTests + count;
+    jsonString = JSON.stringify(numOfTests);
+    localStorage.setItem('testTaken', jsonString);
 
     if (response === true){
       alert('Well done, Noobie! You got it right!');
