@@ -240,7 +240,7 @@ db.data.insert([
 
   {
     "name": "polymorphism",
-    "description": "In object-orientated programming, the ability of an object to take on many forms."
+    "description": "In object-orientated programming, the ability of an object to take on many forms.",
     "keywords": ["object", "object-orientated programming"],
     "testDescription": ["object"],
     "tags": ["object", "object-orientated programming"],
