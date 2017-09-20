@@ -79,7 +79,7 @@ db.data.insert([
       {"OO classes and objects": "https://www.youtube.com/watch?v=POrU7vcKB_k"}
     ],
     "embed_video": "https://www.youtube.com/watch?v=BZ8r7pC9bHY",
-    "audio": "./client/build/audio/class.mp3"
+    "audio": "http://audio.oxforddictionaries.com/en/mp3/class_gb_1.mp3"
   },
 
   {
@@ -118,7 +118,7 @@ db.data.insert([
       {"Ruby data structures - hashes": "https://www.youtube.com/watch?v=QOytrJL4c2c"}
     ],
      "embed_video": "https://www.youtube.com/watch?v=SYMM9qNOXg8",
-     "audio": "./client/build/audio/hash"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/hash_gb_1.mp3"
   },
 
   {
@@ -138,7 +138,7 @@ db.data.insert([
       {"Tutorial for beginners": "https://www.youtube.com/watch?v=lz1Cx6GzOuc"}
     ],
      "embed_video": "https://www.youtube.com/watch?v=0PPKccntohM",
-     "audio": "./client/build/audio/inheritance.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/inheritance_gb_1.mp3"
   },
 
   {
@@ -158,7 +158,7 @@ db.data.insert([
       {"Tutorial for beginners": "https://www.youtube.com/watch?v=HxmP7ZVUeGU"}
     ],
      "embed_video": "https://www.youtube.com/watch?v=NnZQ-C0x4hs",
-     "audio": "./client/build/audio/interface.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/interface_gb_1.mp3"
   },
 
   {
@@ -176,7 +176,7 @@ db.data.insert([
       {"YouTube video:": "https://www.youtube.com/watch?v=_rsKeFaGx48"}
     ],
     "embed_video": "https://www.youtube.com/embed/1OZrWqVncsU",
-    "audio": "./client/build/audio/method.mp3"
+    "audio": "http://audio.oxforddictionaries.com/en/mp3/method_gb_1.mp3"
   },
 
   {
@@ -195,7 +195,7 @@ db.data.insert([
       {"YouTube video": "https://www.youtube.com/watch?v=1OZrWqVncsU"}
     ],
     "embed_video": "https://www.youtube.com/watch?v=1OZrWqVncsU",
-    "audio": "./client/build/audio/object.mp3"
+    "audio": "http://audio.oxforddictionaries.com/en/mp3/object_gb_1.mp3"
   },
 
   {
@@ -215,7 +215,7 @@ db.data.insert([
       {"Difference between overloading and overriding": "https://www.youtube.com/watch?v=4HJUX_BQgGI"}
     ],
      "embed_video": "https://www.youtube.com/watch?v=hGRSyIvoIT4",
-     "audio": "./client/build/audio/overload.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/overload_gb_1.mp3”"
   },
 
   {
@@ -235,7 +235,7 @@ db.data.insert([
       {"Difference between overloading and overriding": "https://www.youtube.com/watch?v=4HJUX_BQgGI"}
     ],
      "embed_video": "https://www.youtube.com/watch?v=ouI9Qarbbik",
-     "audio": "./client/build/audio/override.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/override_gb_1_8.mp3"
   },
 
   {
@@ -255,7 +255,7 @@ db.data.insert([
       {"Introduction to Polymorphism": "https://vimeo.com/60187931"}
     ],
      "embed_video": "https://www.youtube.com/embed/0xw06loTm1k",
-     "audio": "./client/build/audio/polymorphism.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/polymorphism_gb_1_8.mp3"
   },
   
   {
@@ -275,7 +275,7 @@ db.data.insert([
       {"Functional Properties": "https://www.youtube.com/watch?v=qzzFHpn69UQ"}
     ],
     "embed_video": "https://www.youtube.com/watch?v=GAlH10AY7YI",
-    "audio": "./client/build/audio/property.mp3"
+    "audio": "http://audio.oxforddictionaries.com/en/mp3/property_gb_1.mp3"
   },
 
   {
@@ -294,7 +294,7 @@ db.data.insert([
       {"Video discussing variables": "https://www.youtube.com/watch?v=aeoGGabJhAQ"}
     ],
     "embed_video": "https://www.youtube.com/watch?v=t4ND-_kTxcI",
-    "audio": "./client/build/audio/variable.mp3"
+    "audio": "http://audio.oxforddictionaries.com/en/mp3/variable_gb_1_8.mp3"
   }
 
   
