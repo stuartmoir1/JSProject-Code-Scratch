@@ -397,7 +397,7 @@ TestView.prototype = {
     section.appendChild(form);
 
     for (var i = 0; i < term.keywords.length; i++) {
-      var text = term.testDescription[i] + ' ' + '<input type="text" id="answer' +(i+1)+'" alt="Enter answer ' +(i+1)+' here">';
+      var text = term.testDescription[i] + ' ' + '<input type="text" id="answer' +(i+1)+'" alt="Enter answer ' +(i+1)+' here" autofocus="#answer1">';
       questionText.push(text);
     }
     var joinedText = questionText.join(' ');

@@ -22,8 +22,24 @@ h1 {
 
 #searchForm {
   text-align: center;
-  padding-top: 20px;
+  vertical-align: center;
+  /*padding-top: 20px;*/
 }
+
+#answer1, #answer2, #answer3 {
+  text-align: center;
+  /*background-color: #2DAAE1;*/
+  color: white;
+  border: 0;
+  outline: 0;
+background: transparent;
+  border-bottom: 1px solid white;
+
+
+}
+
+
+
 
 .form-control {
   font-family: 'Cutive Mono', monospace;
