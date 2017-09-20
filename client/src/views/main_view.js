@@ -37,7 +37,7 @@ MainView.prototype = {
       var searchValue = document.querySelector('#search-text');
       searchValue.value = randomTerm.name;
 
-      var descriptionView = new DescriptionView();
+      var descriptionView = new DescriptionView(data);
       descriptionView.render(randomTerm);
 
     });

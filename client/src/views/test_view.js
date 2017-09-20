@@ -75,7 +75,7 @@ TestView.prototype = {
     var lastElement = term.testDescription[term.testDescription.length-1];
 
     form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
-      + '<br><br><input type="text" id="submit" value="Check" alt="Check answers" ' + ' ' + '><input type="image" id="random-test" value="Die" src="/images/preview.png"></form>';
+      + '<br><br><input type="text" id="submit" value="Check" alt="Check answers" ' + ' ' + '><input type="image" id="random-test" value="Die" src="/images/dice.png" style="width: 50px; height: 50px;"></form>';
 
 
       var submitButton = document.querySelector('#submit');
