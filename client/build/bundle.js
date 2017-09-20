@@ -404,7 +404,7 @@ TestView.prototype = {
     var lastElement = term.testDescription[term.testDescription.length-1];
 
     form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
-      + '<br><input type="text" id="submit" value="Check" alt="Check answers" ' + ' ' + '</form>';
+      + '<br><br><input type="text" id="submit" value="Check" alt="Check answers" ' + ' ' + '</form>';
 
     var submitButton = document.querySelector('#submit');
     submitButton.addEventListener('click', function(e) {
