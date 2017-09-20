@@ -1,20 +1,17 @@
 body {
 
   background-color: #2DAAE1;
-  /*background-color: #1565C0;*/
   font-family: 'Cutive Mono', monospace;
   color: white;
 }
 
 h1 {
     margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 50px;
     text-align: center;
     width: 80%;
 }
-
-/* ========Dropdown Button======== */
 
 .name {
   font-size: 96px;
@@ -22,14 +19,25 @@ h1 {
 
 #searchForm {
   text-align: center;
-  padding-top: 20px;
+  vertical-align: center;
+}
+
+#answer1, #answer2, #answer3 {
+  text-align: center;
+  /*background-color: #2DAAE1;*/
+  color: white;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+  font-size: 36px;
+  font-family: 'Cutive Mono', monospace;
 }
 
 .form-control {
   font-family: 'Cutive Mono', monospace;
   font-size: 64px;
   background-color: #2DAAE1;
-  /*background-color: #1565C0;*/
   text-align: center;
   border-width: 0px;
   border: none;
@@ -42,41 +50,68 @@ h1 {
 .button {
   font-size: 24px;
   background-color: #2DAAE1;
-  /*background-color: #1565C0;*/
   font-family: 'Cutive Mono', monospace;
   border-radius: 5px;
   height: 35px;
   width: 105px;
   border-style: solid;
   color: white;
-  /*color: black;*/
   border-width: 1px;
-  /*border-color: black;*/
   border-color: white;
   margin: 0 20px 0 20px;
 }
 
-/*.button:hover {background-color: #648EAE}*/
+
+.speak {
+      background: url(images/play_arrow.png);
+      height: 30px;
+      width: 30px;
+      border: none;
+      background-size: cover;
+      padding-bottom: 10px;
+}
+
 .button:hover {background-color: #134A61}
+#submit:hover {background-color: #134A61}
 
 #button-go {
-  background-color: #2DAAE1;
-  /*background-color: #1565C0;*/
+  /*background-color: #2DAAE1;
   border-color: #2DAAE1;
-  /*background-color: #1565C0;*/
+  margin: 0px;*/
+  outline-s
+}
+
+#button-audio {
+  background-color: #2DAAE1;
+  border-color: #2DAAE1;
   margin: 0px;
-/*  height: 105px;
-  width: 105px;*/
 }
 
 #button-random {
   background-color: #2DAAE1;
-  /*background-color: #1565C0;*/
   border-color: #2DAAE1;
   margin: 0px;
-  /*margin-left: 20px;*/
- /* height: 35px;
-  width: 105px;*/
+}
+
+#submit {
+  font-size: 24px;
+  background-color: #2DAAE1;
+  font-family: 'Cutive Mono', monospace;
+  border-radius: 5px;
+  height: 35px;
+  width: 105px;
+  border-style: solid;
+  color: white;
+  border-width: 1px;
+  border-color: white;
+  margin: 0 20px 0 20px;
+  text-align: center;
+}
+
+#button-audio {
+  background-color: #2DAAE1;
+  border-color: #2DAAE1;
+  margin: 0px;
 }
 
 #button-go, #button-random {
@@ -92,13 +127,11 @@ h1 {
   left: 0;
   right: 0;
   background: rgba(, 0, 0, 0.3);
-  /*visibility: visible;*/
   opacity: 1;
   overflow-y: scroll;
 }
 
 .overlay:target {
-  /*transition: opacity 500ms;*/
   visibility: hidden;
   opacity: 0;
 }
@@ -237,6 +270,12 @@ h1 {
     text-align: center;
     font-size: 36px;
     padding: 10px 10px 0 10px;
+}
+
+#test-form {
+    text-align: center;
+    font-size: 36px;
+    padding: 55px 10px 0 10px;
 }
 
 /* Container for flexboxes */

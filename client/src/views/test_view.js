@@ -8,11 +8,14 @@ TestView.prototype = {
     var section = document.querySelector('#description-text');
     var button = document.querySelector('#test-button');
     var infoButton = document.querySelector('#info-button');
+    var audioButton = document.querySelector('.speak')
 
-    // var testView = new TestView();
+
+    
     this.fade(section, term);
     this.fade(button, term);
     this.fade(infoButton, term);
+    this.fade(audioButton, term);
   },
 
   fade: function(section, term){
@@ -65,14 +68,15 @@ TestView.prototype = {
     section.appendChild(form);
 
     for (var i = 0; i < term.keywords.length; i++) {
-      var text = term.testDescription[i] + ' ' + '<input type="text" id="answer' +(i+1)+'" alt="Enter answer ' +(i+1)+' here">';
+      var text = term.testDescription[i] + ' ' + '<input type="text" id="answer' +(i+1)+'" alt="Enter answer ' +(i+1)+' here" autofocus="answer1">';
       questionText.push(text);
     }
     var joinedText = questionText.join(' ');
     var lastElement = term.testDescription[term.testDescription.length-1];
 
     form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
-      + '<input type="image" id="submit" value="Check" src="/images/mark.png" alt="A Random Selection" style="width:50px;height:50px;">' + ' ' + '<input type="image" id="random-test" value="Die" src="/images/preview.png"></form>';
+      + '<br><br><input type="text" id="submit" value="Check" alt="Check answers" ' + ' ' + '<input type="image" id="random-test" value="Die" src="/images/preview.png"></form>';
+
 
     var submitButton = document.querySelector('#submit');
     submitButton.addEventListener('click', function(e) {

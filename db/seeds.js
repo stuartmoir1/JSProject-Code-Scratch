@@ -21,7 +21,8 @@ db.data.insert([
       {"Abstraction (University of Alabama)": "https://www.youtube.com/watch?v=HJ6rX5qBPIc"}
     ],
      "embed_video": "https://www.youtube.com/embed/v2ogKZWkkFg",
-     "audio": "./client/build/audio/abstraction.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/abstraction_gb_1_8.mp3"
+
   },
 
   {
@@ -41,7 +42,7 @@ db.data.insert([
       {"Array - Ruby (Educator)": "https://www.youtube.com/watch?v=REDH9OzdQ_I"}
     ],
      "embed_video": "https://www.youtube.com/embed/Zj_UC7c1nh4",
-     "audio": "./client/build/audio/array.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/array_gb_1.mp3"
   },
 
   {
@@ -60,7 +61,7 @@ db.data.insert([
       {"Variables, ints and doubles casting (AP Computer Science)": "https://www.youtube.com/watch?v=BPEaPjHtTxE"}
     ],
      "embed_video": "https://www.youtube.com/embed/G0q78w5dmcE",
-     "audio": "./client/build/audio/casting.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/casting_gb_1.mp3"
   },
 
   {
@@ -79,7 +80,7 @@ db.data.insert([
       {"Classes and objects (Open Canvas)": "https://www.youtube.com/watch?v=POrU7vcKB_k"}
     ],
     "embed_video": "https://www.youtube.com/embed/BZ8r7pC9bHY",
-    "audio": "./client/build/audio/class.mp3"
+    "audio": "http://audio.oxforddictionaries.com/en/mp3/class_gb_1.mp3"
   },
 
   {
@@ -99,7 +100,7 @@ db.data.insert([
       {"What is encapsulation in Java (Telusko Learnings)": "https://www.youtube.com/watch?v=tt_astMjep0"}
     ],
      "embed_video": "https://www.youtube.com/embed/szYzBC89CPE",
-     "audio": "./client/build/audio/encapsulation.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/encapsulation_gb_1.mp3"
   },
 
   {
@@ -118,7 +119,7 @@ db.data.insert([
       {"Ruby data structures - hashes (Ruby Udacity)": "https://www.youtube.com/watch?v=QOytrJL4c2c"}
     ],
      "embed_video": "https://www.youtube.com/embed/SYMM9qNOXg8",
-     "audio": "./client/build/audio/hash"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/hash_gb_1.mp3"
   },
 
   {
@@ -138,7 +139,7 @@ db.data.insert([
       {"Inheritance in Java (Programming Knowledge)": "https://www.youtube.com/watch?v=lz1Cx6GzOuc"}
     ],
      "embed_video": "https://www.youtube.com/embed/0PPKccntohM",
-     "audio": "./client/build/audio/inheritance.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/inheritance_gb_1.mp3"
   },
 
   {
@@ -158,7 +159,7 @@ db.data.insert([
       {"Java interfaces (Programming Knowledge)": "https://www.youtube.com/watch?v=HxmP7ZVUeGU"}
     ],
      "embed_video": "https://www.youtube.com/embed/NnZQ-C0x4hs",
-     "audio": "./client/build/audio/interface.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/interface_gb_1.mp3"
   },
 
   {
@@ -176,7 +177,7 @@ db.data.insert([
       {"Methods (Udacity)": "https://www.youtube.com/watch?v=_rsKeFaGx48"}
     ],
     "embed_video": "https://www.youtube.com/embed/1OZrWqVncsU",
-    "audio": "./client/build/audio/method.mp3"
+    "audio": "http://audio.oxforddictionaries.com/en/mp3/method_gb_1.mp3"
   },
 
   {
@@ -195,7 +196,7 @@ db.data.insert([
       {"What is an object? (java breakpoint)": "https://www.youtube.com/watch?v=1OZrWqVncsU"}
     ],
     "embed_video": "https://www.youtube.com/embed/1OZrWqVncsU",
-    "audio": "./client/build/audio/object.mp3"
+    "audio": "http://audio.oxforddictionaries.com/en/mp3/object_gb_1.mp3"
   },
 
   {
@@ -215,7 +216,7 @@ db.data.insert([
       {"Difference between overloading and overriding (Durga Education)": "https://www.youtube.com/watch?v=4HJUX_BQgGI"}
     ],
      "embed_video": "https://www.youtube.com/embed/hGRSyIvoIT4",
-     "audio": "./client/build/audio/overload.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/overload_gb_1.mp3”"
   },
 
   {
@@ -235,7 +236,7 @@ db.data.insert([
       {"Difference between overloading and overriding (Durga Education)": "https://www.youtube.com/watch?v=4HJUX_BQgGI"}
     ],
      "embed_video": "https://www.youtube.com/embed/ouI9Qarbbik",
-     "audio": "./client/build/audio/override.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/override_gb_1_8.mp3"
   },
 
   {
@@ -255,7 +256,7 @@ db.data.insert([
       {"Introduction to Polymorphism (shiffman)": "https://vimeo.com/60187931"}
     ],
      "embed_video": "https://www.youtube.com/embed/0xw06loTm1k",
-     "audio": "./client/build/audio/polymorphism.mp3"
+     "audio": "http://audio.oxforddictionaries.com/en/mp3/polymorphism_gb_1_8.mp3"
   },
   
   {
@@ -274,7 +275,7 @@ db.data.insert([
       {"Object Oriented Programming Concepts (BBarters)": "https://www.youtube.com/watch?v=5SWKbS87p98"}
     ],
     "embed_video": "https://www.youtube.com/embed/3bMsY5a7cBo",
-    "audio": "./client/build/audio/property.mp3"
+    "audio": "http://audio.oxforddictionaries.com/en/mp3/property_gb_1.mp3"
   },
 
   {
@@ -293,7 +294,7 @@ db.data.insert([
       {"Variables, arrays, strings and length (ExplainTechnology)": "https://www.youtube.com/watch?v=aeoGGabJhAQ"}
     ],
     "embed_video": "https://www.youtube.com/watch?v=t4ND-_kTxcI",
-    "audio": "./client/build/audio/variable.mp3"
+    "audio": "http://audio.oxforddictionaries.com/en/mp3/variable_gb_1_8.mp3"
   }
 
   // {

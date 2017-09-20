@@ -141,6 +141,7 @@ MainView.prototype = {
 
   render: function(data){
 
+
     var button = document.querySelector('#button-go');
     button.addEventListener('click', function(event){
       event.preventDefault();
@@ -154,6 +155,7 @@ MainView.prototype = {
 
       var descriptionView = new DescriptionView(data);
       descriptionView.render(term);
+
     }.bind(this));
 
     var randomButton = document.querySelector('#button-random');
@@ -168,325 +170,22 @@ MainView.prototype = {
 
       var descriptionView = new DescriptionView();
       descriptionView.render(randomTerm);
+
     });
-  }
+  },
+
 }
 
 module.exports = MainView;
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var TestView = __webpack_require__(4);
-
-// Constructor
-var DescriptionView = function(data){
-  this.data = data;
-}
-
-// Methods
-
-DescriptionView.prototype = {
-
-  render: function(term){
-
-
-    
-    var section = document.querySelector('#description-section');
-    while (section.firstChild){ section.removeChild(section.firstChild); };
-
-    // var pName = document.createElement('p');
-    // pName.innerText = term.name;
-    // section.appendChild(pName);
-
-    var pDescription = document.createElement('p');
-    section.appendChild(pDescription);
-    pDescription.outerHTML = '<p id="description-text">' + term.description + '</p>'
-    // pDescription.innerText = term.description;
-
-    var testButton = document.createElement('button');
-      section.appendChild(testButton);
-      // Changed class attribute to id attribute.
-      testButton.outerHTML = '<button type="button" class="button" id="test-button" alt="test understanding" >Test</button>'
-      // This is new; you need to select the test button separately.
-      button = document.querySelector('#test-button');
-      console.log(button);
-
-      button.addEventListener('click', function(event){
-        event.preventDefault();
-        // console.log("test button clicked");
-        //link from here to another view which allows us to add the fade function
-        var testView = new TestView(this.data);
-        testView.render(term);
-      }.bind(this))
-
-
-    // Load info button.
-    this.moreInfoButton(term);
-  },
-
-  moreInfoButton: function(term){
-    
-    var section = document.querySelector('#description-section');
-    var infoButton = document.createElement('button');
-    section.appendChild(infoButton);
-    infoButton.outerHTML = '<button type="button" class="button" id="info-button">Info</button>';
-
-    var button = document.querySelector('#info-button');
-    button.addEventListener('click', function(event){
-      event.preventDefault();
-      this.moreInfoPopup(term);
-    }.bind(this));
-  },
-
-  moreInfoPopup: function(term){
-
-    // console.log(term);
-    var anchor = this.popupRemoveChildren();
-    var div1 = this.createPopupDiv(anchor);
-    this.createPopupInnerDiv();
-
-    div2 = this.createPopupName(term);
-    this.createPopupClose(anchor, div2);
-    this.createPopupDescription(term, div2);
-    this.createPopupList(term, div2, 'webpages',);
-    this.createPopupList(term, div2, 'videos');
-    
-    //this.createPopupImage(term, div2);
-    this.createPopupVideo(term, div2);
-  },
-
-  popupRemoveChildren: function(){
-    var anchor = document.querySelector('#popup-anchor');
-    while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
-    return anchor;
-  },
-
-  createPopupDiv: function(anchor){
-    var div = document.createElement('div');
-    anchor.appendChild(div);
-    div.outerHTML = '<div id="popup" class="overlay"></div>';
-    return div;
-  },
-
-  createPopupInnerDiv: function(){
-    var outerDiv = document.querySelector('#popup');
-    var innerDiv = document.createElement('div');
-    outerDiv.appendChild(innerDiv);
-    innerDiv.outerHTML = '<div class="popup"></div>';
-  },
-
-  createPopupName: function(term){
-    var div = document.querySelector('.popup');
-    var h2 = document.createElement('h2');
-    div.appendChild(h2);
-    h2.innerHTML = term.name;
-    return div;
-  },
-
-  createPopupClose: function(anchor, div){
-    var a = document.createElement('a');
-    a.href = "#";
-    a.innerHTML = "&times";
-    a.classList.add('close');
-    a.addEventListener('click', function(){
-      while (anchor.firstChild){ anchor.removeChild(anchor.firstChild); };
-    });
-    div.appendChild(a);
-  },
-
-  createPopupDescription: function(term, outerDiv){
-    var div = document.createElement('div');
-    outerDiv.appendChild(div);
-    div.outerHTML = '<div class="description">' + term.add_info + '</div>';
-  },
-
-  createPopupList: function(term, outerDiv, item){
-    var p = document.createElement('p');
-    outerDiv.appendChild(p);
-    var text = item.charAt(0).toUpperCase() + item.slice(1);
-    console.log(text);
-    p.innerHTML = '<strong>' + text + '<strong>';
-    var div = document.createElement('div');
-    div.classList.add(item);
-    outerDiv.appendChild(div);
-    term[item].forEach(function(obj){
-      Object.keys(obj).forEach(function eachKey(key){
-        var a = document.createElement('a');
-        div.appendChild(a);
-        a.outerHTML = '<a href="' + obj[key] + '" target="_blank">' + key + '</a><br>';
-      });
-    });
-  },
-
-  createPopupImage: function(term, outerDiv){
-    var div = document.createElement('div');
-    div.classList.add('image');
-    outerDiv.appendChild(div);
-    div.innerHTML = '<img src="' + term.image + '" alt="Image">';
-  },
-
-  createPopupVideo: function(term, outerDiv){
-    var div = document.createElement('div');
-    div.classList.add('video');
-    outerDiv.appendChild(div)
-    div.innerHTML = '<iframe src="' + term.embed_video + '"></iframe>';
-  }
-}
-
-module.exports = DescriptionView;
-
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports) {
 
-var TestView = function(data) {
-  this.data = data;
-}
-
-TestView.prototype = {
-
-  render: function(term) {
-    var section = document.querySelector('#description-text');
-    var button = document.querySelector('#test-button');
-    var infoButton = document.querySelector('#info-button');
-
-    // var testView = new TestView();
-    this.fade(section, term);
-    this.fade(button, term);
-    this.fade(infoButton, term);
-  },
-
-  fade: function(section, term){
-
-    var op = 1;  // initial opacity
-    var timer = setInterval(function () {
-        if (op <= 0.1){
-            clearInterval(timer);
-            section.style.display = 'none';
-        }
-        section.style.opacity = op;
-        section.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op -= op * 0.1;
-    }, 50);
-    var self = this;
-    setTimeout(function(){
-      self.repopulate(term);
-    },2000 );
-  },
-
-  repopulate: function(term) {
-
-    
-    // setTimeout(function(){
-    //   self.unfade(section);
-    // }, 0);
-    // console.log(self);
-    
-
-    var section = document.querySelector('#description-section');
-    while (section.firstChild){ section.removeChild(section.firstChild); };
-
-    var op = 0.01;  // initial opacity
-    section.style.opacity = 0.01;
-    var timer = setInterval(function () {
-        if (op >= 1){
-            clearInterval(timer);
-        }
-        section.style.opacity = op;
-        section.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op += op * 0.1;
-    }, 50);
-
-    var self = this;
-
-    var questionText = [];
-    var count = 0;
-
-    var form = document.createElement('form');
-    section.appendChild(form);
-
-    for (var i = 0; i < term.keywords.length; i++) {
-      var text = term.testDescription[i] + ' ' + '<input type="text" id="answer' +(i+1)+'" alt="Enter answer ' +(i+1)+' here">';
-      questionText.push(text);
-    }
-    var joinedText = questionText.join(' ');
-    var lastElement = term.testDescription[term.testDescription.length-1];
-
-    form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
-      + '<input type="image" id="submit" value="Check" src="/images/mark.png" alt="A Random Selection" style="width:50px;height:50px;">' + ' ' + '<input type="image" id="random-test" value="Die" src="/images/preview.png"></form>';
-
-    var submitButton = document.querySelector('#submit');
-    submitButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      var testAnswers = [];
-      for (var i = 0; i < term.keywords.length; i++) {
-        var element = document.getElementById('answer'+(i+1)).value;
-        testAnswers.push(element);
-      };
-      self.compare(testAnswers, term);
-
-    })
-
-    console.log(this.data);
-
-    var randomTestButton = document.querySelector('#random-test');
-    randomTestButton.addEventListener('click', function(e){
-      e.preventDefault();
-      var number = this.data.length;
-      var randomTerm = this.data[Math.floor(Math.random() * number)];
-      var searchValue = document.querySelector('#search-text');
-      searchValue.value = randomTerm.name;
-      this.repopulate(randomTerm);
-    }.bind(this));
-
-      
-  },
-
-  compare: function(data, term){
-  
-    var count = 0;
-    var score = 0
-    var response = true;
-    data.forEach(function(element) {
-      if(element === term.keywords[count]){
-        var answer = document.getElementById('answer' + (count + 1));
-        answer.style.color = "Green";
-        score++; 
-      } else {
-        var answer = document.getElementById('answer' + (count + 1));
-        answer.style.color = "Red";
-        response = false;
-      };
-      count++;
-    });
-
-    var jsonString = localStorage.getItem('score');
-    var savedScore = JSON.parse(jsonString);
-    var newScore = savedScore + score;
-    jsonString = JSON.stringify(newScore);
-    localStorage.setItem('score', jsonString);
-
-    jsonString = localStorage.getItem('testTaken');
-    var savedTests = JSON.parse(jsonString);
-    var numOfTests = savedTests + count;
-    jsonString = JSON.stringify(numOfTests);
-    localStorage.setItem('testTaken', jsonString);
-
-    if (response === true){
-      alert('Well done, Noobie! You got it right!');
-    } else {
-      alert('Doh, Noobie! That\`s the wrong answer! Try again');
-    }
-  }
-}
-
-module.exports = TestView;
-
+throw new Error("Module parse failed: /Users/rossmelville/codeclan_work/group_project_master/JSProject-Newbie/client/src/views/description_view.js Unexpected token (66:7)\nYou may need an appropriate loader to handle this file type.\n| \n| \n|       })\n| \n| ");
 
 /***/ }),
+/* 4 */,
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
