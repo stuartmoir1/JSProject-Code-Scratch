@@ -158,54 +158,8 @@ TestView.prototype = {
     this.saveTests(numOfTests);
 
     var testResult = document.querySelector('#test-result');
-
     testResult.innerText = "Test Results:   " + newScore + "/" + numOfTests;
   }
 }
 
 module.exports = TestView;
-
-// var questionText = [];
-// var count = 0;
-
-// var form = document.createElement('form');
-// section.appendChild(form);
-
-// for (var i = 0; i < term.keywords.length; i++) {
-//   var text = term.testDescription[i] + ' ' + '<input type="text" id="answer' +(i+1)+'" alt="Enter answer ' +(i+1)+' here" autofocus="answer1">';
-//   questionText.push(text);
-// }
-// var joinedText = questionText.join(' ');
-// var lastElement = term.testDescription[term.testDescription.length-1];
-
-// form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
-//   + '<br><br><input type="text" id="submit" value="Check" alt="Check answers" ' + ' ' + '><input type="text" id="random-test" value="Next" alt="Next test"></form>';
-
-
-  // var submitButton = document.querySelector('#submit');
-  // submitButton.addEventListener('click', function(e) {
-  //   e.preventDefault();
-  //   var testAnswers = [];
-  //   for (var i = 0; i < term.keywords.length; i++) {
-  //     var element = document.getElementById('answer'+(i+1)).value;
-  //     testAnswers.push(element);
-  //   };
-  //   this.compare(testAnswers, term);
-
-  // }.bind(this));
-
-  // var randomTestButton = document.querySelector('#random-test');
-  // randomTestButton.addEventListener('click', function(e){
-  //   e.preventDefault();
-  //   var number = this.data.length;
-  //   var randomTerm = this.data[Math.floor(Math.random() * number)];
-  //   var searchValue = document.querySelector('#search-text');
-  //   searchValue.value = randomTerm.name;
-  //   this.repopulate(randomTerm);
-  // }.bind(this));
-
-  // var jsonString = localStorage.getItem('score');
-  // var savedScore = JSON.parse(jsonString);
-
-  // jsonString = localStorage.getItem('testTaken');
-  // var savedTests = JSON.parse(jsonString);

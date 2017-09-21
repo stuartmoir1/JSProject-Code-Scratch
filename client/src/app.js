@@ -1,4 +1,3 @@
-// 
 var AjaxRequest = require('./services/ajax_request.js');
 var MainView = require('./views/main_view.js');
 var DropdownView = require('./views/dropdown_view.js')
@@ -20,6 +19,5 @@ window.addEventListener('load', function(){
   var dropdownView = new DropdownView()
 
   ajaxRequest.getData(mainView.render);
-  ajaxRequest.getData(dropdownView.render);
-  
+  ajaxRequest.getData(dropdownView.render);  
 });

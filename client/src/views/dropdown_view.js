@@ -5,10 +5,10 @@ var DropdownView = function(){
 }
 
 // Methods
+
 DropdownView.prototype = {
 
   render: function(data){
-    //console.log(data);
     
     var descriptionView = new DescriptionView(data);
     var dropDown = document.querySelector("#dropdown-content");
@@ -29,29 +29,8 @@ DropdownView.prototype = {
       });
       var section = dropDown.appendChild(anchor)
     }
-
-
-      // Close the dropdown menu if the user clicks outside of it
-      // window.onclick = function(event) {
-      //   if (!event.target.matches('.dropbtn')) {
-
-      //     // var dropdowns = document.getElementsByClassName("dropdown-content");
-      //     var i;
-      //     for (i = 0; i < dropdowns.length; i++) {
-      //       var openDropdown = dropdowns[i];
-      //       if (openDropdown.classList.contains('show')) {
-      //         openDropdown.classList.remove('show');
-      //       }
-      //     }
-      //   }
-      // }
-    }
   }
-
-    // ******================================================================
-
-   
- 
+}
 
 module.exports = DropdownView;
 

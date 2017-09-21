@@ -236,7 +236,6 @@ module.exports = DescriptionView;
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// 
 var AjaxRequest = __webpack_require__(2);
 var MainView = __webpack_require__(3);
 var DropdownView = __webpack_require__(5)
@@ -258,8 +257,7 @@ window.addEventListener('load', function(){
   var dropdownView = new DropdownView()
 
   ajaxRequest.getData(mainView.render);
-  ajaxRequest.getData(dropdownView.render);
-  
+  ajaxRequest.getData(dropdownView.render);  
 });
 
 /***/ }),
@@ -507,57 +505,11 @@ TestView.prototype = {
     this.saveTests(numOfTests);
 
     var testResult = document.querySelector('#test-result');
-
     testResult.innerText = "Test Results:   " + newScore + "/" + numOfTests;
   }
 }
 
 module.exports = TestView;
-
-// var questionText = [];
-// var count = 0;
-
-// var form = document.createElement('form');
-// section.appendChild(form);
-
-// for (var i = 0; i < term.keywords.length; i++) {
-//   var text = term.testDescription[i] + ' ' + '<input type="text" id="answer' +(i+1)+'" alt="Enter answer ' +(i+1)+' here" autofocus="answer1">';
-//   questionText.push(text);
-// }
-// var joinedText = questionText.join(' ');
-// var lastElement = term.testDescription[term.testDescription.length-1];
-
-// form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
-//   + '<br><br><input type="text" id="submit" value="Check" alt="Check answers" ' + ' ' + '><input type="text" id="random-test" value="Next" alt="Next test"></form>';
-
-
-  // var submitButton = document.querySelector('#submit');
-  // submitButton.addEventListener('click', function(e) {
-  //   e.preventDefault();
-  //   var testAnswers = [];
-  //   for (var i = 0; i < term.keywords.length; i++) {
-  //     var element = document.getElementById('answer'+(i+1)).value;
-  //     testAnswers.push(element);
-  //   };
-  //   this.compare(testAnswers, term);
-
-  // }.bind(this));
-
-  // var randomTestButton = document.querySelector('#random-test');
-  // randomTestButton.addEventListener('click', function(e){
-  //   e.preventDefault();
-  //   var number = this.data.length;
-  //   var randomTerm = this.data[Math.floor(Math.random() * number)];
-  //   var searchValue = document.querySelector('#search-text');
-  //   searchValue.value = randomTerm.name;
-  //   this.repopulate(randomTerm);
-  // }.bind(this));
-
-  // var jsonString = localStorage.getItem('score');
-  // var savedScore = JSON.parse(jsonString);
-
-  // jsonString = localStorage.getItem('testTaken');
-  // var savedTests = JSON.parse(jsonString);
 
 /***/ }),
 /* 5 */
@@ -570,10 +522,10 @@ var DropdownView = function(){
 }
 
 // Methods
+
 DropdownView.prototype = {
 
   render: function(data){
-    //console.log(data);
     
     var descriptionView = new DescriptionView(data);
     var dropDown = document.querySelector("#dropdown-content");
@@ -594,29 +546,8 @@ DropdownView.prototype = {
       });
       var section = dropDown.appendChild(anchor)
     }
-
-
-      // Close the dropdown menu if the user clicks outside of it
-      // window.onclick = function(event) {
-      //   if (!event.target.matches('.dropbtn')) {
-
-      //     // var dropdowns = document.getElementsByClassName("dropdown-content");
-      //     var i;
-      //     for (i = 0; i < dropdowns.length; i++) {
-      //       var openDropdown = dropdowns[i];
-      //       if (openDropdown.classList.contains('show')) {
-      //         openDropdown.classList.remove('show');
-      //       }
-      //     }
-      //   }
-      // }
-    }
   }
-
-    // ******================================================================
-
-   
- 
+}
 
 module.exports = DropdownView;
 
