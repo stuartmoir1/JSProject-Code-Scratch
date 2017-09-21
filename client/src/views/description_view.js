@@ -13,42 +13,11 @@ DescriptionView.prototype = {
     
     var section = document.querySelector('#description-section');
     while (section.firstChild){ section.removeChild(section.firstChild); };
-
-    // Description
-    // var pDescription = document.createElement('p');
-    // section.appendChild(pDescription);
-    // pDescription.outerHTML = '<p id="description-text">' + term.description + '</p>'
     
     this.setDescription(section, term);
     this.setTestButton(section, term, this.data);
     this.setAudioButton(section, term);
-
-    // Test
-    // var testButton = document.createElement('button');
-    // section.appendChild(testButton);
-    // testButton.outerHTML = '<button type="button" class="button" id="test-button" alt="test understanding" >Test</button>'
-    // button = document.querySelector('#test-button');
-    // console.log(button);
-
-    // button.addEventListener('click', function(event){
-    //   event.preventDefault();
-    //   var testView = new TestView(this.data);
-    //   testView.render(term);
-    // }.bind(this));
-
-    // Audio
-    // var audioButton = document.createElement('button')
-    // section.appendChild(audioButton);
-    // audioButton.className += "speak";
-
-    // audioElement = document.createElement('audio');
-    // audioElement.setAttribute('src', term.audio);
-    // audioButton.addEventListener('click', function(event){
-    //   event.preventDefault();
-    //   audioElement.play();
-    // });
-
-    this.moreInfoButton(term);
+    this.setInfoButton(term);
   },
 
   setDescription: function(section, term){
@@ -63,7 +32,6 @@ DescriptionView.prototype = {
     section.appendChild(testButton);
     testButton.outerHTML = '<button type="button" class="button" id="test-button" alt="test understanding" >Test</button>'
     button = document.querySelector('#test-button');
-    console.log(button);
 
     button.addEventListener('click', function(event){
       event.preventDefault();
@@ -85,7 +53,7 @@ DescriptionView.prototype = {
     });
   },
 
-  moreInfoButton: function(term){
+  setInfoButton: function(term){
     
     var section = document.querySelector('#description-section');
     var infoButton = document.createElement('button');
@@ -165,7 +133,6 @@ DescriptionView.prototype = {
     var p = document.createElement('p');
     outerDiv.appendChild(p);
     var text = item.charAt(0).toUpperCase() + item.slice(1);
-    console.log(text);
     p.innerHTML = '<strong>' + text + '<strong>';
     var div = document.createElement('div');
     div.classList.add(item);
