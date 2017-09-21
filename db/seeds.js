@@ -222,8 +222,8 @@ db.data.insert([
   {
     "name": "override",
     "description": "Enables a child class to provide a different implementation for a method that is already defined and/or implemented in its parent class or one of its parent classes.",
-    "keywords": ["child", "method", "parent", "parent"],
-    "testDescription": ["Enables a ", " class to provide a different implementation for a ", " that is already defined and/or implemented in its ", " class or one of its ", " classes."],
+    "keywords": ["child", "method", "parent"],
+    "testDescription": ["Enables a ", " class to provide a different implementation for a ", " that is already defined and/or implemented in its ", " class or one of its parent classes."],
     "tags": ["class", "method", "overloading"],
     "add_info": "Overriding allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its superclasses or parent classes. The implementation in the subclass overrides (replaces) the implementation in the superclass by providing a method that has same name, same parameters or signature, and same return type as the method in the parent class.",
     "webpages": [

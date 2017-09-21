@@ -1,16 +1,15 @@
 body {
-
   background-color: #2DAAE1;
   font-family: 'Cutive Mono', monospace;
   color: white;
 }
 
 h1 {
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    text-align: center;
-    width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 80%;
 }
 
 .name {
@@ -22,14 +21,8 @@ h1 {
   vertical-align: center;
 }
 
-/*::-input-placeholder {
-  color: white;
-  opacity: 0.4;
-}*/
-
 #answer1, #answer2, #answer3 {
   text-align: center;
-  /*background-color: #2DAAE1;*/
   color: white;
   border: 0;
   outline: 0;
@@ -66,23 +59,24 @@ h1 {
   margin: 0 20px 0 20px;
 }
 
-
 .speak {
-      background: url(images/play_arrow.png);
-      height: 30px;
-      width: 30px;
-      border: none;
-      background-size: cover;
-      padding-bottom: 10px;
+  background: url(images/play_arrow.png);
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-size: cover;
+  padding-bottom: 10px;
 }
 
-.button:hover {background-color: #134A61}
-#submit:hover, #random-test:hover {background-color: #134A61}
+.button:hover {
+  background-color: #134A61
+}
+
+#submit:hover, #random-test:hover {
+  background-color: #134A61
+}
 
 #button-go {
-  /*background-color: #2DAAE1;
-  border-color: #2DAAE1;
-  margin: 0px;*/
   outline-s
 }
 
@@ -123,6 +117,43 @@ h1 {
   display: inline-block;
 }
 
+#description-section {
+  text-align: center;
+  font-size: 36px;
+  padding: 10px 10px 0 10px;
+}
+
+#test-form {
+  text-align: center;
+  font-size: 36px;
+  padding: 55px 10px 0 10px;
+}
+
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+img.image {
+  width: 15%;
+  height: 30%;
+  align-items: -webkit-center;
+}
+
+#description-text {
+  text-align: center;
+  font-size: 36px;
+  padding: 10px 10px 0 10px;
+}
+
+.logo {
+  position:relative;
+  float: right;
+  margin-left: 30px;
+}
+
 /* Popup */
 
 .overlay {
@@ -148,7 +179,6 @@ h1 {
   border-radius: 5px;
   width: 60%;
   position: relative;
-  /*transition: all 5s ease-in-out;*/
   color: black;
 }
 
@@ -156,15 +186,12 @@ h1 {
   margin-top: 0;
   color: black;
   font-style: ;
-  /*color: #333;*/
-  /*font-family: Tahoma, Arial, sans-serif;*/
 }
 
 .popup .close {
   position: absolute;
   top: 10px;
   right: 30px;
-  /*transition: all 200ms;*/
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
@@ -209,139 +236,46 @@ h1 {
   }
 }
 
-/* Dropdown Button */
+/* Dropdown */
 
 .dropbtn {
-    background-color: #2DAAE1;
-    /*background-color: #1565C0;*/
-    /*color: white;
-    font-family: 'Cutive Mono', monospace;*/
-    /*padding: 16px;*/
-    font-size: 30px;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 5%;
-    cursor: pointer;
+  background-color: #2DAAE1;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5%;
+  cursor: pointer;
 }
-/*===========Hamburger=============*/
-/*.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #5D7C94;
-    margin: 6px 0;
-    transition: 0.4s;
-}*/
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #f1f1f1}
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #648EAE;
-}
-
-/*=========Description================*/
-#description-section {
-    text-align: center;
-    font-size: 36px;
-    padding: 10px 10px 0 10px;
-}
-
-#test-form {
-    text-align: center;
-    font-size: 36px;
-    padding: 55px 10px 0 10px;
-}
-
-/* Container for flexboxes */
-/*.direct-search {
-    display: -webkit-flex;
-    display: flex;
-}*/
-
-/* Create three equal columns that sits next to each other */
-/*.column {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    padding: 10px;
-    text-align: -webkit-center;
-}*/
-
-@media (max-width: 600px) {
-    .row {
-      -webkit-flex-direction: column;
-      flex-direction: column;
-    }
-}
-
-img.image {
-    width: 15%;
-    height: 30%;
-    align-items: -webkit-center;
-}
-
-#description-text {
-  text-align: center;
-  font-size: 36px;
-  padding: 10px 10px 0 10px;
-}
-
-/*
-form#test-form {
-  transform:rotate(360deg);
-  transition-duration:5s;
-}*/
-
-/*#answer1 {
-    width: 80px;
-    height: 20px;
-    background: blue;
-    position: relative;
-    animation: mymove 3s;
-    animation-fill-mode: forwards;
-},
-
-@keyframes mymove {
-    from {top: 40px;}
-    to {top: 200px;}
-}*/
-  /*text-decoration: none;*/
-  /*color: #333;*/
-/*}*/
-
-.logo {
-  position:relative;
- float: right;
- margin-left: 30px;
+  background-color: #648EAE;
 }
