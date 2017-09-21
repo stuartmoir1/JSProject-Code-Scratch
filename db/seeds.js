@@ -293,7 +293,7 @@ db.data.insert([
     "videos": [
       {"Variables, arrays, strings and length (ExplainTechnology)": "https://www.youtube.com/watch?v=aeoGGabJhAQ"}
     ],
-    "embed_video": "https://www.youtube.com/watch?v=t4ND-_kTxcI",
+    "embed_video": "https://www.youtube.com/embed/t4ND-_kTxcI",
     "audio": "http://audio.oxforddictionaries.com/en/mp3/variable_gb_1_8.mp3"
   }
 

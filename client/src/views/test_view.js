@@ -9,8 +9,6 @@ TestView.prototype = {
     var button = document.querySelector('#test-button');
     var infoButton = document.querySelector('#info-button');
     var audioButton = document.querySelector('.speak')
-
-
     
     this.fade(section, term);
     this.fade(button, term);
@@ -36,18 +34,7 @@ TestView.prototype = {
     },2000 );
   },
 
-  repopulate: function(term) {
-
-    
-    // setTimeout(function(){
-    //   self.unfade(section);
-    // }, 0);
-    // console.log(self);
-    
-
-    var section = document.querySelector('#description-section');
-    while (section.firstChild){ section.removeChild(section.firstChild); };
-
+  fadeUp: function(section){
     var op = 0.01;  // initial opacity
     section.style.opacity = 0.01;
     var timer = setInterval(function () {
@@ -58,9 +45,34 @@ TestView.prototype = {
         section.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op += op * 0.1;
     }, 50);
+  },
 
+  repopulate: function(term) {
+
+    var section = document.querySelector('#description-section');
+    while (section.firstChild){ section.removeChild(section.firstChild); };
+
+    this.fadeUp(section);
+    this.createInputForm(section, term);
+    this.testSubmitButtonAction(term);
+    this.randomTestButtonAction();
+    savedScore = this.getSavedScore();
+    savedTests = this.getSavedTest();
     var self = this;
 
+
+      var testResult = document.createElement('div');
+      testResult.setAttribute("id", "test-result");
+      section.appendChild(testResult);
+
+      testResult.innerText = "Test Results:   " + savedScore + "/" + savedTests;
+
+
+
+      
+  },
+
+  createInputForm: function(section, term){
     var questionText = [];
     var count = 0;
 
@@ -76,50 +88,54 @@ TestView.prototype = {
 
     form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
       + '<br><br><input type="text" id="submit" value="Check" alt="Check answers" ' + ' ' + '><input type="text" id="random-test" value="Next" alt="Next test"></form>';
+  },
 
+  testSubmitButtonAction: function(term){
+    var submitButton = document.querySelector('#submit');
+    submitButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      var testAnswers = [];
+      for (var i = 0; i < term.keywords.length; i++) {
+        var element = document.getElementById('answer'+(i+1)).value;
+        testAnswers.push(element);
+      };
+      this.compare(testAnswers, term);
 
-      var submitButton = document.querySelector('#submit');
-      submitButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        var testAnswers = [];
-        for (var i = 0; i < term.keywords.length; i++) {
-          var element = document.getElementById('answer'+(i+1)).value;
-          testAnswers.push(element);
-        };
-        self.compare(testAnswers, term);
+    }.bind(this));
+  },
 
-      })
+  randomTestButtonAction: function(){
+    var randomTestButton = document.querySelector('#random-test');
+    randomTestButton.addEventListener('click', function(e){
+      e.preventDefault();
+      var number = this.data.length;
+      var randomTerm = this.data[Math.floor(Math.random() * number)];
+      var searchValue = document.querySelector('#search-text');
+      searchValue.value = randomTerm.name;
+      this.repopulate(randomTerm);
+    }.bind(this));
+  },
 
-      console.log(form.outerHTML);
+  getSavedScore: function(){
+    var jsonString = localStorage.getItem('score');
+    var savedScore = JSON.parse(jsonString);
+    return savedScore;
+  },
 
-      var randomTestButton = document.querySelector('#random-test');
-      console.log(randomTestButton);
-      randomTestButton.addEventListener('click', function(e){
-        e.preventDefault();
-        var number = this.data.length;
-        var randomTerm = this.data[Math.floor(Math.random() * number)];
-        var searchValue = document.querySelector('#search-text');
-        searchValue.value = randomTerm.name;
-        this.repopulate(randomTerm);
-      }.bind(this));
+  getSavedTest: function(){
+    jsonString = localStorage.getItem('testTaken');
+    var savedTests = JSON.parse(jsonString);
+    return savedTests;
+  },
 
-      var jsonString = localStorage.getItem('score');
-      var savedScore = JSON.parse(jsonString);
+  saveScore: function(score){
+    jsonString = JSON.stringify(score);
+    localStorage.setItem('score', jsonString);
+  },
 
-      jsonString = localStorage.getItem('testTaken');
-      var savedTests = JSON.parse(jsonString);
-
-      var testResult = document.createElement('div');
-      testResult.setAttribute("id", "test-result");
-      section.appendChild(testResult);
-
-
-      // testResult.outerHTML = '<div id="test-results" alt="Results of tests">"Test Results:   " + savedScore + "/" + savedTests</div>';
-      testResult.innerText = "Test Results:   " + savedScore + "/" + savedTests;
-
-
-
-      
+  saveTests: function(tests){
+    jsonString = JSON.stringify(tests);
+    localStorage.setItem('testTaken', jsonString);
   },
 
   compare: function(data, term){
@@ -140,30 +156,69 @@ TestView.prototype = {
       count++;
     });
 
-    var jsonString = localStorage.getItem('score');
-    var savedScore = JSON.parse(jsonString);
+    var savedScore = this.getSavedScore();
     var newScore = savedScore + score;
-    jsonString = JSON.stringify(newScore);
-    localStorage.setItem('score', jsonString);
+    this.saveScore(newScore);
 
-    jsonString = localStorage.getItem('testTaken');
-    var savedTests = JSON.parse(jsonString);
+    var savedTests = this.getSavedTest();
     var numOfTests = savedTests + count;
-    jsonString = JSON.stringify(numOfTests);
-    localStorage.setItem('testTaken', jsonString);
+    this.saveTests(numOfTests);
 
     var testResult = document.querySelector('#test-result');
 
     testResult.innerText = "Test Results:   " + newScore + "/" + numOfTests;
 
-
-
-    if (response === true){
-      alert('Well done, Noobie! You got it right!');
-    } else {
-      alert('Doh, Noobie! That\`s the wrong answer! Try again');
-    }
+    // if (response === true){
+    //   alert('Well done, Noobie! You got it right!');
+    // } else {
+    //   alert('Doh, Noobie! That\`s the wrong answer! Try again');
+    // }
   }
 }
+
+// var questionText = [];
+// var count = 0;
+
+// var form = document.createElement('form');
+// section.appendChild(form);
+
+// for (var i = 0; i < term.keywords.length; i++) {
+//   var text = term.testDescription[i] + ' ' + '<input type="text" id="answer' +(i+1)+'" alt="Enter answer ' +(i+1)+' here" autofocus="answer1">';
+//   questionText.push(text);
+// }
+// var joinedText = questionText.join(' ');
+// var lastElement = term.testDescription[term.testDescription.length-1];
+
+// form.outerHTML = '<form id="test-form" alt="test question">' + joinedText + lastElement + ' '
+//   + '<br><br><input type="text" id="submit" value="Check" alt="Check answers" ' + ' ' + '><input type="text" id="random-test" value="Next" alt="Next test"></form>';
+
+
+  // var submitButton = document.querySelector('#submit');
+  // submitButton.addEventListener('click', function(e) {
+  //   e.preventDefault();
+  //   var testAnswers = [];
+  //   for (var i = 0; i < term.keywords.length; i++) {
+  //     var element = document.getElementById('answer'+(i+1)).value;
+  //     testAnswers.push(element);
+  //   };
+  //   this.compare(testAnswers, term);
+
+  // }.bind(this));
+
+  // var randomTestButton = document.querySelector('#random-test');
+  // randomTestButton.addEventListener('click', function(e){
+  //   e.preventDefault();
+  //   var number = this.data.length;
+  //   var randomTerm = this.data[Math.floor(Math.random() * number)];
+  //   var searchValue = document.querySelector('#search-text');
+  //   searchValue.value = randomTerm.name;
+  //   this.repopulate(randomTerm);
+  // }.bind(this));
+
+  // var jsonString = localStorage.getItem('score');
+  // var savedScore = JSON.parse(jsonString);
+
+  // jsonString = localStorage.getItem('testTaken');
+  // var savedTests = JSON.parse(jsonString);
 
 module.exports = TestView;
