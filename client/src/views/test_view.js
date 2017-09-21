@@ -20,13 +20,13 @@ TestView.prototype = {
 
     var op = 1;  // initial opacity
     var timer = setInterval(function () {
-        if (op <= 0.1){
-            clearInterval(timer);
-            section.style.display = 'none';
-        }
-        section.style.opacity = op;
-        section.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op -= op * 0.1;
+      if (op <= 0.1){
+        clearInterval(timer);
+        section.style.display = 'none';
+      }
+      section.style.opacity = op;
+      section.style.filter = 'alpha(opacity=' + op * 100 + ")";
+      op -= op * 0.1;
     }, 50);
     var self = this;
     setTimeout(function(){
@@ -38,12 +38,12 @@ TestView.prototype = {
     var op = 0.01;  // initial opacity
     section.style.opacity = 0.01;
     var timer = setInterval(function () {
-        if (op >= 1){
-            clearInterval(timer);
-        }
-        section.style.opacity = op;
-        section.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op += op * 0.1;
+      if (op >= 1){
+        clearInterval(timer);
+      }
+      section.style.opacity = op;
+      section.style.filter = 'alpha(opacity=' + op * 100 + ")";
+      op += op * 0.1;
     }, 50);
   },
 
@@ -60,16 +60,11 @@ TestView.prototype = {
     savedTests = this.getSavedTest();
     var self = this;
 
+    var testResult = document.createElement('div');
+    testResult.setAttribute("id", "test-result");
+    section.appendChild(testResult);
 
-      var testResult = document.createElement('div');
-      testResult.setAttribute("id", "test-result");
-      section.appendChild(testResult);
-
-      testResult.innerText = "Test Results:   " + savedScore + "/" + savedTests;
-
-
-
-      
+    testResult.innerText = "Test Results:   " + savedScore + "/" + savedTests;      
   },
 
   createInputForm: function(section, term){
@@ -100,7 +95,6 @@ TestView.prototype = {
         testAnswers.push(element);
       };
       this.compare(testAnswers, term);
-
     }.bind(this));
   },
 
@@ -139,7 +133,6 @@ TestView.prototype = {
   },
 
   compare: function(data, term){
-  
     var count = 0;
     var score = 0
     var response = true;
@@ -167,14 +160,10 @@ TestView.prototype = {
     var testResult = document.querySelector('#test-result');
 
     testResult.innerText = "Test Results:   " + newScore + "/" + numOfTests;
-
-    // if (response === true){
-    //   alert('Well done, Noobie! You got it right!');
-    // } else {
-    //   alert('Doh, Noobie! That\`s the wrong answer! Try again');
-    // }
   }
 }
+
+module.exports = TestView;
 
 // var questionText = [];
 // var count = 0;
@@ -220,5 +209,3 @@ TestView.prototype = {
 
   // jsonString = localStorage.getItem('testTaken');
   // var savedTests = JSON.parse(jsonString);
-
-module.exports = TestView;

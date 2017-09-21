@@ -10,64 +10,79 @@ var DescriptionView = function(data){
 DescriptionView.prototype = {
 
   render: function(term){
-
-
     
     var section = document.querySelector('#description-section');
     while (section.firstChild){ section.removeChild(section.firstChild); };
 
-    // var pName = document.createElement('p');
-    // pName.innerText = term.name;
-    // section.appendChild(pName);
+    // Description
+    // var pDescription = document.createElement('p');
+    // section.appendChild(pDescription);
+    // pDescription.outerHTML = '<p id="description-text">' + term.description + '</p>'
+    
+    this.setDescription(section, term);
+    this.setTestButton(section, term, this.data);
+    this.setAudioButton(section, term);
 
+    // Test
+    // var testButton = document.createElement('button');
+    // section.appendChild(testButton);
+    // testButton.outerHTML = '<button type="button" class="button" id="test-button" alt="test understanding" >Test</button>'
+    // button = document.querySelector('#test-button');
+    // console.log(button);
+
+    // button.addEventListener('click', function(event){
+    //   event.preventDefault();
+    //   var testView = new TestView(this.data);
+    //   testView.render(term);
+    // }.bind(this));
+
+    // Audio
+    // var audioButton = document.createElement('button')
+    // section.appendChild(audioButton);
+    // audioButton.className += "speak";
+
+    // audioElement = document.createElement('audio');
+    // audioElement.setAttribute('src', term.audio);
+    // audioButton.addEventListener('click', function(event){
+    //   event.preventDefault();
+    //   audioElement.play();
+    // });
+
+    this.moreInfoButton(term);
+  },
+
+  setDescription: function(section, term){
     var pDescription = document.createElement('p');
     section.appendChild(pDescription);
     pDescription.outerHTML = '<p id="description-text">' + term.description + '</p>'
-    // pDescription.innerText = term.description;
+  },
+
+  setTestButton: function(section, term, data){
 
     var testButton = document.createElement('button');
-      section.appendChild(testButton);
-      // Changed class attribute to id attribute.
-      testButton.outerHTML = '<button type="button" class="button" id="test-button" alt="test understanding" >Test</button>'
-      // This is new; you need to select the test button separately.
-      button = document.querySelector('#test-button');
-      console.log(button);
+    section.appendChild(testButton);
+    testButton.outerHTML = '<button type="button" class="button" id="test-button" alt="test understanding" >Test</button>'
+    button = document.querySelector('#test-button');
+    console.log(button);
 
+    button.addEventListener('click', function(event){
+      event.preventDefault();
+      var testView = new TestView(data);
+      testView.render(term);
+    }.bind(this));
+  },
+
+  setAudioButton: function(section, term){
     var audioButton = document.createElement('button')
-      section.appendChild(audioButton);
-      audioButton.className += "speak";
-      
-    // var audioButton = document.querySelector("#button-audio");
-    // while (audioButton.firstChild){ audioButton.removeChild(audioButton.firstChild); };
-    //   var audioElement = ""
+    section.appendChild(audioButton);
+    audioButton.className += "speak";
 
-      audioElement = document.createElement('audio');
-      audioElement.setAttribute('src', term.audio)
-      // audioButton.outerHTML = '<input type="image" class="speak" id="button-audio" value="Listen" alt="Submit search" src="images/play_arrow.png" style="width:50px;height:50px;">'
-      audioButton.addEventListener('click', function(event){
-        event.preventDefault();
-        audioElement.play();
-
-      });
-
-      button.addEventListener('click', function(event){
-        event.preventDefault();
-        // console.log("test button clicked");
-        //link from here to another view which allows us to add the fade function
-        var testView = new TestView(this.data);
-        testView.render(term);
-
-      }.bind(this))
-
-      
-        
-
-
-      
-
-
-    // Load info button.
-    this.moreInfoButton(term);
+    audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', term.audio);
+    audioButton.addEventListener('click', function(event){
+      event.preventDefault();
+      audioElement.play();
+    });
   },
 
   moreInfoButton: function(term){
